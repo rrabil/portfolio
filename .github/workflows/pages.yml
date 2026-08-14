@@ -22,12 +22,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Vale
+      - name: Install Vale
         uses: errata-ai/vale-action@v2
         with:
           reporter: local
-          filter_mode: nofilter
-          fail_on_error: true
+          fail_on_error: false
+      - name: Run Vale
+        run: /home/runner/vale docs/ src/pages/
 
   link-check:
     needs: lint
