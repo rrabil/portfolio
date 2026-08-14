@@ -1,0 +1,89 @@
+/**
+ * Visual system approved 2026-08-14: cool ink grounds, petrol-teal accent
+ * (primary/"verified" meaning), amber reserved for rare override/annotation
+ * callouts. Serif display type carries the "writer" identity; Segoe UI body
+ * and Cascadia Code mono carry the "architect" identity.
+ */
+
+:root {
+  --bg: #f4f6f5;
+  --bg-surface: #eaefed;
+  --bg-surface-hover: #e0e7e4;
+  --text: #12181a;
+  --text-muted: #4b5559;
+  --rule: #d2dad7;
+  --accent: #0b6e63;
+  --accent-strong: #085951;
+  --accent-contrast: #f4fbfa;
+  --override: #a9631e;
+  --override-bg: #f3e3d0;
+
+  --font-display: 'Iowan Old Style', 'Hoefler Text', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body: 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', Consolas, ui-monospace, monospace;
+
+  --ifm-color-primary: #0b6e63;
+  --ifm-color-primary-dark: #0a6259;
+  --ifm-color-primary-darker: #095c53;
+  --ifm-color-primary-darkest: #084c45;
+  --ifm-color-primary-light: #0c7a6d;
+  --ifm-color-primary-lighter: #0d8074;
+  --ifm-color-primary-lightest: #0f9686;
+
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--bg-surface);
+  --ifm-font-color-base: var(--text);
+  --ifm-font-family-base: var(--font-body);
+  --ifm-heading-font-family: var(--font-display);
+  --ifm-code-font-family: var(--font-mono);
+  --ifm-navbar-background-color: var(--bg);
+  --ifm-footer-background-color: var(--text);
+  --ifm-hr-border-color: var(--rule);
+  --ifm-toc-border-color: var(--rule);
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(11, 110, 99, 0.1);
+}
+
+[data-theme='dark'] {
+  --bg: #0d1013;
+  --bg-surface: #161b1e;
+  --bg-surface-hover: #1d2327;
+  --text: #e7ecea;
+  --text-muted: #93a19d;
+  --rule: #2a3236;
+  --accent: #2fc4b2;
+  --accent-strong: #5cd6c6;
+  --accent-contrast: #06211d;
+  --override: #e0a257;
+  --override-bg: #2b2013;
+
+  --ifm-color-primary: #2fc4b2;
+  --ifm-color-primary-dark: #2ab1a0;
+  --ifm-color-primary-darker: #27a797;
+  --ifm-color-primary-darkest: #20897d;
+  --ifm-color-primary-light: #45cdbc;
+  --ifm-color-primary-lighter: #52d1c1;
+  --ifm-color-primary-lightest: #77dbce;
+
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--bg-surface);
+  --ifm-navbar-background-color: var(--bg);
+  --ifm-footer-background-color: #06090b;
+  --docusaurus-highlighted-code-line-bg: rgba(47, 196, 178, 0.15);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  font-weight: 400;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+}
+
+.footer--dark {
+  --ifm-footer-link-color: var(--text-muted);
+  --ifm-footer-color: var(--text-muted);
+  --ifm-footer-title-color: var(--text);
+}
