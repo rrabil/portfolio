@@ -23,12 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install Vale
-        uses: errata-ai/vale-action@v2
-        with:
-          reporter: local
-          fail_on_error: false
+        run: |
+          curl -sSL https://github.com/vale-cli/vale/releases/download/v3.17.1/vale_3.17.1_Linux_64-bit.tar.gz | tar -xz -C /usr/local/bin vale
+      - name: Sync Vale styles
+        run: vale sync
       - name: Run Vale
-        run: /home/runner/vale docs/ src/pages/
+        run: vale docs/ src/pages/
 
   link-check:
     needs: lint
