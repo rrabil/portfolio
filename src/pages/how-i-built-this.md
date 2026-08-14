@@ -5,5 +5,5 @@ description: Vision, what was built, and the moments of overriding AI output alo
 
 # How I Built This
 
-Content coming soon — vision, what was built, and two or three concrete
+Content coming soon—vision, what was built, and two or three concrete
 moments of overriding or correcting AI output during the build.
