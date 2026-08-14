@@ -37,7 +37,6 @@
   --ifm-heading-font-family: var(--font-display);
   --ifm-code-font-family: var(--font-mono);
   --ifm-navbar-background-color: var(--bg);
-  --ifm-footer-background-color: var(--text);
   --ifm-hr-border-color: var(--rule);
   --ifm-toc-border-color: var(--rule);
   --ifm-code-font-size: 90%;
@@ -68,7 +67,6 @@
   --ifm-background-color: var(--bg);
   --ifm-background-surface-color: var(--bg-surface);
   --ifm-navbar-background-color: var(--bg);
-  --ifm-footer-background-color: #06090b;
   --docusaurus-highlighted-code-line-bg: rgba(47, 196, 178, 0.15);
 }
 
@@ -83,7 +81,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer--dark {
-  --ifm-footer-link-color: var(--text-muted);
-  --ifm-footer-color: var(--text-muted);
-  --ifm-footer-title-color: var(--text);
+  --ifm-footer-background-color: #0d1013;
+  --ifm-footer-color: #b7c1bf;
+  --ifm-footer-link-color: #e7ecea;
+  --ifm-footer-title-color: #f4f6f5;
+}
+
+.footer__link-item:hover {
+  color: var(--accent-strong);
 }

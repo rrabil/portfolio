@@ -31,20 +31,18 @@ export default function Home() {
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer — AI Knowledge Systems Architect
+            Principal Technical Writer — AI Content Strategy and Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Documentation that survives contact with production — and the judgment to
-            know when the AI draft was wrong.
+            Creating content that informs and delights users—and scales over time.
           </h1>
           <p className={styles.subhead}>
-            Fifteen-plus years turning ambiguous systems into documentation people
-            actually use — now applied to the governance frameworks that keep
-            AI-assisted knowledge systems honest.
+            Eighteen-plus years turning complex concepts and unstructured systems into documentation people
+            actually use. Now building content and governance frameworks to keep AI-generated content useful and reliable.
           </p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/portfolio/how-to-guides">
-              View the Portfolio →
+              View My Portfolio →
             </Link>
             <Link className={styles.btnGhost} to="/how-i-built-this">
               How I Built This Site
@@ -55,27 +53,25 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.sectionHead}>
             <p className={styles.eyebrow}>Dual Identity</p>
-            <h2>Two disciplines, one governance model.</h2>
+            <h2>What I do.</h2>
           </div>
           <div className={styles.identityGrid}>
             <div className={styles.identityPanel}>
-              <h3>Technical Writer</h3>
+              <h3>Technical Communication</h3>
               <p>
-                Fifteen years of documentation across DITA/Oxygen migrations,
-                Confluence governance, and product docs that scale past whatever
-                process was supposed to contain them. The wiki-retirement
-                methodology built at Opower outlived the acquisition that was
-                supposed to make it obsolete.
+                Master&apos;s degree in technical communication. Over eighteen years of experience in technical writing and knowledge
+                management. Expert in
+                researching and organizing complex technical information, designing
+                attractive documents, and turning complex jargon into clear content.
               </p>
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
-              <h3>AI Knowledge Systems Architect</h3>
+              <h3>AI Knowledge Architecture</h3>
               <p>
-                Governance frameworks for custom GPT architectures, and the
-                standing rules that keep AI output honest. This site is the
-                proof, not just the pitch: a docs-as-code pipeline that lints,
-                checks links, and refuses to deploy broken work.
+                Building AI knowledge assets and governance frameworks that keep AI output reliable. This site is 
+                proof of this practice: a docs-as-code pipeline that lints prose,
+                validates links, and refuses to deploy broken work.
               </p>
             </div>
           </div>
@@ -115,8 +111,7 @@ export default function Home() {
           </div>
           <p className={styles.pipelineCaption}>
             Every push runs all four before anything ships. If a check fails,
-            the site doesn&apos;t deploy — same standard the documentation
-            itself is held to.
+            the site doesn&apos;t deploy.
           </p>
         </section>
       </main>
