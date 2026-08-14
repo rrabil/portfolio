@@ -6,7 +6,7 @@ Static technical writing portfolio prepared for GitHub Pages.
 
 Open `index.html` in a browser, or serve the folder with any static web server.
 
-## Publish To GitHub Pages
+## Publish to GitHub Pages
 
 Create an empty public repository named `portfolio` under `rrabil`, then run:
 
