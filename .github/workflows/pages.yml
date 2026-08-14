@@ -1,7 +1,9 @@
-name: Deploy static portfolio to Pages
+name: Lint, check, build, and deploy
 
 on:
   push:
+    branches: ["main"]
+  pull_request:
     branches: ["main"]
   workflow_dispatch:
 
@@ -15,23 +17,71 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Vale
+        run: |
+          curl -sSL https://github.com/vale-cli/vale/releases/download/v3.17.1/vale_3.17.1_Linux_64-bit.tar.gz | tar -xz -C /usr/local/bin vale
+      - name: Sync Vale styles
+        run: vale sync
+      - name: Run Vale
+        run: vale docs/ src/pages/
+
+  link-check:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress 'docs/**/*.md' 'src/pages/**/*.md' '*.md'
+          fail: true
+
+  build:
+    needs: link-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: build/
+
   deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: build/
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
-
+          path: build/
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

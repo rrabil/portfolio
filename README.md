@@ -1,50 +1,32 @@
 # Richard Rabil Portfolio
 
-Static technical writing portfolio prepared for GitHub Pages.
+Technical writing and AI knowledge systems portfolio, built with [Docusaurus](https://docusaurus.io/). See [AGENTS.md](AGENTS.md) for full project context, architecture decisions, and content plan — this file only covers running the site locally.
 
-## Local Preview
+## Local development
 
-Open `index.html` in a browser, or serve the folder with any static web server.
-
-## Publish To GitHub Pages
-
-Create an empty public repository named `portfolio` under `rrabil`, then run:
-
-```powershell
-git branch -M main
-git remote add origin https://github.com/rrabil/portfolio.git
-git push -u origin main
+```bash
+npm start
 ```
 
-In GitHub, open **Settings > Pages** and set the source to **GitHub Actions** if it is not selected automatically.
+Starts a dev server at `http://localhost:3000/` with hot reload.
 
-The default project URL will be:
+## Build
 
-```text
-https://rrabil.github.io/portfolio/
+```bash
+npm run build
 ```
 
-## Custom URL Notes
+Outputs static files to `/build`.
 
-`richardrabil.com/portfolio` has to be served or redirected by the existing WordPress site because DNS cannot point only one path to GitHub Pages.
+## Lint
 
-The cleaner GitHub Pages option is:
+Style/spelling checks run via [Vale](https://vale.sh/), configured in `.vale.ini`. Style packages under `styles/` (except `styles/config/`) are fetched with `vale sync` and are not tracked in git.
 
-```text
-portfolio.richardrabil.com
+```bash
+vale sync
+vale docs
 ```
 
-That requires the domain manager to create a `CNAME` record for `portfolio` pointing to `rrabil.github.io`, then this repo can add a `CNAME` file containing `portfolio.richardrabil.com`.
+## Deploy
 
-## Content To Add Later
-
-- Public writing samples or sanitized PDFs.
-- A preferred email address or LinkedIn profile.
-- Concrete case studies with outcomes, constraints, and links.
-
-## Source Material Used
-
-- Public work archive: https://richardrabil.com/work/
-- LinkedIn profile link: https://www.linkedin.com/in/rrabil/
-
-LinkedIn returned an authwall during automated review, so it is linked as a professional profile but not used as a factual source for portfolio copy.
+Deploys to GitHub Pages via the workflow in `.github/workflows/`, gated on lint, link-check, and build passing.
