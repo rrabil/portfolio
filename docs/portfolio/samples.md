@@ -23,7 +23,7 @@ Published, production documentation for enterprise software—the core craft, at
 | User Guide | [Opower Analytics Visualization User Guide](https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/oracle-utilities-opower-analytics-visualization-user-guide.html) |
 | Specification | [Data Transfer Specifications](https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/home-data-transfer.html) |
 | Overview Guides | [Opower Digital Self Service—Energy Management Overview](https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/homedssoverview.html#GUID-26C3598E-6D93-468D-9B24-83CD44560D96)<br />[Opower Business Customer Engagement Overview](https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/home-bce-overview.html) |
-| Design Document | [High-Level Game Design Document](https://richardrabil.com/wp-content/uploads/2026/07/rabil-high-level-game-design-document-calydon-redacted.pdf) |
+| Design Document | [High-Level Game Design Document](https://richardrabil.com/wp-content/uploads/2026/08/rabil-high-level-game-design-document-calydon-redacted.pdf) |
 | Technical Report | [Evaluation of Software Tools for Interactive Storytelling](https://richardrabil.com/wp-content/uploads/2026/08/rabil-technical-report-software-interactive-storytelling.pdf) |
 | Instructional Design | [How to Generate Great-Looking Output Using Adobe RoboHelp 9](https://www.youtube.com/watch?v=fbQ2ypdel0I) |
 

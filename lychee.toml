@@ -1,0 +1,7 @@
+# Domains excluded because they return Cloudflare bot-management 403s to
+# automated checkers (verified via curl: cf-cache-status/CF-RAY headers and
+# a __cf_bm challenge cookie), not because the pages are actually broken.
+exclude = [
+    "https://document360.com",
+    "https://www.researchgate.net",
+]
