@@ -87,7 +87,7 @@ const config = {
             items: [
               {label: 'Home', to: '/'},
               {label: 'About Me', to: '/about'},
-              {label: 'Portfolio', to: '/docs/portfolio/how-to-guides'},
+              {label: 'Portfolio', to: '/docs/portfolio/samples'},
               {label: 'Skills & Agents', to: '/docs/skills-agents/standing-rules-vs-memory'},
             ],
           },

@@ -34,14 +34,14 @@ export default function Home() {
             Principal Technical Writer — AI Content Strategy and Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating content that informs and delights users—and scales over time.
+            Creating technical content that informs and delights users—and scales over time.
           </h1>
           <p className={styles.subhead}>
-            Eighteen-plus years turning complex concepts and unstructured systems into documentation people
-            actually use. Now building content and governance frameworks to keep AI-generated content useful and reliable.
+            Over eighteen years of experience turning complex concepts and unstructured systems into documentation people
+            actually trust. Now building content and governance frameworks to keep AI-generated content useful and reliable.
           </p>
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/docs/portfolio/how-to-guides">
+            <Link className={styles.btnPrimary} to="/docs/portfolio/samples">
               View My Portfolio →
             </Link>
             <Link className={styles.btnGhost} to="/how-i-built-this">
@@ -59,17 +59,16 @@ export default function Home() {
             <div className={styles.identityPanel}>
               <h3>Technical Communication</h3>
               <p>
-                Master&apos;s degree in technical communication. Over eighteen years of experience in technical writing and knowledge
-                management. Expert in
-                researching and organizing complex technical information, designing
-                attractive documents, and turning complex jargon into clear content.
+                Over eighteen years of experience in technical writing and knowledge
+                management. Expert in researching and organizing complex technical information, designing
+                attractive documents, turning complex jargon into clear content, and enabling users to do their tasks correctly. Master&apos;s degree in technical communication.  
               </p>
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
               <h3>AI Knowledge Architecture</h3>
               <p>
-                Building AI knowledge assets and governance frameworks that keep AI output reliable. This site is 
+                Building AI knowledge assets and governance frameworks that enable teams to work consistently and scale, and that keep AI outputs reliable. This site is 
                 proof of this practice: a docs-as-code pipeline that lints prose,
                 validates links, and refuses to deploy broken work.
               </p>
@@ -84,7 +83,7 @@ export default function Home() {
           </div>
           <div className={styles.cardRow}>
             {samples.map((sample) => (
-              <Link className={styles.card} to="/docs/portfolio/how-to-guides" key={sample.title}>
+              <Link className={styles.card} to="/docs/portfolio/samples" key={sample.title}>
                 <span className={styles.cardMeta}>{sample.meta}</span>
                 <h3>{sample.title}</h3>
                 <p>{sample.blurb}</p>

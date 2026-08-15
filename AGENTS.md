@@ -6,11 +6,11 @@ Tool-agnostic project context for AI coding agents (Claude Code, Codex, or other
 
 Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Systems Architect. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation, not just describes one. Purpose is to show mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge systems architecture, for external job search positioning.
 
-Reference site (structural/stylistic model, not to be copied verbatim): https://oddlittlebird.github.io/showcase-site — built with Docusaurus, Claude Code, Vale, Lychee, and Doc Detective.
+Follows common docs-as-code portfolio conventions: a Markdown/MDX static site generator, automated prose linting, automated link checking, and a transparent "how this was built" narrative page — general best practices for demonstrating technical-writing and AI-collaboration credibility, not modeled on any single existing site.
 
 ## Site architecture decisions
 
-**Static site generator:** TBD — decide before scaffolding. Docusaurus is the reference site's choice and a reasonable default given Markdown/MDX support and GitHub Pages compatibility.
+**Static site generator:** Docusaurus — chosen for solid Markdown/MDX support, an active plugin ecosystem, and native GitHub Pages compatibility.
 
 **Hosting:** GitHub Pages, free tier.
 
@@ -73,7 +73,7 @@ This distinction maps directly to the governance-framework language already used
 
 - Open constraint: real authenticated data access isn't feasible for a fictional/public demo. Current plan (static example responses, no live backend) is confirmed workable for now. Revisit only if a more dynamic demo becomes worthwhile later.
 
-**How I Built This:** Structured like the reference site's version — vision → what was built → 2–3 concrete moments of overriding or correcting AI output → conclusion. The specific disagreements/judgment calls are the point; do not skip to only the polished outcome.
+**How I Built This:** Follows a build-transparency structure common to technical portfolios: vision → what was built → 2–3 concrete moments of overriding or correcting AI output → conclusion. The specific disagreements/judgment calls are the point; do not skip to only the polished outcome.
 
 **Resume:** HTML page (better for SEO/scannability) plus a downloadable, ATS-parseable PDF (plain structure, no tables/columns/graphics). Keep both in sync but not identical — the HTML version can be more expansive with inline portfolio links.
 
