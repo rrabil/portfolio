@@ -3,20 +3,21 @@ sidebar_position: 1
 hide_table_of_contents: true
 ---
 
-# Work Samples
+# Work
 
 This page represents a sample of my published, production work spanning technical writing, information architecture, and AI knowledge systems. Where the original venue is paywalled, I've linked to an archived copy on my blog instead. My AI knowledge architecture work is mostly proprietary and can't be shared directly—that section points to writing about the practice, to this site as a working example, and to my [resume](/resume) for project specifics.
 
 **On this page**
 
-- [Technical Writing \& Documentation](#technical-writing--documentation)
-- [Information Architecture \& Knowledge Management](#information-architecture--knowledge-management)
-- [AI \& Knowledge Architecture](#ai--knowledge-architecture)
-- [Career \& Craft Perspectives](#career--craft-perspectives)
+- [Work](#work)
+  - [Technical Writing \& Documentation](#technical-writing--documentation)
+  - [Information Architecture \& Knowledge Management](#information-architecture--knowledge-management)
+  - [AI \& Knowledge Architecture](#ai--knowledge-architecture)
+  - [Career \& Craft Perspectives](#career--craft-perspectives)
 
 ## Technical Writing & Documentation
 
-Published, production documentation for enterprise software—the core craft, at scale.
+Published, production documentation for enterprise software.
 
 | Type | Samples |
 | --- | --- |
@@ -39,7 +40,7 @@ Published thinking on organizing, scaling, and governing documentation ecosystem
 
 ## AI & Knowledge Architecture
 
-The AI knowledge architecture work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and refuses to deploy broken work—documented in more detail in [How I Built This Site](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
+The AI knowledge architecture work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and so on—documented in more detail in [How I Built This Site](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
 
 - [On Delegating Tech Writing to AI: What We Gain and What We Lose](https://richardrabil.com/2026/08/08/on-delegating-tech-writing-to-ai-what-we-gain-and-what-we-lose/)—August 2026
 - [Technical Writing Is Dead. Long Live Technical Writing!](https://richardrabil.com/2026/02/28/technical-writing-is-dead-long-live-technical-writing/)—February 2026

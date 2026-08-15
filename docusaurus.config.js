@@ -57,26 +57,38 @@ const config = {
         items: [
           {to: '/', label: 'Home', position: 'left'},
           {to: '/about', label: 'About Me', position: 'left'},
+          {to: '/resume', label: 'Resume', position: 'left'},
           {
-            type: 'docSidebar',
-            sidebarId: 'portfolioSidebar',
+            type: 'dropdown',
+            label: 'Work',
             position: 'left',
-            label: 'Portfolio',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'portfolioSidebar',
+                label: 'Work',
+              },
+              {to: '/api-sample', label: 'API Sample'},
+            ],
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'skillsAgentsSidebar',
+            type: 'dropdown',
+            label: 'How I Built This',
             position: 'left',
-            label: 'Skills & Agents',
+            items: [
+              {to: '/how-i-built-this', label: 'How I Built This'},
+              {
+                type: 'docSidebar',
+                sidebarId: 'skillsAgentsSidebar',
+                label: 'Skills & Agents',
+              },
+            ],
           },
-          {to: '/api-sample', label: 'API Sample', position: 'left'},
-          {to: '/how-i-built-this', label: 'How I Built This', position: 'left'},
           {
             href: 'https://richardrabil.com',
             label: 'Blog',
             position: 'right',
           },
-          {to: '/resume', label: 'Resume', position: 'right'},
         ],
       },
       footer: {
@@ -87,16 +99,16 @@ const config = {
             items: [
               {label: 'Home', to: '/'},
               {label: 'About Me', to: '/about'},
-              {label: 'Portfolio', to: '/docs/portfolio/samples'},
-              {label: 'Skills & Agents', to: '/docs/skills-agents/standing-rules-vs-memory'},
+              {label: 'Resume', to: '/resume'},
+              {label: 'Work', to: '/docs/portfolio/samples'},
             ],
           },
           {
             title: 'More',
             items: [
               {label: 'How I Built This', to: '/how-i-built-this'},
+              {label: 'Skills & Agents', to: '/docs/skills-agents/standing-rules-vs-memory'},
               {label: 'API Sample', to: '/api-sample'},
-              {label: 'Resume', to: '/resume'},
               {label: 'Blog', href: 'https://richardrabil.com'},
             ],
           },

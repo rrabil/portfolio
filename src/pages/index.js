@@ -5,19 +5,22 @@ import styles from './index.module.css';
 
 const samples = [
   {
+    meta: 'Document360 Podcast · August 2025',
+    title: 'Why Aesthetics Matter in Technical Docs, with Richard Rabil (Oracle)',
+    blurb: 'A conversation on how visual design and usability shape whether documentation actually gets read.',
+    href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
+  },
+  {
     meta: 'STC Intercom · May 2019',
     title: 'Content Strategy in Action: Enabling Sales with Product Documentation',
     blurb: 'How documentation structure became a sales enablement asset, not an afterthought.',
+    href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
   },
   {
     meta: 'A List Apart · July 2018',
     title: 'Order Out of Chaos: Patterns of Organization for Writing on the Job',
     blurb: 'Reusable organizational patterns for technical writing under real deadline pressure.',
-  },
-  {
-    meta: 'STC Intercom · October 2017',
-    title: "Designing Wiki Templates for Today's Web",
-    blurb: 'Template governance as the quiet infrastructure behind a wiki that stays usable.',
+    href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
   },
 ];
 
@@ -37,12 +40,15 @@ export default function Home() {
             Creating technical content that informs and delights users—and scales over time.
           </h1>
           <p className={styles.subhead}>
-            Over eighteen years of experience turning complex concepts and unstructured systems into documentation people
-            actually trust. Now building content and governance frameworks to keep AI-generated content useful and reliable.
+            Hi, I'm Richard. Welcome to my online portfolio. I bring over eighteen years of professional technical writing experience turning complex concepts and unstructured systems into documentation people
+            actually trust. I also build governance frameworks and editorial workflows to keep content useful and reliable for humans and AI consumers.
           </p>
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/docs/portfolio/samples">
-              View My Portfolio →
+            <Link className={styles.btnPrimary} to="/resume">
+              View Resume →
+            </Link>
+            <Link className={styles.btnGhost} to="/docs/portfolio/samples">
+              My Work
             </Link>
             <Link className={styles.btnGhost} to="/how-i-built-this">
               How I Built This Site
@@ -74,6 +80,9 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <Link className={styles.sectionLink} to="/about">
+            More About Me →
+          </Link>
         </section>
 
         <section className={styles.section}>
@@ -83,14 +92,40 @@ export default function Home() {
           </div>
           <div className={styles.cardRow}>
             {samples.map((sample) => (
-              <Link className={styles.card} to="/docs/portfolio/samples" key={sample.title}>
+              <a
+                className={styles.card}
+                href={sample.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={sample.title}>
                 <span className={styles.cardMeta}>{sample.meta}</span>
                 <h3>{sample.title}</h3>
                 <p>{sample.blurb}</p>
-                <span className={styles.cardRead}>Read the piece →</span>
-              </Link>
+                <span className={styles.cardRead}>
+                  Read the piece
+                  <svg
+                    className={styles.externalIcon}
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                    aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M7 17L17 7M17 7H9M17 7V15"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fillOpacity="0"
+                    />
+                  </svg>
+                </span>
+              </a>
             ))}
           </div>
+          <Link className={styles.sectionLink} to="/docs/portfolio/samples">
+            View More Samples →
+          </Link>
         </section>
 
         <section className={styles.section}>
@@ -112,6 +147,9 @@ export default function Home() {
             Every push runs all four before anything ships. If a check fails,
             the site doesn&apos;t deploy.
           </p>
+          <Link className={styles.sectionLink} to="/how-i-built-this">
+            Learn more →
+          </Link>
         </section>
       </main>
     </Layout>
