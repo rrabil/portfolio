@@ -1,6 +1,10 @@
-# Domains excluded because they return Cloudflare bot-management 403s to
-# automated checkers (verified via curl: cf-cache-status/CF-RAY headers and
-# a __cf_bm challenge cookie), not because the pages are actually broken.
+# Domains excluded because Cloudflare's bot management blocks automated
+# checkers there, not because the pages are actually broken:
+# - researchgate.net: always returns a 403 challenge page to non-browser
+#   clients (Cf-Mitigated: challenge), regardless of user agent.
+# - document360.com: inconsistently 403s automated clients depending on
+#   user agent/request reputation; excluded preemptively to avoid CI
+#   flakiness even though it isn't a hard block like researchgate.net.
 exclude = [
     "https://document360.com",
     "https://www.researchgate.net",

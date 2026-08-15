@@ -39,7 +39,7 @@ jobs:
       - name: Lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress 'docs/**/*.md' 'src/pages/**/*.md' '*.md'
+          args: --no-progress --config lychee.toml 'docs/**/*.md' 'src/pages/**/*.md' '*.md'
           fail: true
 
   build:
