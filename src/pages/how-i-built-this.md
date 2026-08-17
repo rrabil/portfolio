@@ -5,7 +5,7 @@ description: Vision, what was built, and the moments of overriding AI output alo
 
 # How I Built This
 
-In this portfolio site, I wanted to demonstrate two credentials together: deep technical writing craft, and the governance discipline to keep AI-assisted content trustworthy at scale. I also wanted to present evidence of the pipeline, standards, and judgment calls that produced them. That's what this page is all about.
+In this portfolio I wanted to demonstrate two credentials together: deep technical writing craft, and the governance discipline to keep AI-assisted content trustworthy at scale. I also wanted to present evidence of the pipeline, standards, and judgment calls that produced them.
 
 ## The system
 
@@ -34,4 +34,4 @@ A single `AGENTS.md` file holds project context, content structure decisions, an
 
 ## What this proves
 
-The differentiator isn't AI tool fluency—plenty of people can prompt a model to generate content. What this site demonstrates is judgment: catching a monitoring gap that made a broken check look healthy, catching a fix that solved the wrong problem, and making deliberate editorial calls about what does and doesn't belong on a page. That's the same discipline behind the governance frameworks described in the [About](/about) and [Skills & Agents](/docs/skills-agents/standing-rules-vs-memory) pages, applied here, in public, to itself.
+Of course, plenty of people can prompt a model to generate content. What this site demonstrates is judgment: catching a monitoring gap that made a broken check look healthy, catching a fix that solved the wrong problem, and making deliberate editorial calls about what does and doesn't belong on a page. That's the same discipline behind the governance frameworks described in the [About](/about) and [Resume](/resume) pages, applied here, in public, to itself.

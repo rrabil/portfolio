@@ -30,28 +30,24 @@ export default function Home() {
   return (
     <Layout
       title="Richard Rabil"
-      description="Principal Technical Writer & AI Knowledge Systems Architect">
+      description="Principal Technical Writer & AI Knowledge Architect">
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
             Principal Technical Writer — AI Content Strategy and Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating technical content that informs and delights users—and scales over time.
+            Creating technical docs that serve humans and agents—and scale over time.
           </h1>
           <p className={styles.subhead}>
-            Hi, I'm Richard. Welcome to my online portfolio. I bring over eighteen years of professional technical writing experience turning complex concepts and unstructured systems into documentation people
-            actually trust. I also build governance frameworks and editorial workflows to keep content useful and reliable for humans and AI consumers.
+            Hi, I'm Richard. Welcome to my portfolio. I write technical documentation for human and AI consumers, and build governance frameworks to keep the content useful and reliable as products and systems evolve.
           </p>
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/resume">
-              View Resume →
+            <Link className={styles.btnPrimary} to="/about">
+              About Me
             </Link>
             <Link className={styles.btnGhost} to="/docs/portfolio/samples">
-              My Work
-            </Link>
-            <Link className={styles.btnGhost} to="/how-i-built-this">
-              How I Built This Site
+              View My Work
             </Link>
           </div>
         </section>
@@ -65,18 +61,18 @@ export default function Home() {
             <div className={styles.identityPanel}>
               <h3>Technical Communication</h3>
               <p>
-                Over eighteen years of experience in technical writing and knowledge
-                management. Expert in researching and organizing complex technical information, designing
-                attractive documents, turning complex jargon into clear content, and enabling users to do their tasks correctly. Master&apos;s degree in technical communication.  
+                I bring over eighteen years of experience in technical writing and knowledge
+                management. I'm an expert in researching and organizing complex technical information, designing
+                attractive documents, turning complex jargon into clear content, and enabling users (and agents!) to do their tasks correctly. I hold a master's degree in technical communication.  
               </p>
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
               <h3>AI Knowledge Architecture</h3>
               <p>
-                Building AI knowledge assets and governance frameworks that enable teams to work consistently and scale, and that keep AI outputs reliable. This site is 
+                I build AI knowledge assets and governance frameworks that enable teams and agents to work consistently and at scale. This site is 
                 proof of this practice: a docs-as-code pipeline that lints prose,
-                validates links, and refuses to deploy broken work.
+                validates links, and deploys vetted content.
               </p>
             </div>
           </div>
@@ -130,7 +126,7 @@ export default function Home() {
 
         <section className={styles.section}>
           <div className={styles.sectionHead}>
-            <p className={styles.eyebrow}>This Site&apos;s Pipeline</p>
+            <p className={styles.eyebrow}>What Is This Site?</p>
             <h2>Not a metaphor.</h2>
           </div>
           <div className={styles.pipeline}>
