@@ -14,7 +14,7 @@ Published, production documentation for enterprise software.
 | Type | Samples |
 | --- | --- |
 | Design Document | [High-Level Game Design Document](/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf) |
-| Instructional Design | [How to Generate Great-Looking Output Using Adobe RoboHelp 9](https://www.youtube.com/watch?v=fbQ2ypdel0I) |
+| Instructional Design | [How to Generate Great-Looking Output Using Adobe RoboHelp](https://www.youtube.com/watch?v=fbQ2ypdel0I) |
 | Overview Guides | [Opower Digital Self Service—Energy Management Overview](https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/homedssoverview.html#GUID-26C3598E-6D93-468D-9B24-83CD44560D96)<br />[Opower Business Customer Engagement Overview](https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/home-bce-overview.html) |
 | Specification | [Data Transfer Specifications](https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/home-data-transfer.html) |
 | Technical Report | [Evaluation of Software Tools for Interactive Storytelling](/files/Rabil-Technical-Report-Software-Interactive-Storytelling.pdf) |
