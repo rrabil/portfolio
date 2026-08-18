@@ -1,18 +1,11 @@
 ---
 sidebar_position: 1
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 # Work
 
 This page represents a sample of my published, production work spanning technical writing, information architecture, and AI knowledge systems. Where the original venue is paywalled, I've linked to an archived copy on my blog instead. My AI knowledge architecture work is mostly proprietary and can't be shared directly—that section points to writing about the practice, to this site as a working example, and to my [resume](/resume) for project specifics.
-
-**On this page**
-
-- [Technical Writing \& Documentation](#technical-writing--documentation)
-  - [Information Architecture \& Knowledge Management](#information-architecture--knowledge-management)
-  - [AI \& Knowledge Architecture](#ai--knowledge-architecture)
-  - [Career \& Craft Perspectives](#career--craft-perspectives)
 
 ## Technical Writing & Documentation
 
@@ -20,12 +13,13 @@ Published, production documentation for enterprise software.
 
 | Type | Samples |
 | --- | --- |
-| User Guide | [Opower Analytics Visualization User Guide](https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/oracle-utilities-opower-analytics-visualization-user-guide.html) |
-| Specification | [Data Transfer Specifications](https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/home-data-transfer.html) |
-| Overview Guides | [Opower Digital Self Service—Energy Management Overview](https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/homedssoverview.html#GUID-26C3598E-6D93-468D-9B24-83CD44560D96)<br />[Opower Business Customer Engagement Overview](https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/home-bce-overview.html) |
 | Design Document | [High-Level Game Design Document](/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf) |
-| Technical Report | [Evaluation of Software Tools for Interactive Storytelling](/files/Rabil-Technical-Report-Software-Interactive-Storytelling.pdf) |
 | Instructional Design | [How to Generate Great-Looking Output Using Adobe RoboHelp 9](https://www.youtube.com/watch?v=fbQ2ypdel0I) |
+| Overview Guides | [Opower Digital Self Service—Energy Management Overview](https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/homedssoverview.html#GUID-26C3598E-6D93-468D-9B24-83CD44560D96)<br />[Opower Business Customer Engagement Overview](https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/home-bce-overview.html) |
+| Specification | [Data Transfer Specifications](https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/home-data-transfer.html) |
+| Technical Report | [Evaluation of Software Tools for Interactive Storytelling](/files/Rabil-Technical-Report-Software-Interactive-Storytelling.pdf) |
+| User Guide | [Opower Analytics Visualization User Guide](https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/oracle-utilities-opower-analytics-visualization-user-guide.html) |
+| Writing Workshop | [Best Practices for Writing Procedures](/files/Procedure-Writing-Workshop.pdf) |
 
 ## Information Architecture & Knowledge Management
 
