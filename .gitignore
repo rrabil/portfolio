@@ -22,3 +22,8 @@ yarn-error.log*
 # Vale style packages (fetched via `vale sync`, not tracked)
 styles/*
 !styles/config/
+
+# Microsoft Office lock files
+~$*.pptx
+~$*.docx
+~$*.xlsx
