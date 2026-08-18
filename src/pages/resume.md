@@ -9,7 +9,7 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 18+ years of SaaS and enterprise documentation experience. I write clear technical content and build AI-enabled knowledge infrastructure—governance frameworks, lifecycle rules, editorial guidance, and reusable components—that keeps documentation accurate, trustworthy, and scalable.
 
-[LinkedIn](https://www.linkedin.com/in/rrabil) · [richardrabil.com/work](https://richardrabil.com/work) · *A full, formal resume is available on request.*
+[LinkedIn](https://www.linkedin.com/in/rrabil) · [richardrabil.com/work](https://richardrabil.com/work) · *Full resume available on request.*
 
 ## Work Experience
 
