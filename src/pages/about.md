@@ -25,7 +25,7 @@ Ever since entering the field I have also been interested in *structure*: how to
 * What does the next writer or editor who needs to maintain this documentation in the future need to know? What style guidance should they use? What templates and content rules should they follow? What experts should they rely on for review?
 * How do we track the health of the enormous volumes of information under our responsibility? When and how do we need retire information when it is no longer necessary?
 
-These questions have led me into many overlapping disciplines, from technical editing and information architecture to content strategy and knowledge management. I have frequently taken on "team lead", "team editor", and "architect" roles for large-scale documentation projects in the organizations I work for: setting up governance frameworks and editorial workflows, designing information models and status dashboards, defining the content strategy for content lifecycles, and sharing best practices and articles about the latest trends in the field.
+These questions have led me into many overlapping disciplines, from technical editing and information architecture to content strategy and knowledge management. I have frequently taken on "team lead," "team editor," and "architect" roles for large-scale documentation projects in the organizations I work for: setting up governance frameworks and editorial workflows, designing information models and status dashboards, defining the content strategy for content lifecycles, and sharing best practices and articles about the latest trends in the field.
 
 ## Where AI Comes In
 
