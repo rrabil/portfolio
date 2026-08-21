@@ -34,13 +34,13 @@ export default function Home() {
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer — AI Content Strategy and Knowledge Management
+            Principal Technical Writer — AI Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating technical docs that serve humans and agents—and scale over time.
+            Creating documentation that humans trust—and that scales over time.
           </h1>
           <p className={styles.subhead}>
-            Hi, I'm Richard. Welcome to my portfolio. I write technical documentation for human and AI consumers, and build governance frameworks to keep the content useful and reliable as products and systems evolve.
+            Hi, I'm Richard. Welcome to my portfolio. I write technical documentation for human and AI consumers, and build content pipelines and governance frameworks to keep the content reliable as products and systems evolve.
           </p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/about">
