@@ -12,7 +12,11 @@ to the governance-framework language on my resume.
 ## Skills
 
 Content coming soon—a tour of specific skills built for this project
-and others, and what each one automates.
+and others, and what each one automates. First example: [Evaluating
+and merging third-party skills](./evaluating-third-party-skills), a
+case study in judgment applied to off-the-shelf AI tooling. Further
+skills get their own page here as they're written, following the same
+pattern.
 
 ## Claude.md / AGENTS.md
 
