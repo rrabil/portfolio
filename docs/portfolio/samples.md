@@ -51,3 +51,11 @@ Additional writing on hiring, evaluating writers, and the craft itself.
 - [Do Technical Writers Dream of Arbortext Editor?](https://richardrabil.com/2018/08/10/do-technical-writers-dream-of-arbortext-editor/)—August 2018
 - [How to Be an Amazing Tech Comm Job Applicant: Tips from a Tech Comm Hiring Manager](https://techwhirl.com/how-to-be-amazing-tech-comm-job-applicant-tips-tech-comm-hiring-manager/)—*TechWhirl*, March 2018 *(originally published in *Intercom*, July 2017)*
 - [Evaluating Writing Samples: Strategies for TechComm Hiring Managers](https://techwhirl.com/evaluating-writing-samples-strategies-techcomm-hiring-managers/)—*TechWhirl*, July 2017
+
+## Agents and Skills
+
+Content coming soon—for now, see the docs-engineering side of this
+work under [How I Built This](/how-i-built-this): the
+[documentation pipeline](/documentation-pipeline-portfolio),
+[Doc Detective examples](/doc-detective-examples), and
+[Skills & Agents](/docs/skills-agents/standing-rules-vs-memory).
