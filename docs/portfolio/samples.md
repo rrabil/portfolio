@@ -13,6 +13,7 @@ Published, production documentation for enterprise software.
 
 | Type | Samples |
 | --- | --- |
+| Admin Guide | [Oracle Utilities Data Intelligence Admin Guide](https://docs.oracle.com/en/industries/utilities/data-intelligence/266/data-intelligence-admin-guide/About-Oracle-Utilities-Data-Intelligence1.html)<br />[Data Refresh Procedure](/files/Refresh-Data-Intelligence-Data-Sample.pdf) |
 | Design Document | [High-Level Game Design Document](/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf) |
 | Instructional Design | [How to Generate Great-Looking Output Using Adobe RoboHelp](https://www.youtube.com/watch?v=fbQ2ypdel0I) |
 | Overview Guides | [Opower Digital Self Service—Energy Management Overview](https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/homedssoverview.html#GUID-26C3598E-6D93-468D-9B24-83CD44560D96)<br />[Opower Business Customer Engagement Overview](https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/home-bce-overview.html) |
