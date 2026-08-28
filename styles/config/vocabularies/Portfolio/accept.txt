@@ -25,3 +25,5 @@ MDX'?s?
 linter'?s?
 config
 typo'd
+iaKm
+aiKnowledge

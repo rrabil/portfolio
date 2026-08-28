@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
 const samples = [
@@ -9,24 +10,55 @@ const samples = [
     title: 'Why Aesthetics Matter in Technical Docs, with Richard Rabil (Oracle)',
     blurb: 'A conversation on how visual design and usability shape whether documentation actually gets read.',
     href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
-  },
-  {
-    meta: 'STC Intercom · May 2019',
-    title: 'Content Strategy in Action: Enabling Sales with Product Documentation',
-    blurb: 'How documentation structure became a sales enablement asset, not an afterthought.',
-    href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
+    readLabel: 'Read the piece',
+    thumb: '/img/samples/podcast-document360.png',
   },
   {
     meta: 'A List Apart · July 2018',
     title: 'Order Out of Chaos: Patterns of Organization for Writing on the Job',
     blurb: 'Reusable organizational patterns for technical writing under real deadline pressure.',
     href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
+    readLabel: 'Read the piece',
+    thumb: '/img/samples/alistapart-article.png',
+  },
+  {
+    meta: 'STC Intercom · May 2019',
+    title: 'Content Strategy in Action: Enabling Sales with Product Documentation',
+    blurb: 'How documentation structure became a sales enablement asset.',
+    href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
+    readLabel: 'Read the piece',
+    thumb: '/img/samples/stc-intercom-article.png',
+  },
+  {
+    meta: 'Overview Guide · Oracle Utilities Docs',
+    title: 'Opower Digital Self Service—Energy Management Overview',
+    blurb: 'How the Energy Use view surfaces solar and bidirectional energy data for residential customers.',
+    href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy-use-view-residential.html#GUID-34357E57-D562-412F-9DBA-ED8D9EEA431A',
+    readLabel: 'Read the documentation',
+    thumb: '/img/samples/dss-solar-bidirectional.png',
+  },
+  {
+    meta: 'User Guide · Oracle Utilities Docs',
+    title: 'Opower Analytics Visualization User Guide',
+    blurb: 'How subject areas, measures, and attributes come together to build a visualization from scratch.',
+    href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
+    readLabel: 'Read the documentation',
+    thumb: '/img/samples/av-user-guide.png',
+  },
+  {
+    meta: 'Specification · Oracle Utilities Docs',
+    title: 'Data Transfer Specifications',
+    blurb: 'How tiered rate plan files link together through shared rate_plan_identifier and rate_component fields.',
+    href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
+    readLabel: 'Read the documentation',
+    thumb: '/img/samples/data-transfer-spec.png',
   },
 ];
 
 const pipelineStages = ['Lint', 'Link Check', 'Build', 'Deploy'];
 
 export default function Home() {
+  const {withBaseUrl} = useBaseUrlUtils();
   return (
     <Layout
       title="Richard Rabil"
@@ -37,7 +69,7 @@ export default function Home() {
             Principal Technical Writer — AI Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating documentation that humans trust—and that scales over time.
+            Creating scalable documentation that humans trust.
           </h1>
           <p className={styles.subhead}>
             Hi, I'm Richard. Welcome to my portfolio. I write technical documentation for human and AI consumers, and build content pipelines and governance frameworks to keep the content reliable as products and systems evolve.
@@ -68,7 +100,7 @@ export default function Home() {
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
-              <h3>AI Knowledge Architecture</h3>
+              <h3>AI Knowledge Management</h3>
               <p>
                 I build AI knowledge assets and governance frameworks that enable teams and agents to work consistently and at scale. This site is 
                 proof of this practice: a docs-as-code pipeline that lints prose,
@@ -89,33 +121,42 @@ export default function Home() {
           <div className={styles.cardRow}>
             {samples.map((sample) => (
               <a
-                className={styles.card}
-                href={sample.href}
+                className={`${styles.card} ${sample.thumb ? styles.cardWithThumb : ''}`}
+                href={sample.internal ? withBaseUrl(sample.href) : sample.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={sample.title}>
-                <span className={styles.cardMeta}>{sample.meta}</span>
-                <h3>{sample.title}</h3>
-                <p>{sample.blurb}</p>
-                <span className={styles.cardRead}>
-                  Read the piece
-                  <svg
-                    className={styles.externalIcon}
-                    viewBox="0 0 24 24"
-                    width="14"
-                    height="14"
-                    aria-hidden="true">
-                    <path
-                      fill="currentColor"
-                      d="M7 17L17 7M17 7H9M17 7V15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fillOpacity="0"
-                    />
-                  </svg>
-                </span>
+                {sample.thumb && (
+                  <img
+                    className={styles.cardThumb}
+                    src={withBaseUrl(sample.thumb)}
+                    alt=""
+                  />
+                )}
+                <div className={styles.cardBody}>
+                  <span className={styles.cardMeta}>{sample.meta}</span>
+                  <h3>{sample.title}</h3>
+                  <p>{sample.blurb}</p>
+                  <span className={styles.cardRead}>
+                    {sample.readLabel}
+                    <svg
+                      className={styles.externalIcon}
+                      viewBox="0 0 24 24"
+                      width="14"
+                      height="14"
+                      aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M7 17L17 7M17 7H9M17 7V15"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fillOpacity="0"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </a>
             ))}
           </div>

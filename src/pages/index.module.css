@@ -131,6 +131,12 @@
 
 @media (max-width: 900px) {
   .cardRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardRow {
     grid-template-columns: 1fr;
   }
 }
@@ -142,7 +148,6 @@
   padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s ease, background 0.15s ease;
@@ -153,6 +158,60 @@
   background: var(--bg-surface-hover);
   text-decoration: none;
   color: inherit;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardWithThumb {
+  padding: 0 0 22px;
+  overflow: hidden;
+}
+
+.cardWithThumb .cardBody {
+  padding: 0 22px;
+}
+
+.cardThumb {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* below the samples-page mobile breakpoint, switch from a full-width
+   top image to a compact image-left shelf row so cards don't balloon */
+@media (max-width: 640px) {
+  .cardWithThumb {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .cardWithThumb .cardBody {
+    padding: 0;
+    gap: 8px;
+  }
+
+  .cardThumb {
+    width: 120px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+  }
+
+  .cardWithThumb h3 {
+    font-size: 1rem;
+  }
 }
 
 .cardMeta {
