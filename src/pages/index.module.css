@@ -71,6 +71,11 @@
   border: 1px solid var(--rule);
 }
 
+.btnIcon {
+  display: inline-block;
+  color: currentColor;
+}
+
 .btnGhost:hover {
   border-color: var(--text-muted);
   color: var(--text);
@@ -211,6 +216,10 @@
 
   .cardWithThumb h3 {
     font-size: 1rem;
+  }
+
+  .cardWithThumb p {
+    display: none;
   }
 }
 

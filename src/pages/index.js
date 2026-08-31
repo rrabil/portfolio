@@ -31,8 +31,8 @@ const samples = [
   },
   {
     meta: 'Overview Guide · Oracle Utilities Docs',
-    title: 'Opower Digital Self Service—Energy Management Overview',
-    blurb: 'How the Energy Use view surfaces solar and bidirectional energy data for residential customers.',
+    title: 'Opower Digital Energy Management',
+    blurb: 'The complete guide to the Digital Self Service energy management experience, from account overviews to solar and bidirectional usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy-use-view-residential.html#GUID-34357E57-D562-412F-9DBA-ED8D9EEA431A',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/dss-solar-bidirectional.png',
@@ -69,7 +69,7 @@ export default function Home() {
             Principal Technical Writer — AI Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating scalable documentation that humans trust.
+            Creating useful documentation at scale.
           </h1>
           <p className={styles.subhead}>
             Hi, I'm Richard. Welcome to my portfolio. I write technical documentation for human and AI consumers, and build content pipelines and governance frameworks to keep the content reliable as products and systems evolve.
@@ -77,6 +77,21 @@ export default function Home() {
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/about">
               About Me
+              <svg
+                className={styles.btnIcon}
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                aria-hidden="true">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M13 6l6 6-6 6"
+                />
+              </svg>
             </Link>
             <Link className={styles.btnGhost} to="/docs/portfolio/samples">
               View My Work
@@ -95,15 +110,15 @@ export default function Home() {
               <p>
                 I bring over eighteen years of experience in technical writing and knowledge
                 management. I'm an expert in researching and organizing complex technical information, designing
-                attractive documents, turning complex jargon into clear content, and enabling users (and agents!) to do their tasks correctly. I hold a master's degree in technical communication.  
+                attractive documents, and creating documentation that people actually read and find useful. I hold a master's degree in technical communication.
               </p>
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
               <h3>AI Knowledge Management</h3>
               <p>
-                I build AI knowledge assets and governance frameworks that enable teams and agents to work consistently and at scale. This site is 
-                proof of this practice: a docs-as-code pipeline that lints prose,
+                I build AI knowledge assets and governance frameworks that enable teams and agents to work consistently and at scale. This site is
+                proof: a docs-as-code pipeline that lints prose,
                 validates links, and deploys vetted content.
               </p>
             </div>
