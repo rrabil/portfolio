@@ -15,9 +15,13 @@ import styles from './about.module.css';
   />
 </div>
 
-I'm a writer at heart, and always will be–a technical writer who appreciates the role of science and technology in society, and wants to help people use it well. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs talented, conscientious communicators who can craft clear and effective documentation about what we build. That's one reason why, after finishing my BA in professional writing, I went on to earn a master's in technical communication, where I went into deeper into theory and practice. I have more than 18 years of experience in the field, and am now weaving AI into every part of what I do.
+I'm a writer at heart, and always will be–a technical writer who appreciates the role of science and technology in society, and wants to help people use it well. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs talented, conscientious communicators who can craft useful documentation about what we build. That's one reason why, after finishing my BA in professional writing, I went on to earn a master's in technical communication, where I went into deeper into theory and practice. I have more than 18 years of experience in the field.
 
-## A Systems Mindset
+## Creating Useful and Attractive Docs
+
+I believe documentation is only as good as its ability to actually get used. That means writing content that's accurate and easy to find, but also visually approachable—clear layouts, thoughtful formatting, and design choices that invite people to read what's in front of them instead of skimming past it.
+
+## Applying Systems Thinking
 
 Ever since entering the field I have always been interested in *systems* and *structure*: how to organize and design documentation so it can grow in a sustainable way. I'm constantly asking questions like:
 
@@ -35,6 +39,6 @@ In addition to researching and publishing user-friendly docs, I now regularly ap
 
 This combination–seasoned technical writer and AI-augmented knowledge manager / knowledge architect / content engineer–is what I bring to the table.
 
-In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline. See my [how I built this site](/how-i-built-this) for more information.
+In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline—but I'm still working out where AI belongs in that pipeline and where it doesn't. I lean on it to accelerate drafting, structure, and consistency checks, while treating human judgment as the final word on accuracy, nuance, and trust. See my [how I built this site](/how-i-built-this) for more information.
 
 For a closer look at my published work and my experience, see my [portfolio samples](/docs/portfolio/samples) and my [resume](/resume). If you would like to get in touch with me, please reach out on [LinkedIn](https://www.linkedin.com/in/rrabil/).
