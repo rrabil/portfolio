@@ -39,6 +39,6 @@ In addition to researching and creating user-friendly docs, I now regularly appl
 
 This combination–seasoned technical writer and AI-augmented knowledge manager / knowledge architect / content engineer–is what I bring to the table.
 
-In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline—but I'm still working out where AI belongs in that pipeline and where it doesn't. See  [how I built this site](/how-i-built-this) for more information.
+In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline—but I'm still working out where AI belongs in that pipeline and where it doesn't. See [how I built this site](/how-i-built-this) for more information.
 
 For a closer look at my published work and my experience, see my [portfolio samples](/docs/portfolio/samples) and my [resume](/resume). If you would like to get in touch with me, please reach out on [LinkedIn](https://www.linkedin.com/in/rrabil/).
