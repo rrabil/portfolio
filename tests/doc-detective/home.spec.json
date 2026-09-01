@@ -1,0 +1,56 @@
+{
+  "specId": "Home page - renders and navigates to Work",
+  "tests": [
+    {
+      "testId": "Home page loads and shows the hero and Selected Work section",
+      "description": "Verifies the homepage renders its hero headline and the Selected Work section, not just that the URL returns 200 (Lychee already covers that).",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Creating useful documentation at scale\\./"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/A few things that shipped\\./"
+          }
+        },
+        {
+          "screenshot": {
+            "path": "home.png",
+            "directory": "screenshots",
+            "overwrite": "aboveVariation"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "View My Work navigates from the homepage to the Work samples page",
+      "description": "Checks the actual in-browser click, not just that the target URL resolves \u00e2\u20ac\u201d catches a broken onClick/router issue that a link-checker can't.",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/View My Work/",
+            "click": true
+          }
+        },
+        { "wait": 1500 },
+        {
+          "find": {
+            "elementText": "/This page represents a sample of my published, production work/"
+          }
+        }
+      ]
+    }
+  ]
+}
