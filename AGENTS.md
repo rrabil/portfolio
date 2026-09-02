@@ -50,18 +50,26 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
                              a topic as a subsection, split it into its own doc once
                              there's enough written to justify it, and link out to it
                              from the overview page's placeholder section)
-/src/pages                → top-level routes: index.js (home), about.md, resume.md,
+/src/pages                → top-level routes: index.js (home), home.md (hand-authored
+                             Markdown twin of index.js, excluded from routing — see
+                             "Machine-readable content layer"), about.md, resume.md,
                              api-sample.md, how-i-built-this.md,
                              documentation-pipeline-portfolio.md, doc-detective-examples.md
                              (last two exist but aren't in nav yet — see Navigation above)
 /src/css, /src/components  → shared styles and React components
 /api                       → placeholder for the fictional OpenAPI spec (not yet built)
+/scripts                   → build-time Node scripts, run via npm lifecycle hooks
+  /scripts/generate-llm-content.mjs → postbuild step, see "Machine-readable content layer"
+  /scripts/lib/pages.mjs    → shared route/frontmatter logic for that script and its checks
 /checks                    → self-healing docs components, one module per check
   /checks/link-checker      → currently just documents that Lychee (in CI) fills this role
+  /checks/md-twin-checker   → verifies every page has a Markdown twin + alternate-link tag
+  /checks/llms-txt-checker  → verifies llms.txt matches the site's actual pages
 /styles                    → Vale style packages; styles/Google fetched via `vale sync`
                              (not tracked in git), styles/config/ holds the project vocab
 /.claude                   → local Claude Code settings (gitignored except settings.local.json)
-/.github/workflows/pages.yml → single CI/CD workflow: lint → link-check → build → deploy
+/.github/workflows/pages.yml → single CI/CD workflow: lint → link-check → build →
+                             machine-readable-checks → deploy
 static/                    → images, favicon, .nojekyll
 ```
 
@@ -71,8 +79,9 @@ One workflow, four sequential jobs, each gated on the previous via `needs`:
 
 1. **lint** — installs Vale directly (not a third-party Action — see "Where judgment mattered" on the How I Built This page for why), runs `vale sync` then `vale docs/ src/pages/`.
 2. **link-check** — runs Lychee (`lycheeverse/lychee-action`) against `docs/**/*.md`, `src/pages/**/*.md`, and root `*.md`, configured via `lychee.toml`. Runs with `fail: false`: broken links are reported but do **not** block the pipeline — a deliberate call to keep external-link rot from blocking deploys of otherwise-good content.
-3. **build** — `npm ci` + `npm run build`; uploads the `build/` output as an artifact.
-4. **deploy** — downloads the build artifact and publishes to GitHub Pages via `actions/deploy-pages`. Only runs on a push to `main` (not on PRs), so nothing publishes without an actual merge.
+3. **build** — `npm ci` + `npm run build`, which also runs `scripts/generate-llm-content.mjs` as a `postbuild` step (see "Machine-readable content layer"); uploads the `build/` output as an artifact.
+4. **machine-readable-checks** — downloads the build artifact, runs `checks/md-twin-checker` and `checks/llms-txt-checker` against it. Blocks `deploy` on failure.
+5. **deploy** — downloads the build artifact and publishes to GitHub Pages via `actions/deploy-pages`. Only runs on a push to `main` (not on PRs), so nothing publishes without an actual merge.
 
 Runs on push/PR to `main` and on manual `workflow_dispatch`.
 
@@ -85,7 +94,20 @@ Runs on push/PR to `main` and on manual `workflow_dispatch`.
 - Future checks (backlog, not yet built): broken image references, heading-anchor drift, front-matter/metadata validation.
 - Adding a new check should mean adding a new module, not rewriting the runner or existing checks.
 
+## Machine-readable content layer
+
+GitHub Pages is a static host with no server-side content negotiation, so agents can't get plain Markdown from a page by sending an `Accept` header — the workaround is a predictable, always-present parallel file per page, discovered via a standard `<link rel="alternate">` tag and indexed by an `llms.txt`, all produced automatically at build time (`scripts/generate-llm-content.mjs`, run as npm's `postbuild` after `docusaurus build`):
+
+- Every page built from a Markdown source (`docs/**/*.md`, `src/pages/**/*.md`) gets its raw Markdown copied to `<route>/index.md` next to its generated `<route>/index.html` — e.g., `about.md` → `/about/index.html` and `/about/index.md`.
+- Every generated `<route>/index.html` gets `<link rel="alternate" type="text/markdown" href="…">` injected into its `<head>`, pointing at that page's twin.
+- `llms.txt` is regenerated fresh at the site root on every build, listing every page's title, description (from frontmatter — added where missing), and URL. Never hand-edit it.
+- The homepage is a deliberate special case: `index.js` is hand-written React with no Markdown source, so `src/pages/home.md` is a **hand-authored** Markdown twin — excluded from Docusaurus's own page routing (`docusaurus.config.js` → `pages.exclude`) so it doesn't also render as a real `/home` page, but still copied to `/index.md` and linked from `/index.html` by the same build step. Its `llms.txt` entry is hardcoded in the generator script rather than read from frontmatter, since there's no "real" content page backing it — keep that entry in sync with `home.md` by hand if either changes.
+- `checks/md-twin-checker` and `checks/llms-txt-checker` verify this output independently, as a safety net on top of automatic regeneration (e.g., catching a manual/partial deploy that skipped the build step) — not a substitute for it.
+- True `Accept`-header content negotiation (serving different content from the same URL) is explicitly out of scope — GitHub Pages can't do it, and client-side JS workarounds were deliberately rejected in favor of this plain-parallel-file approach.
+
 ## Page content notes
+
+**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Management panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the four-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
 **About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 hide_table_of_contents: false
+title: Work
+description: Published, production work spanning technical writing, information architecture, and AI knowledge systems.
 ---
 
 import SampleGrid from '@site/src/components/SampleGrid';

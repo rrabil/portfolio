@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Evaluating and merging third-party skills
+description: A case study in judgment applied to off-the-shelf AI tooling—comparing and merging two third-party AI-editing skills.
 ---
 
 # Evaluating and merging third-party skills
