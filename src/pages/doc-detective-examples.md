@@ -23,12 +23,12 @@ A representative step, from `home.spec.json`:
 
 ```json
 {
-  "testId": "View My Work navigates from the homepage to the Work samples page",
+  "testId": "The primary work CTA navigates from the homepage to the Work samples page",
   "steps": [
     { "goTo": { "url": "/" } },
-    { "find": { "elementText": "/View My Work/", "click": true } },
+    { "find": { "selector": "a[class*='btnGhost'][href*='/docs/portfolio/samples']", "moveTo": true, "click": true } },
     { "wait": 1500 },
-    { "find": { "elementText": "/This page represents a sample of my published, production work/" } }
+    { "find": { "selector": "h1", "elementText": "/Work/" } }
   ]
 }
 ```
@@ -51,9 +51,11 @@ The first full run wasn't clean, and two of the three failures were genuinely in
 
 **Heading matches were failing on exact text.** `elementText` does an exact match against an element's full visible text by default. Every heading-level check (`Work Experience`, `Technical Writing & Documentation`, and others) failed with "Element not found within timeout," while plain paragraph text matched fine. The cause: Docusaurus renders a hash-link anchor alongside every H2/H3 for permalinking, and the element's computed text no longer equals the bare heading string. The fix was switching those checks to Doc Detective's substring-match syntax (wrapping the value in `/slashes/`) instead of assuming exact text would work—same lesson as the MDX-comment fix on [How I Built This](/how-i-built-this): the first plausible-looking fix isn't automatically the right one until you check what actually changed.
 
-**A click that reported success but didn't navigate.** The Work page's link to this very page—"Doc Detective examples"—matched by text and reported `Clicked element`, but the following assertion on the destination page still failed. A screenshot taken immediately after the click showed the browser hadn't moved at all; it was still on the Work page. Text-based element matching inside a paragraph can locate and register a click on an element without it being scrolled into an actionable position, so the click event fires but doesn't land where the browser thinks it's landing. The fix: target the link by its actual `href` with a CSS selector instead of its display text, and add an explicit `moveTo: true` scroll-into-view immediately before the click. After that change, the same test passed cleanly on the first try.
+**A click that reported success but didn't navigate.** The Work page's link to this very page—"Doc Detective examples"—matched by text and reported `Clicked element`, but the following assertion on the destination page still failed. A screenshot taken immediately after the click showed the browser hadn't moved at all; it was still on the Work page. Text-based element matching inside a paragraph can locate an element and register a click against it without the element being scrolled into an actionable position, so the click event fires but doesn't land where the browser thinks it's landing. The fix: target the link by its actual `href` with a CSS selector instead of its display text, and add an explicit `moveTo: true` scroll-into-view immediately before the click. After that change, the same test passed cleanly on the first try.
 
 That second one is the more useful finding: a green "Clicked element" result was, on its own, a false signal. The test suite's own log said the step succeeded; the actual browser state said otherwise. Screenshotting the failure rather than trusting the reported step status is what caught it—the same discipline the CI pipeline needed when a linting Action's exit code silently overrode a real failure.
+
+**Marketing copy shouldn't be a test fixture.** The first version of `home.spec.json` asserted the hero headline's exact wording. That's the wrong thing to pin: the headline is prose meant to be edited freely and often, and a test that fails on every copy tweak trains you to stop trusting (or running) the suite at all. The fix was a deliberate split, not a blanket loosening: copy that's meant to change—the headline, the subhead—gets a structural check only (an `h1` exists, has non-empty text), while things that identify structure or drive behavior—the Work page's title, the CTA's href and click target—still get pinned. Confirmed by editing the headline to arbitrary throwaway text and rerunning: the suite passed clean, no spec edit required. It also surfaced a second, smaller issue: the CTA's own `href` isn't a unique selector on this page (the same URL appears in the navbar, the CTA, "View More Samples," and the footer), so the click step needed the button's own class scoping it, not just its destination.
 
 ## Running it yourself
 
