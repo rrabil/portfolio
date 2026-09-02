@@ -13,7 +13,7 @@ This page documents a small, real test suite against this site—not a fictional
 
 Three specs, six tests, in [`tests/doc-detective/`](https://github.com/rrabil/portfolio/tree/main/tests/doc-detective):
 
-**`home.spec.json`**—the homepage renders its hero headline and Selected Work section, and clicking "View My Work" actually navigates to the Work samples page (not just that `/docs/portfolio/samples` resolves as a URL—Lychee already confirms that; this confirms the click itself works).
+**`home.spec.json`**—the homepage renders a hero headline and at least one Selected Work card, and the primary work CTA actually navigates to the Work samples page when clicked (not just that `/docs/portfolio/samples` resolves as a URL—Lychee already confirms that; this confirms the click itself works). The headline check doesn't pin exact wording—see [Where judgment mattered](#where-judgment-mattered) below.
 
 **`work-samples.spec.json`**—all four category sections on the Work page render (a link-checker sees a 200 even if an MDX component's data silently failed to populate a section), and the page's own link to this Doc Detective Examples page is live and clickable.
 
