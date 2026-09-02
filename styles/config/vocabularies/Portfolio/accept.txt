@@ -27,3 +27,12 @@ config
 typo'd
 iaKm
 aiKnowledge
+permalinking
+[Ss]creenshotting
+dev
+gitignored
+JUnit
+allowlists?
+CTA'?s?
+href
+navbar

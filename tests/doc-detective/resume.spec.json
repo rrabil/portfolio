@@ -1,0 +1,50 @@
+{
+  "specId": "Resume page - renders and its outbound links resolve",
+  "tests": [
+    {
+      "testId": "Resume page renders name, headline, and Work Experience section",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/resume"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Richard Rabil, Jr\\./"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Principal Technical Writer \\& AI Knowledge Architect/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Work Experience/"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "Resume's LinkedIn link is live",
+      "description": "checkLink against the real external target, distinct from the site's own Lychee run (which checks the same URL but only as a string in source, not as a resolved DOM href).",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/resume"
+          }
+        },
+        {
+          "checkLink": {
+            "url": "https://www.linkedin.com/in/rrabil",
+            "statusCodes": [
+              200,
+              999
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

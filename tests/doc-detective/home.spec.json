@@ -1,0 +1,37 @@
+{
+  "specId": "Home page - renders and navigates to Work",
+  "tests": [
+    {
+      "testId": "Home page loads and shows the hero and Selected Work section",
+      "description": "Verifies the homepage renders a hero headline and at least one Selected Work card, not just that the URL returns 200 (Lychee already covers that). Deliberately doesn't assert exact copy—the headline and taglines here are marketing prose that changes often; these checks only confirm the elements render with real content, structural regressions (an element disappearing, the samples array failing to render) still fail loudly.",
+      "steps": [
+        { "goTo": { "url": "/" } },
+        { "find": { "selector": "h1", "elementText": "/.+/" } },
+        { "find": { "selector": "[class*='card_']" } },
+        {
+          "screenshot": {
+            "path": "home.png",
+            "directory": "screenshots",
+            "overwrite": "aboveVariation"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "The primary work CTA navigates from the homepage to the Work samples page",
+      "description": "Targets the hero CTA by its structural class and href, not its visible label, so renaming the button text (e.g. \"View My Work\" to something else) doesn't break this test—the page links to /docs/portfolio/samples from four places (navbar, hero CTA, \"View More Samples\", footer), so href alone isn't unique; the CTA's own class scopes it to the one in the hero. Checks the actual in-browser click, not just that the target URL resolves—catches a broken onClick/router issue that a link-checker can't. The destination check uses the Work page's title (\"Work\"), a stable IA/page-title label rather than marketing copy.",
+      "steps": [
+        { "goTo": { "url": "/" } },
+        {
+          "find": {
+            "selector": "a[class*='btnGhost'][href*='/docs/portfolio/samples']",
+            "moveTo": true,
+            "click": true
+          }
+        },
+        { "wait": 1500 },
+        { "find": { "selector": "h1", "elementText": "/Work/" } }
+      ]
+    }
+  ]
+}

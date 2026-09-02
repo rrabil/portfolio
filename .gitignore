@@ -23,6 +23,10 @@ yarn-error.log*
 styles/*
 !styles/config/
 
+# Doc Detective run output (regenerated on every run; specs under tests/doc-detective/ are tracked)
+/tests/doc-detective-results/
+/tests/doc-detective/screenshots/
+
 # Microsoft Office lock files
 ~$*.pptx
 ~$*.docx

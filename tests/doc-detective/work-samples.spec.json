@@ -1,0 +1,65 @@
+{
+  "specId": "Work samples page - sections render and the Doc Detective cross-link is live",
+  "tests": [
+    {
+      "testId": "Work page renders all four category sections",
+      "description": "Confirms the page's four H2 sections are actually present in rendered output \u00e2\u20ac\u201d MDX component data (SampleGrid items) failing silently would still return a 200 that Lychee sees as fine.",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/docs/portfolio/samples"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Technical Writing \\& Documentation/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Information Architecture \\& Knowledge Management/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/AI \\& Knowledge Architecture/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Career \\& Craft Perspectives/"
+          }
+        },
+        {
+          "find": {
+            "elementText": "/Agents and Skills/"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "Work page links to a live Doc Detective Examples page",
+      "description": "This is the page's own link to the page these tests document \u00e2\u20ac\u201d a real regression check that the cross-link doesn't rot as both pages change.",
+      "steps": [
+        {
+          "goTo": {
+            "url": "/docs/portfolio/samples"
+          }
+        },
+        {
+          "find": {
+            "selector": "a[href*='doc-detective-examples']",
+            "moveTo": true,
+            "click": true
+          }
+        },
+        { "wait": 1500 },
+        {
+          "find": {
+            "elementText": "/Doc Detective Examples/"
+          }
+        }
+      ]
+    }
+  ]
+}
