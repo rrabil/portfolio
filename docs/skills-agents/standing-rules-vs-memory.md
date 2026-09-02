@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Standing Rules vs. Accumulated Memory
+description: The distinction between human-authored standing rules and AI-accumulated memory, and skills built for this project.
 ---
 
 # Standing Rules vs. Accumulated Memory

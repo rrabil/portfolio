@@ -1,5 +1,6 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
+import {GlobExcludeDefault} from '@docusaurus/utils';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -37,6 +38,12 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/rrabil/portfolio/tree/main/',
+        },
+        pages: {
+          // home.md is a hand-authored Markdown twin of index.js for the
+          // machine-readable content layer (see scripts/generate-llm-content.mjs),
+          // not a page Docusaurus should route/render on its own.
+          exclude: [...GlobExcludeDefault, 'home.md'],
         },
         blog: false,
         theme: {
