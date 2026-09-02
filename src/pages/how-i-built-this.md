@@ -24,6 +24,8 @@ Each stage blocks the next, defined as four jobs in a single GitHub Actions work
 
 A single `AGENTS.md` file holds project context, content structure decisions, and standing rules for any AI agent working in this repository, so decisions stay consistent across sessions instead of being re-litigated every time. Claude Code did the implementation work: scaffolding, content drafting, CI configuration, and lint/vocabulary maintenance, under direction and review.
 
+For a closer, more mechanical look at this pipeline's actual configuration, see [Documentation Pipeline Portfolio](/documentation-pipeline-portfolio). [Doc Detective Examples](/doc-detective-examples) documents a real browser-based test suite that catches what Vale and Lychee can't—rendered content and in-browser navigation, not just prose style and link resolution.
+
 ## Where judgment mattered
 
 **A monitoring gap that made a broken check look healthy.** The CI pipeline originally used a third-party GitHub Action for prose linting, running in a local-reporter mode. It looked correct, but the Action's own exit code silently overrode the pass/fail signal regardless of severity—meaning content could fail every rule and the pipeline would still report success. Catching this required tracing through the Action's internals rather than accepting the first green checkmark. The fix: drop the Action, install the linter directly in CI, and run it as a plain shell command that trusts its own exit code.
