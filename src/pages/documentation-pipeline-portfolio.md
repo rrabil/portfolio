@@ -1,15 +1,15 @@
 ---
 title: Documentation Pipeline Portfolio
-description: A closer look at the lint, link-check, build, and deploy pipeline that gates this site.
+description: A closer look at the lint, link-check, build, machine-readable-checks, and deploy pipeline that gates this site.
 ---
 
 # Documentation Pipeline Portfolio
 
 [How I Built This](/how-i-built-this) tells the narrative version of this site's pipeline—the judgment calls, the near-misses. This page is the mechanical version: what's actually configured, why each piece is shaped the way it is, and what each stage does and doesn't catch.
 
-## The four gated jobs
+## The five gated jobs
 
-Everything lives in one GitHub Actions workflow, `.github/workflows/pages.yml`, with four jobs chained by `needs`: `lint` → `link-check` → `build` → `deploy`. Each job only starts if the one before it succeeds, so a failing lint run never reaches a build, and a failing build never reaches a deploy.
+Everything lives in one GitHub Actions workflow, `.github/workflows/pages.yml`, with five jobs chained by `needs`: `lint` → `link-check` → `build` → `machine-readable-checks` → `deploy`. Each job only starts if the one before it succeeds, so a failing lint run never reaches a build, and a failing build never reaches a deploy.
 
 `deploy` carries an extra condition beyond `needs`: `if: github.ref == 'refs/heads/main' && github.event_name == 'push'`. That means every pull request runs lint, link-check, and build—so a PR shows whether it's safe to merge—but only a push to `main` can publish. A concurrency group (`group: "pages"`, `cancel-in-progress: false`) means overlapping runs queue instead of racing each other or getting killed mid-deploy.
 
@@ -41,6 +41,15 @@ Lychee checks every link in Markdown source (not the built HTML) across `docs/`,
 
 Standard Docusaurus build: `npm ci` for a clean, lockfile-exact install, then `npm run build`. The `build/` output is uploaded as a workflow artifact so the `deploy` job can consume it without rebuilding.
 
+## Machine-readable checks
+
+```bash
+node checks/md-twin-checker/check.mjs
+node checks/llms-txt-checker/check.mjs
+```
+
+This job downloads the same `build/` artifact and runs two checks against it: `md-twin-checker` confirms every built HTML page has a matching Markdown twin (`<route>/index.md`) and an `<link rel="alternate" type="text/markdown">` tag pointing at it; `llms-txt-checker` confirms the root `llms.txt` file actually matches the site's real pages. Both are safety nets on top of automatic regeneration at build time (`scripts/generate-llm-content.mjs`)—not the mechanism itself, a check that the mechanism worked. A failure here blocks `deploy` the same as a failed build.
+
 ## Deploy
 
 `deploy` downloads that same `build/` artifact (guaranteeing deploy ships exactly what build produced, not a fresh rebuild that could drift), configures GitHub Pages, uploads the artifact in the Pages-specific format, and publishes via `actions/deploy-pages`.
@@ -49,4 +58,4 @@ Standard Docusaurus build: `npm ci` for a clean, lockfile-exact install, then `n
 
 Vale and Lychee both work on *source*, checking prose style and that links resolve. Neither one opens a browser. Neither one knows whether a heading that's supposed to render actually renders, whether a page's own internal navigation link actually navigates when clicked, or whether an MDX component silently failed to render its data while the page still returned a clean 200.
 
-That gap is what [Doc Detective Examples](/doc-detective-examples) covers: a small, real Doc Detective test suite that drives an actual browser against this site and checks rendered output and in-browser interaction, not just source text. It runs locally today (`npm run test:docs`), not yet as a fifth gated CI stage—see that page for the honest state of it, including a real bug the process caught.
+That gap is what [Doc Detective Examples](/doc-detective-examples) covers: a small, real Doc Detective test suite that drives an actual browser against this site and checks rendered output and in-browser interaction, not just source text. It runs locally today (`npm run test:docs`), not yet as an additional gated CI stage—see that page for the honest state of it, including a real bug the process caught.

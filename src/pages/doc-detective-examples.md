@@ -7,7 +7,7 @@ description: A real, working Doc Detective test suite for this site—what it ch
 
 The [pipeline](/documentation-pipeline-portfolio) lints prose and checks that links resolve, but neither Vale nor Lychee opens a browser. Neither can tell you whether a heading that's supposed to render actually renders, or whether clicking a link on the live page actually navigates. [Doc Detective](https://doc-detective.com) fills that gap: it drives a real browser against the site and checks rendered output and in-browser interaction directly, the same way a user would experience it.
 
-This page documents a small, real test suite against this site—not a fictional demo. It runs locally today via `npm run test:docs`; it isn't yet wired into the GitHub Actions pipeline as a fifth gated stage (see [Documentation Pipeline Portfolio](/documentation-pipeline-portfolio) for what is gated today).
+This page documents a small, real test suite against this site—not a fictional demo. It runs locally today via `npm run test:docs`; it isn't yet wired into the GitHub Actions pipeline as an additional gated stage (see [Documentation Pipeline Portfolio](/documentation-pipeline-portfolio) for the five that are gated today).
 
 ## What's tested
 

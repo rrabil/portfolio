@@ -10,23 +10,23 @@ import {technicalWriting, iaKm, aiKnowledge, careerCraft} from '@site/src/compon
 
 # Work
 
-This page represents a sample of my published, production work spanning technical writing, information architecture, and AI knowledge systems. Where the original venue is paywalled, I've linked to an archived copy on my blog instead. My AI knowledge architecture work is mostly proprietary and can't be shared directly—that section points to writing about the practice, to this site as a working example, and to my [resume](/resume) for project specifics.
+Below is a sample of my published work spanning technical writing, information architecture, and AI knowledge management. In some cases the original venue is paywalled, and I've linked to an archived copy on my blog instead. My AI knowledge management work is mostly proprietary, so that section points to my own writing about the practice, as well as this site as a working example (and to my [resume](/resume) for project specifics).
 
 ## Technical Writing & Documentation
 
-Published, production documentation for enterprise software.
+Published artifacts for enterprise software and other sundry technical use cases.
 
 <SampleGrid items={technicalWriting} />
 
 ## Information Architecture & Knowledge Management
 
-Published thinking on organizing, scaling, and governing documentation ecosystems.
+Published thinking on organizing, scaling, and governing documentation systems.
 
 <SampleGrid items={iaKm} />
 
-## AI & Knowledge Architecture
+## AI & Knowledge Management
 
-The AI knowledge architecture work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and so on—documented in more detail in [How I Built This Site](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
+Most of the AI knowledge architecture and management work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and so on—documented in more detail in [How I Built This Site](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
 
 <SampleGrid items={aiKnowledge} />
 

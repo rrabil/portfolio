@@ -4,7 +4,7 @@ Tool-agnostic project context for AI coding agents (Claude Code, Codex, or other
 
 ## Project overview
 
-Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Systems Architect. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to show mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture for external job search positioning.
+Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Management. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to demonstrate mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture.
 
 Follows common docs-as-code portfolio conventions: a Markdown/MDX static site generator, automated prose linting, automated link checking, and a transparent "how this was built" narrative page — general best practices for demonstrating technical-writing and AI-collaboration credibility.
 
@@ -75,9 +75,9 @@ static/                    → images, favicon, .nojekyll
 
 ## CI pipeline (GitHub Actions — `.github/workflows/pages.yml`)
 
-One workflow, four sequential jobs, each gated on the previous via `needs`:
+One workflow, five sequential jobs, each gated on the previous via `needs`:
 
-1. **lint** — installs Vale directly (not a third-party Action — see "Where judgment mattered" on the How I Built This page for why), runs `vale sync` then `vale docs/ src/pages/`.
+1. **lint** — installs Vale directly (not a third-party Action — see "Editorial judgment" on the How I Built This page for why), runs `vale sync` then `vale docs/ src/pages/`.
 2. **link-check** — runs Lychee (`lycheeverse/lychee-action`) against `docs/**/*.md`, `src/pages/**/*.md`, and root `*.md`, configured via `lychee.toml`. Runs with `fail: false`: broken links are reported but do **not** block the pipeline — a deliberate call to keep external-link rot from blocking deploys of otherwise-good content.
 3. **build** — `npm ci` + `npm run build`, which also runs `scripts/generate-llm-content.mjs` as a `postbuild` step (see "Machine-readable content layer"); uploads the `build/` output as an artifact.
 4. **machine-readable-checks** — downloads the build artifact, runs `checks/md-twin-checker` and `checks/llms-txt-checker` against it. Blocks `deploy` on failure.
@@ -107,7 +107,9 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 ## Page content notes
 
-**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Management panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the four-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
+**Backlog idea (not scheduled):** consolidate How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples into a single page—currently three separate pages with real content overlap (all three narrate the same CI pipeline at different levels of detail). Plan: land a consistency pass across all three first (this one), then do a follow-up pass to merge/simplify. Revisit after the consistency pass lands.
+
+**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Management panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
 **About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 
@@ -132,12 +134,12 @@ This distinction maps directly to the governance-framework language already used
 
 **Resume** (`src/pages/resume.md`) — written, currently a single Markdown/HTML page only (no separate downloadable PDF yet — the "ATS-parseable PDF" plan from earlier drafts of this file has not been built). Full work history (Oracle, Opower, SAIC, Digital Infuzion), tools table, publications, awards. If a PDF version is added later, keep it in sync but not identical — the HTML version can stay more expansive with inline portfolio links.
 
-## Career positioning context (for content generation, not code)
+## Messaging & positioning context (for content generation, not code)
 
-- Dual identity: Principal Technical Writer + AI Knowledge Systems Architect.
+- Dual identity: Principal Technical Writer + AI Knowledge Management.
 - Differentiator to emphasize throughout the site: judgment over tool-fluency — documented evidence of knowing when and why to override AI output, not just AI tool use itself.
 - New, related differentiator to start weaving in: serving human readers and AI agents as first-class audiences at once, not sequentially — content and structure (this file included) designed to be equally legible to a person and to an agent parsing it. Frame this as a natural extension of the governance-framework work, not a separate gimmick.
-- Resume stays broad/high-level; specific narrow evidence is reserved for cover letters, interviews, and site narrative pages like "How I Built This" — not for resume bullets.
+- Resume stays broad/high-level; specific narrow evidence is reserved for other written materials and site narrative pages like "How I Built This" — not for resume bullets.
 - Domain expertise to leverage: DITA/Oxygen migrations, docs-as-code, Confluence governance, Oracle Utilities domain knowledge (usage data, billing, meter readings).
 
 ## Standing rules for agents working in this repo
