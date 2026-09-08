@@ -7,7 +7,7 @@ export const technicalWriting = [
   {
     meta: 'Overview Guide',
     title: 'Opower Digital Energy Management',
-    blurb: 'The complete guide to the Digital Self Service energy management experience, from account overviews to solar and bidirectional usage.',
+    blurb: 'The complete guide to the Digital Self Service - Energy Management experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy-use-view-residential.html#GUID-34357E57-D562-412F-9DBA-ED8D9EEA431A',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/dss-solar-bidirectional.png',
@@ -15,7 +15,7 @@ export const technicalWriting = [
   {
     meta: 'Design Document',
     title: 'High-Level Game Design Document',
-    blurb: 'A full design spec for an original game concept, redacted for public sharing.',
+    blurb: 'A design spec for an original game concept, redacted for public sharing.',
     href: '/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf',
     readLabel: 'View PDF',
     thumb: '/img/samples/game-design-document.png',
@@ -24,7 +24,7 @@ export const technicalWriting = [
   {
     meta: 'Instructional Design',
     title: 'How to Generate Great-Looking Output Using Adobe RoboHelp',
-    blurb: 'A recorded walkthrough of formatting production-quality output from a RoboHelp project.',
+    blurb: 'A recorded tutorial on how to format production-quality output from a RoboHelp project.',
     href: 'https://www.youtube.com/watch?v=fbQ2ypdel0I',
     readLabel: 'Watch the video',
     thumb: '/img/samples/robohelp-video.png',
@@ -32,7 +32,7 @@ export const technicalWriting = [
   {
     meta: 'Overview Guide',
     title: 'Opower Business Customer Engagement Overview',
-    blurb: 'How the Power View shows a business customer’s demand across a given time period.',
+    blurb: 'Documentation about an energy management software-as-a-service product for business owners who want to save energy.',
     href: 'https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/power-view.html#GUID-2CA91056-B3C6-49EE-B20F-BC25AEF63EF1',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/bce-power-view.png',
@@ -40,7 +40,7 @@ export const technicalWriting = [
   {
     meta: 'Specification',
     title: 'Data Transfer Specifications',
-    blurb: 'How tiered rate plan files link together through shared rate_plan_identifier and rate_component fields.',
+    blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/data-transfer-spec.png',
@@ -48,7 +48,7 @@ export const technicalWriting = [
   {
     meta: 'Technical Report',
     title: 'Evaluation of Software Tools for Interactive Storytelling',
-    blurb: 'A comparative evaluation of authoring tools for branching, interactive narrative.',
+    blurb: 'A comparative evaluation of authoring tools for branching, interactive video game writing.',
     href: '/files/Rabil-Technical-Report-Software-Interactive-Storytelling.pdf',
     readLabel: 'View PDF',
     thumb: '/img/samples/technical-report-workflow.png',
@@ -57,7 +57,7 @@ export const technicalWriting = [
   {
     meta: 'User Guide',
     title: 'Opower Analytics Visualization User Guide',
-    blurb: 'How subject areas, measures, and attributes come together to build a visualization from scratch.',
+    blurb: 'How subject areas, measures, and attributes come together to build visualizations and inform business decisions.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/av-user-guide.png',
@@ -129,7 +129,7 @@ export const aiKnowledge = [
   {
     meta: 'Article · August 2026',
     title: 'On Delegating Tech Writing to AI: What We Gain and What We Lose',
-    blurb: 'What actually transfers well to AI-delegated technical writing, and what still requires a human.',
+    blurb: 'What actually transfers well to AI-delegated technical writing, and where there are risks to address.',
     href: 'https://richardrabil.com/2026/08/08/on-delegating-tech-writing-to-ai-what-we-gain-and-what-we-lose/',
     readLabel: 'Read the piece',
     thumb: '/img/samples/ai-delegating.png',
@@ -137,7 +137,7 @@ export const aiKnowledge = [
   {
     meta: 'Article · February 2026',
     title: 'Technical Writing Is Dead. Long Live Technical Writing!',
-    blurb: 'Why the role is changing shape rather than disappearing as AI reshapes documentation work.',
+    blurb: 'Why the role is changing rather than disappearing as AI reshapes documentation work.',
     href: 'https://richardrabil.com/2026/02/28/technical-writing-is-dead-long-live-technical-writing/',
     readLabel: 'Read the piece',
     thumb: '/img/samples/tw-is-dead.png',
@@ -188,7 +188,7 @@ export const careerCraft = [
   {
     meta: 'Article · August 2018',
     title: 'Do Technical Writers Dream of Arbortext Editor?',
-    blurb: 'A personal reflection on tools, craft, and identity in technical writing.',
+    blurb: 'A detailed analysis of the strengths and weaknesses of one of the most widely-used DITA XML authoring tools in the industry.',
     href: 'https://richardrabil.com/2018/08/10/do-technical-writers-dream-of-arbortext-editor/',
     readLabel: 'Read the piece',
     thumb: '/img/samples/arbortext-dream.png',
@@ -196,7 +196,7 @@ export const careerCraft = [
   {
     meta: 'Article · TechWhirl, March 2018',
     title: 'How to Be an Amazing Tech Comm Job Applicant: Tips from a Tech Comm Hiring Manager',
-    blurb: 'Hiring-manager advice for standing out as a technical communication job applicant.',
+    blurb: 'Hiring-manager advice for standing out as a technical writing job applicant.',
     href: 'https://techwhirl.com/how-to-be-amazing-tech-comm-job-applicant-tips-tech-comm-hiring-manager/',
     readLabel: 'Read the piece',
     thumb: '/img/samples/glasses-envelope.png',

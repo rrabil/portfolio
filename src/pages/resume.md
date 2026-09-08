@@ -1,13 +1,13 @@
 ---
 title: Resume
-description: Principal Technical Writer & AI Knowledge Architect—work experience, tools, and publications.
+description: Principal Technical Writer & AI Knowledge Management—work experience, tools, and publications.
 ---
 
 # Richard Rabil, Jr.
 
-**Principal Technical Writer & AI Knowledge Architect**
+**Principal Technical Writer | AI Knowledge Management**
 
-18+ years of SaaS and enterprise documentation experience. I write clear, useful technical content and build AI-enabled knowledge infrastructure—governance frameworks, lifecycle rules, editorial guidance, and reusable components—that keeps the content accurate, trustworthy, and scalable.
+18+ years of experience writing and managing technical docs at scale for SaaS and enterprise software.
 
 [LinkedIn](https://www.linkedin.com/in/rrabil) · [Samples](/docs/portfolio/samples) · [Blog](https://richardrabil.com/) · *Full resume available on request.*
 
@@ -18,12 +18,12 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 *Arlington, VA · April 2016–Present*
 
 - Use AI-assisted workflows to research, create, and maintain technical documentation for Oracle Utilities products, partnering with product managers, engineers, and other technical stakeholders to ensure content is accurate, user-friendly, and consistent across the portfolio.
-- Architect and administer a shared AI knowledge workspace for technical writers across multiple teams in the Global Industries Unit, establishing rules and workflows around approved prompts and team context so outputs stay consistent and trustworthy. Define and maintain standards for repeatable documentation tasks (reusable prompts, skills, and context files) to reduce variance and rework while keeping the system extensible. Deliver training and presentations to increase adoption and workflow alignment.
+- Architect and administer a shared AI knowledge workspace for technical writers across multiple teams in the Global Industries Unit, establishing rules and workflows around approved prompts and team context so outputs stay consistent and trustworthy. Define and maintain standards for repeatable documentation tasks (reusable prompts, skills, and context files) to reduce variance and rework while keeping the system extensible.
 - Manage and maintain team documentation standards (style guidance, structural templates, workspace templates, SOPs), ensuring consistency in the use of knowledge assets and deliverables.
 - Define rules and requirements for new AI workflows regarding when and how AI can be safely used to consume inputs, identify what information to include or exclude, and what constraints and testing criteria to follow when executing the workflow and evaluating results.
 - Define and manage lifecycle rules and workspace governance. Create wiki dashboards to track effort and status of AI workspace assets.
 - Research trends and best practices in KM, AI, and technical communication. Share findings on various team channels and inform ongoing innovation.
-- Led the migration of content in Madcap Flare to enterprise DITA/Oxygen. Designed and socialized standards for content reuse libraries, variables, condition tags, and image management to save time and promote quality and consistency across contributors.
+- Led the migration of content in Madcap Flare to enterprise DITA/Oxygen XML. Designed and socialized standards for content reuse libraries, variables, condition tags, and image management to save time and promote quality and consistency across contributors.
 - Led team-wide initiative to transform remaining print documentation to web-based documentation, following standard design patterns and best practices for web writing and usability.
 
 ### Opower—Senior Technical Writer
@@ -32,7 +32,7 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 - Created and maintained print and online documentation for energy efficiency SaaS products, working with product managers, engineers, and other stakeholders to ensure content was clear, well-organized, and accurate.
 - Led a cross-org initiative to design a full-lifecycle SOP knowledge system for Opower delivery teams. Conducted extensive SME interviews; defined the metadata and structural schema for parent/child content types; designed a scalable information architecture; and established a governance model to allow other contributors across the company to write and manage their own content faster and in a high-quality and scalable manner. Delivered adoption training and tracked content health signals using page metadata and macros.
-- Co-led a large initiative to design and implement a central, authoritative product knowledge base for use across the company. Researched the audiences and required metadata and information types. Designed and implemented information models, page templates, and workflows to organize and present the knowledge in a clear and user-friendly structure. Defined lifecycle rules for maintaining and retiring content through methods such as content reuse libraries, writing instructions, and archiving procedures. Partnered with teams to adopt the framework and scale a growing SaaS documentation portfolio.
+- Co-led a large initiative to design and implement a central, authoritative product [knowledge base](https://www.digitalapplied.com/blog/self-service-knowledge-base-design-2026-information-architecture-playbook) for use across the company. Researched the audiences and required metadata and information types. Designed and implemented information models, page templates, and workflows to organize and present the knowledge in a clear and user-friendly structure. Defined lifecycle rules for maintaining and retiring content through methods such as content reuse libraries, writing instructions, and archiving procedures. Partnered with teams to adopt the framework and scale a growing SaaS documentation portfolio.
 - Developed and implemented documentation standards (such as style guidelines, information models, templates, naming conventions, peer review checklists) that saved time, improved quality, and reduced redundancy.
 
 ### SAIC—Technical Writer/Editor
