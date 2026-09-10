@@ -30,7 +30,8 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "doc-detective": "^4.38.1"
+    "doc-detective": "^4.38.1",
+    "pa11y": "^9.0.0"
   },
   "browserslist": {
     "production": [
