@@ -31,8 +31,6 @@ Footer mirrors the same links under "Site" (Home, About Me, Work, Resume) and "M
 
 - API Sample (`/api-sample`)
 - Skills & Agents (`/docs/skills-agents/standing-rules-vs-memory`)
-- Documentation Pipeline Portfolio (`/documentation-pipeline-portfolio`)
-- Doc Detective Examples (`/doc-detective-examples`)
 
 These pages still exist as live routes and are still linked to directly from page content (e.g., the Work samples page's "Agents and Skills" section, the About page) — they're just not promoted to top-level nav yet. When a page is ready to graduate into nav, update this list and the actual navbar/footer config together so this section doesn't go stale again.
 
@@ -53,9 +51,7 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
 /src/pages                → top-level routes: index.js (home), home.md (hand-authored
                              Markdown twin of index.js, excluded from routing — see
                              "Machine-readable content layer"), about.md, resume.md,
-                             api-sample.md, how-i-built-this.md,
-                             documentation-pipeline-portfolio.md, doc-detective-examples.md
-                             (last two exist but aren't in nav yet — see Navigation above)
+                             api-sample.md, how-i-built-this.md
 /src/css, /src/components  → shared styles and React components
 /api                       → placeholder for the fictional OpenAPI spec (not yet built)
 /scripts                   → build-time Node scripts, run via npm lifecycle hooks
@@ -107,13 +103,13 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 ## Page content notes
 
-**Backlog idea (not scheduled):** consolidate How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples into a single page—currently three separate pages with real content overlap (all three narrate the same CI pipeline at different levels of detail). Plan: land a consistency pass across all three first (this one), then do a follow-up pass to merge/simplify. Revisit after the consistency pass lands.
+**Done (was a backlog idea):** How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples have been consolidated into a single page (`src/pages/how-i-built-this.md`). The three pages had real content overlap — all three narrated the same CI pipeline at different levels of detail. The two retired pages were archived outside the repo (under `Career/portfolio-archive/retired-pages/`) rather than only deleted, and they remain in git history at commit `367eb9d`.
 
 **Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Management panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
 **About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 
-**Work** (`docs/portfolio/samples.md`, nav item) — written. Existing published pieces (Document360 podcast, STC Intercom, A List Apart), each linking to the original external source rather than reproducing content. Home page surfaces the same three as "Selected Work" cards. Ends with an "Agents and Skills" section that cross-links to How I Built This, Documentation Pipeline Portfolio, Doc Detective Examples, and Skills & Agents — Work points outward to the docs-engineering side rather than duplicating it.
+**Work** (`docs/portfolio/samples.md`, nav item) — written. Existing published pieces (Document360 podcast, STC Intercom, A List Apart), each linking to the original external source rather than reproducing content. Home page surfaces the same three as "Selected Work" cards. Ends with an "Agents and Skills" section that cross-links to How I Built This (including its Content Pipeline and Doc Detective Checks sections) and Skills & Agents — Work points outward to the docs-engineering side rather than duplicating it.
 
 **Skills & Agents** (`docs/skills-agents/`, not yet in nav) — **overview page has placeholder subsections; one topic has real content.** `standing-rules-vs-memory.md` is the overview/index page: its own intro is still "Content coming soon" for the standing-rules-vs-memory distinction itself, plus two placeholder subsections (Skills; Claude.md/AGENTS.md). `evaluating-third-party-skills.md` is a real, written case study (comparing two third-party AI-editing skills and how they were merged) — it's the first topic to graduate from a placeholder subsection into its own doc, and the "Skills" subsection on the overview page links out to it. Intended distinction for the overview page's own content:
 
@@ -126,11 +122,15 @@ This distinction maps directly to the governance-framework language already used
 
 - Open constraint: real authenticated data access isn't feasible for a fictional/public demo. Current plan (static example responses, no live backend) is confirmed workable for now. Revisit only if a more dynamic demo becomes worthwhile later.
 
-**Documentation Pipeline Portfolio** (`src/pages/documentation-pipeline-portfolio.md`, not yet in nav) — **stub, not yet built.** Planned: a closer look at the lint/link-check/build/deploy pipeline as a portfolio artifact in its own right, distinct from the higher-level narrative on How I Built This.
+**How I Built This** (`src/pages/how-i-built-this.md`) — written. The consolidated home for everything about how this site is built; the former Documentation Pipeline Portfolio and Doc Detective Examples pages were merged into it. Five sections, in order: System Overview (Docusaurus/GitHub Pages/Actions), Content Pipeline (Vale, Lychee, md-twin-checker, llms-txt-checker), Doc Detective Checks (one subsection per spec in `tests/doc-detective/`), Skills (one subsection per skill), AGENTS.md (this file, as a "serve two audiences" artifact).
 
-**Doc Detective Examples** (`src/pages/doc-detective-examples.md`, not yet in nav) — **stub, not yet built.** Planned: examples of automated documentation testing using Doc Detective.
+Conventions on this page, apply them to any edit:
 
-**How I Built This** (`src/pages/how-i-built-this.md`) — written. Follows a build-transparency structure: the system (pipeline stages, what each stage catches) → where judgment mattered (concrete moments of catching or correcting AI output, e.g. a linting Action that silently swallowed failures, an MDX comment-syntax fix that solved the build error but not the actual linter-suppression goal) → what this proves. The specific disagreements/judgment calls are the point; do not skip to only the polished outcome. When new judgment-call moments happen during future work on this repo, this page is the place to add them.
+- Bold-label pattern is **Label:** with the colon *inside* the bold, not **Label**: — consistently, for every labeled paragraph.
+- Don't hardcode test results or counts that go stale. The Doc Detective section closes with a reproducibility line pointing at `tests/doc-detective/` and `npm run test:docs` instead.
+- Add a subsection here when a new spec or skill is added, so the page stays a complete inventory rather than a snapshot.
+
+Note: the earlier version of this page carried an "Editorial judgment" section (concrete moments of catching or correcting AI output — a linting Action that silently swallowed failures, an MDX comment-syntax fix that solved the build error but not the linter-suppression goal). The consolidated copy drops it. That material is preserved in the archive alongside the retired pages and in git history at `367eb9d`; if judgment-call narrative returns to the site, it needs a deliberate home rather than being re-added here by default.
 
 **Resume** (`src/pages/resume.md`) — written, currently a single Markdown/HTML page only (no separate downloadable PDF yet — the "ATS-parseable PDF" plan from earlier drafts of this file has not been built). Full work history (Oracle, Opower, SAIC, Digital Infuzion), tools table, publications, awards. If a PDF version is added later, keep it in sync but not identical — the HTML version can stay more expansive with inline portfolio links.
 

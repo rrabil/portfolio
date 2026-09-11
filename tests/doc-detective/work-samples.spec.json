@@ -38,7 +38,7 @@
       ]
     },
     {
-      "testId": "Work page links to a live Doc Detective Examples page",
+      "testId": "Work page links to the live Doc Detective Checks section",
       "description": "This is the page's own link to the page these tests document \u00e2\u20ac\u201d a real regression check that the cross-link doesn't rot as both pages change.",
       "steps": [
         {
@@ -48,7 +48,7 @@
         },
         {
           "find": {
-            "selector": "a[href*='doc-detective-examples']",
+            "selector": "a[href*='doc-detective-checks']",
             "moveTo": true,
             "click": true
           }
@@ -56,7 +56,7 @@
         { "wait": 1500 },
         {
           "find": {
-            "elementText": "/Doc Detective Examples/"
+            "elementText": "/Doc Detective Checks/"
           }
         }
       ]
