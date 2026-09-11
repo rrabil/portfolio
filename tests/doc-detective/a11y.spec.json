@@ -1,0 +1,36 @@
+{
+  "specId": "Accessibility - key pages meet WCAG2AA (Pa11y)",
+  "tests": [
+    {
+      "testId": "Home page has no WCAG2AA errors",
+      "description": "Runs Pa11y (axe-core + HTML CodeSniffer) against the rendered page via runShell. Pa11y's default --level is error, so only error-severity findings fail this step—warnings and notices are informational, same threshold philosophy as Vale's error-level-only deploy gate. This checks a different layer than the other specs in this suite: they confirm content renders and navigation works, this confirms the rendered DOM is usable by assistive tech (alt text, contrast, landmarks, ARIA) — Vale and Lychee can't see this, and neither can the other doc-detective specs.",
+      "steps": [
+        {
+          "runShell": {
+            "command": "npx pa11y http://localhost:3000/portfolio/"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "Resume page has no WCAG2AA errors",
+      "steps": [
+        {
+          "runShell": {
+            "command": "npx pa11y http://localhost:3000/portfolio/resume"
+          }
+        }
+      ]
+    },
+    {
+      "testId": "Work samples page has no WCAG2AA errors",
+      "steps": [
+        {
+          "runShell": {
+            "command": "npx pa11y http://localhost:3000/portfolio/docs/portfolio/samples"
+          }
+        }
+      ]
+    }
+  ]
+}
