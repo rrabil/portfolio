@@ -40,6 +40,6 @@ Additional writing on hiring, evaluating writers, and the craft itself.
 
 Content coming soon—for now, see the docs-engineering side of this
 work under [How I Built This](/how-i-built-this): the
-[documentation pipeline](/documentation-pipeline-portfolio),
-[Doc Detective examples](/doc-detective-examples), and
+[content pipeline](/how-i-built-this#content-pipeline),
+[Doc Detective checks](/how-i-built-this#doc-detective-checks), and
 [Skills & Agents](/docs/skills-agents/standing-rules-vs-memory).

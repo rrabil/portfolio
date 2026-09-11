@@ -36,3 +36,9 @@ allowlists?
 CTA'?s?
 href
 navbar
+frontmatter
+hardcoded
+checkLink
+unslop
+toolchain
+[Gg]enericiz(e|ed|ing)

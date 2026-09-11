@@ -1,46 +1,67 @@
 ---
 title: How I Built This
-description: Vision, what was built, and the moments of overriding AI output along the way.
+description: The system, content pipeline, automated checks, skills, and agent context behind this site.
 ---
 
 # How I Built This
 
-In this portfolio site my goal is to demonstrate a few things together: deep expertise in technical writing paired with techniques in AI-assisted content engineering and knowledge management. As part of this goal, I wrote this page to explain the system behind this site, the content pipeline, and the judgment calls I made along the way to produce it.
+My goal in this portfolio is to demonstrate my deep experience in AI-assisted technical writing, content engineering, and knowledge systems management. To that end, I worked with Claude over many iterations and editorial reviews to develop this page and showcase the underlying system, content pipeline, skills, and agents I used to produce the site.
 
-## The system
+## System Overview
 
-This is a Docusaurus (Markdown/MDX) site deployed to GitHub Pages through a five-stage pipeline that gates on itself:
+This site is a [Docusaurus](https://docusaurus.io/) (Markdown/MDX) static site, hosted on [GitHub Pages](https://docs.github.com/en/pages) and deployed through a single GitHub Actions workflow. Every push runs the same lint, link-check, and build jobs, and a pull request (PR) shows whether it's safe to merge the changes. Only pushes to main trigger deployments. I review all PRs before merging them.
 
-1. Vale (prose linting)
-2. Lychee (link checking)
-3. Build
-4. Machine-readable checks (Markdown twins, `llms.txt`)
-5. Deploy
+## Content Pipeline
 
-Each stage blocks the next one, defined as five jobs in a single GitHub Actions workflow, with each depending on the one before it. Deploy only runs on pushes to `main`. I review all pull requests. This means nothing publishes without me actually merging it.
+**Vale:** Vale enforces prose style. I configured it to use the [Google developer documentation style guide](https://developers.google.com/style) as a base and layered a few rules on top that are specific to this site, such as grammar exceptions, a project vocabulary file for proper nouns and jargon, and overrides for cases where a rule shouldn't apply just to satisfy a linter. Only error-level findings block a deploy, whereas warnings and suggestions are flagged without stalling anything.
 
-**Vale** enforces prose style. I configured it to use a base Google style guide, plus rules layered on top for this site specifically, such as grammar exceptions, a project vocabulary file for proper nouns and jargon, and overrides for the rare cases where a rule shouldn't apply just to satisfy a linter. Only error-level findings block a deploy. Warnings and suggestions are flagged without stalling a deploy.
+**Lychee:** Lychee checks every link in the content before shipping it, which is important beyond merely catching URL typos. Links that are valid now can rot months later and pose a credibility problem. That said, I configured broken links to be reported in the results rather than block the pipeline. The reason is that I don't want to fail a whole deploy over a URL changed by some third party, thus blocking otherwise healthy content due to edits outside of my control.
 
-**Lychee** checks every link in the content before it ships. That matters past the obvious case of a URL with typos: links that are valid when written can rot months later, and present a credibility problem.
+**Markdown Twin Checker (md-twin-checker):** This pipeline step is inspired by the [AcceptMarkdown](https://acceptmarkdown.com/) solution. However, I couldn't implement AcceptMarkdown because GitHub Pages is a static site that doesn't have a server-side ability to interpret content requests and decide what to serve. So I went with a slightly different implementation. Every page built from a Markdown source file gets a plain-text twin, plus a `<link rel="alternate" type="text/markdown">` tag pointing at it. This enables an AI agent or crawler to get the raw Markdown version of an HTML page from a static host that has no server-side content negotiation. The md-twin-checker verifies that the pairing actually happened after a build so that every HTML page has its twin and its alternate-link tag. It runs against the build output and is checked automatically before anything publishes. A failure here blocks deploy the same as a failed build.
 
-**Machine-readable checks** verify the build's own self-healing-docs guarantees: that every page has a Markdown twin and an `<link rel="alternate">` tag pointing at it, and that `llms.txt` actually matches the site's real pages. See [Documentation Pipeline Portfolio](/documentation-pipeline-portfolio) for how those checks work.
+**LLMS.txt (llms-txt-checker):** An llms.txt file is automatically regenerated at the site root on every build, listing every page's title, description, and URL.
 
-A single `AGENTS.md` file holds project context, content structure decisions, and standing rules for any AI agent working in this repository, so decisions stay consistent across sessions. I used Claude Code for the implementation work: scaffolding, initial content drafting, CI configuration, and lint/vocabulary maintenance, under my direction and review. Down with AI slop. (And yes, I did install an AI de-slopping skill.)
+The exception to this is the homepage, which is an index.js file with React components. Because there is no Markdown source for it, the home.md file is a hand-authored twin, excluded from Docusaurus's own routing so it doesn't also render as a real page, with its llms.txt entry hardcoded in the generator rather than read from frontmatter.
 
-For a closer look at the pipeline's actual configuration, see [Documentation Pipeline Portfolio](/documentation-pipeline-portfolio).
+The llms-txt-checker verifies that the generated llms.txt file actually matches the site's real pages. It fails if either side has an entry the other doesn't, similar to how the md-twin-checker looks for page twins.
 
-Moreover, I used the Doc Detective browser-based testing suite to run checks on things that Vale and Lychee can't, such as rendered content and navigation. See [Doc Detective Examples](/doc-detective-examples), which describes a real browser-based test suite that catches what Vale and Lychee can't—rendered content and in-browser navigation, and other things.
+## Doc Detective Checks
 
-## Editorial judgment
+Although both Vale and Lychee check content in the source, neither opens a browser to check that things are working as expected. Doc Detective drives a real browser against the live site and checks rendered output and in-browser interaction directly. I have the open-source [Doc Detective](https://github.com/doc-detective/doc-detective) testing framework to thank for this one.
 
-I am amazed at how powerful AI has been in helping me scaffold and stand up this site. But I also quickly learned that the process is not seamless, and I found several areas in need of critical hands-on direction. Some examples of that were:
+**a11y.spec.json:** This spec runs an automated testing process using [Pa11y](https://github.com/pa11y/pa11y) against the Web Content Accessibility Guidelines (WCAG2AA). The process audits the home, resume, and work-samples pages to ensure each comes back with zero WCAG2AA errors.
 
-**A monitoring gap that made a broken check look healthy.** The CI pipeline originally used a third-party GitHub Action for prose linting, running in a local-reporter mode. It looked correct, but the Action's own exit code silently overrode the pass/fail signal regardless of severity—meaning content could fail every rule and the pipeline would still report success. Catching this required tracing through the Action's internals rather than accepting the first green checkmark. The fix: drop the Action, install the linter directly in CI, and run it as a plain shell command that trusts its own exit code.
+This is a different layer than the rest of my Doc Detective suite. While the other specs confirm that content renders and navigation works, this one confirms that the HTML page's actual structure is usable by assistive technology for users with disabilities, checking things like alt text, contrast, landmarks, ARIA (Accessible Rich Internet Applications)—things which none of the other specs can see.
 
-**A fix that broke the thing it was supposed to protect.** While building the Work Samples page, a linked article title—"Technical Writing Is Dead. Long Live Technical Writing!"—tripped a style rule against exclamation points. The title is real and published verbatim; it isn't something to edit to satisfy a linter. Claude's first suggestion was an inline HTML comment to suppress the rule for that one line. It broke the site's build immediately, because this Docusaurus setup compiles content as MDX, which doesn't accept raw HTML comments anywhere in a file. The follow-up fix—switching to MDX's own comment syntax—solved the build error but silently broke the original goal, since the linter doesn't recognize that syntax as a directive at all. The actual fix was a scoped rule override added directly to the linter's own config file, which only surfaced from checking the rendered page and the linter output, not from trusting that a plausible-looking fix had worked.
+**home.spec.json:** This spec checks two things beyond what Vale and Lychee can check:
 
-**Editorial calls that AI defaults wouldn't have made.** Structuring the Work Samples page meant rejecting as much as accepting. "Technical Editing" was a reasonable candidate category, backed by real experience with internal style guides—but nothing existed to link to, so it stayed out rather than becoming a bullet list, which isn't what a samples page is for. Category naming—pairing "Information Architecture" with "Knowledge Management" rather than "Content Strategy"—was chosen specifically to avoid overlapping language with the AI-focused section elsewhere on the same page, so a recruiter scanning quickly wouldn't wonder if the two sections meant the same thing.
+1. The homepage actually renders a hero headline and at least one "Selected Work" card (not just that the URL returns 200 OK response from the web server).
+2. The primary work call-to-action (CTA) actually navigates to the Work samples page when clicked. The check targets the CTA's structural class and href rather than its visible label so that editing the button text doesn't break the test.
 
-## What this proves
+**resume.spec.json:** This spec checks that the resume renders its name, headline, and Work Experience heading, and that its LinkedIn link resolves via Doc Detective's own checkLink step. (The latter is distinct from Lychee's check of the same URL, since Lychee only confirms the string is a valid link in source, not that a resolved DOM href on the live page actually works.)
 
-Of course, plenty of people can prompt a model to generate content. What this site demonstrates is judgment: catching a monitoring gap that made a broken check look healthy, catching a fix that solved the wrong problem, and making deliberate editorial calls about what does and doesn't belong on a page. That's the same discipline behind the governance frameworks described in the [About](/about) and [Resume](/resume) pages, applied here, in public, to itself.
+**work-samples.spec.json:** This spec confirms that all category sections on the Work page actually render. A link checker sees a clean 200 OK response even if an MDX component's data silently failed to populate a section.
+
+Curious whether it actually passes? The specs live in [tests/doc-detective/](https://github.com/rrabil/portfolio/tree/main/tests/doc-detective)—skim them to see exactly what's checked, or run `npm run test:docs` yourself if you've got the repo cloned.
+
+## Skills
+
+I worked with Claude to build several skills to accelerate different aspects of the portfolio development process. Some of the skills are related to preparing samples, while others are designed to facilitate updates to the website.
+
+**deck-builder:** This skill regenerates and re-publishes slide-deck work samples so that they are more generic and stylistically consistent. It started as a builder for two specific workshop decks and grew to cover case studies, project readouts, proposals, and retros, all of which share a catalog of reusable slide layouts. The slide-deck work samples are generated from code rather than built manually in PowerPoint, with editable .pptx sources kept outside the repo. Only PDF exports are published to the site, and I keep a log of what's live so as to avoid republishing anything by accident.
+
+**de-slop:** For this one, I evaluated two open-source Claude Code skills built for the same problem: modifying AI-drafted prose so it doesn't sound robotic and terrible. The first one, [no-ai-slop](https://github.com/petergyang/no-ai-slop), is engineered better and removes bad patterns, but doesn't go beyond that. The second one, [unslop](https://github.com/theclaymethod/unslop), is a plainer file, but it has an interesting four-step method that treats stripped-down text as insufficient (meaning the text may be grammatically correct but still pretty boring), and so it includes an explicit "add personality" and self-audit pass. Instead of choosing one over the other, I had Claude evaluate and merge them into one local skill (while crediting both source repositories directly).
+
+**guide-doc-builder:** This skill builds and updates document writing samples that are styled to match the portfolio's visual theme. It started as a single guide builder and grew to cover three shapes (user guides, troubleshooting guides, and comparison/decision docs) that all share the same design system and toolchain. For example, if I have a writing sample that I need to transform or genericize so it can be shared, this skill helps me style it in a consistent way after the editing is done.
+
+Right now, each new document type starts from copying an existing example rather than filling in one generic template. I'm holding off on building a generic template system until I've made about five documents and can see what they have in common rather than designing a one-size-fits-all model prematurely.
+
+**portfolio-page-review:** Copyediting my own pages solo means the same three mistakes slip through repeatedly—a fact that's drifted from what the code actually does, a term that assumes more technical background than a reader has, or a section that undersells work that's genuinely more interesting than the sentence describing it. So I built a skill that runs all three checks—technical accuracy against the live repo, plain-language clarity, and a "would a hiring manager actually notice this" pass—every time I revise a page. Unlike the others above, it isn't a Claude Code skill living in this repo; it runs in a separate Claude session that reviews pages against this repo from the outside.
+
+**portfolio-precheck:** This skill mirrors the repository's CI pipeline—lint, build, and an optional link-check—so I can catch a failure locally before pushing anything and having GitHub Actions tell me later what went wrong. It runs the same steps in the same order, stops at the first failure, and follows Vale's own exit code as the source of truth.
+
+**sample-card-manager:** As I designed the work-sample cards, I found myself repeating the same steps to refine them. So I created this skill to add, update, reorder, or re-image the work-sample cards on the home page and the Work/samples page—the two things that actually change per card (the thumbnail and the data entry)—without re-deriving the responsive card layout or image-sourcing logic each time. The skill encodes decisions like thumbnail-sourcing priority (local file, then blog featured image, then PDF render, then live screenshot) so that the logic doesn't need to loop again card by card.
+
+## AGENTS.md
+
+I added a single AGENTS.md file at the repo root to contain tool-agnostic project context for any AI coding agent working here (Claude, Codex, or otherwise). This keeps decisions consistent across sessions instead of needing to be explained again each time. The file contains site architecture decisions, the full repo structure, the CI pipeline stages, the self-healing docs principle, and other bits of context. It's yet another example of the "serve two audiences" philosophy: a file that both humans and agents can read.
