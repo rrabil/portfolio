@@ -66,7 +66,7 @@ export default function Home() {
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer — AI Knowledge Management
+            Principal Technical Writer—AI Knowledge Management
           </p>
           <h1 className={styles.heroHeadline}>
             Creating useful technical docs at scale—for humans <em>and</em> agents.

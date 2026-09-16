@@ -20,7 +20,7 @@ case study in judgment applied to off-the-shelf AI tooling. Further
 skills get their own page here as they're written, following the same
 pattern.
 
-## Claude.md / AGENTS.md
+## CLAUDE.md / AGENTS.md
 
 Content coming soon—how standing-rules files like AGENTS.md are
 structured and maintained, and how they differ from memory that

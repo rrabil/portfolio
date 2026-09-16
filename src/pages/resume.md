@@ -23,7 +23,7 @@ description: Principal Technical Writer & AI Knowledge Management—work experie
 - Define rules and requirements for new AI workflows regarding when and how AI can be safely used to consume inputs, identify what information to include or exclude, and what constraints and testing criteria to follow when executing the workflow and evaluating results.
 - Define and manage lifecycle rules and workspace governance. Create wiki dashboards to track effort and status of AI workspace assets.
 - Research trends and best practices in KM, AI, and technical communication. Share findings on various team channels and inform ongoing innovation.
-- Led the migration of content in Madcap Flare to enterprise DITA/Oxygen XML. Designed and socialized standards for content reuse libraries, variables, condition tags, and image management to save time and promote quality and consistency across contributors.
+- Led the migration of content in MadCap Flare to enterprise DITA/Oxygen XML. Designed and socialized standards for content reuse libraries, variables, condition tags, and image management to save time and promote quality and consistency across contributors.
 - Led team-wide initiative to transform remaining print documentation to web-based documentation, following standard design patterns and best practices for web writing and usability.
 
 ### Opower—Senior Technical Writer
@@ -61,7 +61,7 @@ description: Principal Technical Writer & AI Knowledge Management—work experie
 
 | Category | Tools |
 | --- | --- |
-| Authoring & CCMS | Atlassian Confluence, Madcap Flare, Adobe RoboHelp, DITA/Oxygen |
+| Authoring & CCMS | Atlassian Confluence, MadCap Flare, Adobe RoboHelp, DITA/Oxygen |
 | AI & Automation | ChatGPT / custom GPTs, Codex, Claude Code, Generative AI |
 | Docs-as-Code & Version Control | Git/GitHub, Markdown, Vale, HTML, CSS, Tortoise SVN |
 | Productivity & Project Management | Microsoft Office (Word, PowerPoint, Excel, Visio, Project, Publisher), JIRA, Snagit, Camtasia Studio |

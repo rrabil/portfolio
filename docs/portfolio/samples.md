@@ -26,7 +26,7 @@ Published thinking on organizing, scaling, and governing documentation systems.
 
 ## AI & Knowledge Management
 
-Most of the AI knowledge architecture and management work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and so on—documented in more detail in [How I Built This Site](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
+Most of the AI knowledge architecture and management work I do professionally is proprietary and can't be shared directly. What I can point to: this site itself—a docs-as-code pipeline that lints prose, checks links, and so on—documented in more detail in [How I Built This](/how-i-built-this); my writing on the practice, below; and specific project examples in my [resume](/resume).
 
 <SampleGrid items={aiKnowledge} />
 

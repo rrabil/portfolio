@@ -27,7 +27,7 @@ In addition to developing quality content, I am keenly interested in *structure*
 
 * How do we keep this content up-to-date after publishing the first version? How should it be organized to grow and expand over time as the product or service evolves? What if we need to migrate to a different repository or format?
 * What does the next writer or editor who maintains this documentation need to know? What style guidance should they use? What templates and content rules should they follow? What experts should they rely on for review?
-* How do we track ad-hoc requests and prioritize new documentation needs? How do we monitor the health of the enormous volumes of information under our responsibility? When and how do we need retire information when it is no longer necessary?
+* How do we track ad-hoc requests and prioritize new documentation needs? How do we monitor the health of the enormous volumes of information under our responsibility? When and how do we need to retire information when it is no longer necessary?
 
 These questions have led me into many overlapping disciplines, from technical writing and information architecture to content strategy and knowledge management. I frequently take on "team lead," "editorial director," and "architect" roles for large documentation projects in the organizations I work for: setting up information models and governance, designing templates and status dashboards, defining the content strategy for content lifecycles, and sharing best practices and articles about the latest trends in the field.
 
