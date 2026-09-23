@@ -4,7 +4,7 @@ Tool-agnostic project context for AI coding agents (Claude Code, Codex, or other
 
 ## Project overview
 
-Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Management. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to demonstrate mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture.
+Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Architect. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to demonstrate mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture.
 
 Follows common docs-as-code portfolio conventions: a Markdown/MDX static site generator, automated prose linting, automated link checking, and a transparent "how this was built" narrative page — general best practices for demonstrating technical-writing and AI-collaboration credibility.
 
@@ -99,7 +99,7 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 **Done (was a backlog idea):** How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples have been consolidated into a single page (`src/pages/how-i-built-this.md`). The three pages had real content overlap — all three narrated the same CI pipeline at different levels of detail. The two retired pages were archived outside the repo (under `Career/portfolio-archive/retired-pages/`) rather than only deleted, and they remain in git history at commit `367eb9d`.
 
-**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Management panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
+**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Architecture panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
 **About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 
@@ -125,7 +125,7 @@ Note: the earlier version of this page carried an "Editorial judgment" section (
 
 ## Messaging & positioning context (for content generation, not code)
 
-- Dual identity: Principal Technical Writer + AI Knowledge Management.
+- Dual identity: Principal Technical Writer + AI Knowledge Architect.
 - Differentiator to emphasize throughout the site: judgment over tool-fluency — documented evidence of knowing when and why to override AI output, not just AI tool use itself.
 - New, related differentiator to start weaving in: serving human readers and AI agents as first-class audiences at once, not sequentially — content and structure (this file included) designed to be equally legible to a person and to an agent parsing it. Frame this as a natural extension of the governance-framework work, not a separate gimmick.
 - Resume stays broad/high-level; specific narrow evidence is reserved for other written materials and site narrative pages like "How I Built This" — not for resume bullets.
@@ -136,5 +136,6 @@ Note: the earlier version of this page carried an "Editorial judgment" section (
 - Verify the installed/current version of any library or framework before writing code against its API or schema — do not assume from training knowledge.
 - Write test instructions (e.g., for Doc Detective or similar tools) for the tool's parser, not as prose a human would read.
 - Flag side effects of any suggested change before making it (e.g., file-type conversions that alter framework behavior), rather than surfacing them only after something breaks.
+- Content-only changes (copy in `docs/` and `src/pages/`, frontmatter, the site tagline) can go straight to `main` once Vale, the build, and the machine-readable checks pass. Structural changes go through a branch and PR.
 - When a repeated correction happens twice, it belongs in this file, not just in session memory.
 - When writing or editing site content, hold both audiences in mind: it should read naturally for a human visitor and remain clean, unambiguous Markdown/MDX for an AI agent parsing the source directly. Don't sacrifice one for the other.
