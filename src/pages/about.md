@@ -15,7 +15,7 @@ import styles from './about.module.css';
   />
 </div>
 
-I'm a principal technical writer and knowledge architect with 20+ years of experience in the tech industry. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs conscientious communicators who can craft quality documentation about the things we build, and deliver knowledge to the right people at the right time.
+I'm a principal technical writer and knowledge architect with 20+ years of experience in the tech industry and a master's degree in technical communication. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs conscientious communicators who can craft quality documentation about the things we build, and deliver knowledge to the right people at the right time.
 
 ## Creating Quality Docs
 

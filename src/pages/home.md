@@ -9,7 +9,7 @@ description: Principal Technical Writer & AI Knowledge Architect.
 
 Delivering technical knowledge at scale—for humans *and* agents.
 
-Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
+Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
 
 - [About Me](/about)
 - [View My Work](/docs/portfolio/samples)
@@ -18,7 +18,7 @@ Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creati
 
 **Dual Identity**
 
-Technical Communication—I'm an expert in researching and organizing complex technical information, designing attractive documents, and creating content that people actually read. I hold a master's degree in technical communication.
+Technical Communication—With a master's degree in technical communication, I'm an expert in researching and organizing complex technical information, designing attractive documents, and creating content that people actually read.
 
 AI Knowledge Architecture—I build AI knowledge assets and governance frameworks that enable teams (and agents!) to deliver quality knowledge to their audiences as the docs grow. This site is proof: a [docs-as-code pipeline](/how-i-built-this) that lints prose, validates links, and deploys vetted content via CI/CD.
 
