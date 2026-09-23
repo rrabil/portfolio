@@ -31,7 +31,7 @@ Although both Vale and Lychee check content in the source, neither opens a brows
 
 **a11y.spec.json:** This spec runs an automated testing process using [Pa11y](https://github.com/pa11y/pa11y) against the Web Content Accessibility Guidelines (WCAG2AA). The process audits the home, resume, and work-samples pages to ensure each comes back with zero WCAG2AA errors.
 
-This is a different layer than the rest of my Doc Detective suite. While the other specs confirm that content renders and navigation works, this one confirms that the HTML page's actual structure is usable by assistive technology for users with disabilities, checking things like alt text, contrast, landmarks, ARIA (Accessible Rich Internet Applications)—things which none of the other specs can see.
+This is a different layer than the rest of my Doc Detective suite. While the other specs confirm that content renders and navigation works, this one confirms that the HTML page's actual structure is usable by assistive technology for users with disabilities, checking things none of the other specs can see, such as alt text, contrast, landmarks, and ARIA (Accessible Rich Internet Applications).
 
 **home.spec.json:** This spec checks two things beyond what Vale and Lychee can check:
 
@@ -42,7 +42,7 @@ This is a different layer than the rest of my Doc Detective suite. While the oth
 
 **work-samples.spec.json:** This spec confirms that all category sections on the Work page actually render. A link checker sees a clean 200 OK response even if an MDX component's data silently failed to populate a section.
 
-Curious whether it actually passes? The specs live in [tests/doc-detective/](https://github.com/rrabil/portfolio/tree/main/tests/doc-detective)—skim them to see exactly what's checked, or run `npm run test:docs` yourself if you've got the repo cloned.
+Curious whether it actually passes? The specs live in [tests/doc-detective/](https://github.com/rrabil/portfolio/tree/main/tests/doc-detective). Skim them to see exactly what's checked, or run `npm run test:docs` yourself if you've got the repo cloned.
 
 ## Skills
 
@@ -56,11 +56,11 @@ I worked with Claude to build several skills to accelerate different aspects of 
 
 Right now, each new document type starts from copying an existing example rather than filling in one generic template. I'm holding off on building a generic template system until I've made about five documents and can see what they have in common rather than designing a one-size-fits-all model prematurely.
 
-**portfolio-page-review:** Copyediting my own pages solo means the same three mistakes slip through repeatedly—a fact that's drifted from what the code actually does, a term that assumes more technical background than a reader has, or a section that undersells work that's genuinely more interesting than the sentence describing it. So I built a skill that runs all three checks—technical accuracy against the live repo, plain-language clarity, and a "would a hiring manager actually notice this" pass—every time I revise a page. Unlike the others above, it isn't a Claude Code skill living in this repo; it runs in a separate Claude session that reviews pages against this repo from the outside.
+**portfolio-page-review:** Copyediting my own pages solo means the same three mistakes slip through repeatedly: a fact that's drifted from what the code actually does, a term that assumes more technical background than a reader has, or a section that undersells work that's genuinely more interesting than the sentence describing it. So I built a skill that checks for all three every time I revise a page: technical accuracy against the live repo, plain-language clarity, and a "would a hiring manager actually notice this" pass. It also checks the pages against each other. Some mistakes, like a job title that changes from page to page, only show up that way.
 
-**portfolio-precheck:** This skill mirrors the repository's CI pipeline—lint, build, and an optional link-check—so I can catch a failure locally before pushing anything and having GitHub Actions tell me later what went wrong. It runs the same steps in the same order, stops at the first failure, and follows Vale's own exit code as the source of truth.
+**portfolio-precheck:** This skill mirrors the repository's CI pipeline—lint, build, the Markdown twin and llms.txt checks, and an optional link-check—so I can catch a failure locally before pushing anything and having GitHub Actions tell me later what went wrong. It runs the same steps in the same order, stops at the first failure, and follows Vale's own exit code as the source of truth.
 
-**sample-card-manager:** As I designed the work-sample cards, I found myself repeating the same steps to refine them. So I created this skill to add, update, reorder, or re-image the work-sample cards on the home page and the Work/samples page—the two things that actually change per card (the thumbnail and the data entry)—without re-deriving the responsive card layout or image-sourcing logic each time. The skill encodes decisions like thumbnail-sourcing priority (local file, then blog featured image, then PDF render, then live screenshot) so that the logic doesn't need to loop again card by card.
+**sample-card-manager:** As I designed the work-sample cards, I found myself repeating the same steps to refine them. So I created this skill to add, update, reorder, or re-image the work-sample cards on the home page and the Work/samples page. Only two things actually change per card (the thumbnail and the data entry), so the skill handles those without re-deriving the responsive card layout or image-sourcing logic each time. The skill encodes decisions like thumbnail-sourcing priority (local file, then blog featured image, then PDF render, then live screenshot) so that the logic doesn't need to loop again card by card.
 
 ## AGENTS.md
 

@@ -5,7 +5,7 @@ import {GlobExcludeDefault} from '@docusaurus/utils';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Richard Rabil',
-  tagline: 'Principal Technical Writer & AI Knowledge Management',
+  tagline: 'Principal Technical Writer & AI Knowledge Architect',
   favicon: 'img/favicon.ico',
 
   future: {
