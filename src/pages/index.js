@@ -72,7 +72,7 @@ export default function Home() {
             Delivering technical knowledge at scale—for humans <em>and</em> agents.
           </h1>
           <p className={styles.subhead}>
-            Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
+            Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
           </p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/about">

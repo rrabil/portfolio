@@ -9,7 +9,7 @@ description: Principal Technical Writer & AI Knowledge Architect.
 
 Delivering technical knowledge at scale—for humans *and* agents.
 
-Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
+Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
 
 - [About Me](/about)
 - [View My Work](/docs/portfolio/samples)
