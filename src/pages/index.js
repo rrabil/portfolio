@@ -108,8 +108,9 @@ export default function Home() {
             <div className={styles.identityPanel}>
               <h3>Technical Communication</h3>
               <p>
-                I'm an expert in researching and organizing complex technical information, designing
-                attractive documents, and creating content that people actually read. I hold a master's degree in technical communication.
+                With a master's degree in technical communication, I'm an expert in researching and
+                organizing complex technical information, designing attractive documents, and creating
+                content that people actually read.
               </p>
             </div>
             <div className={styles.identityRule} />
