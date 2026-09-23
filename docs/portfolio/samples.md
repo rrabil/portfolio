@@ -41,5 +41,6 @@ Additional writing on hiring, evaluating writers, and the craft itself.
 See the content-engineering side of this
 work under [How I Built This](/how-i-built-this): the
 [content pipeline](/how-i-built-this#content-pipeline),
-[Doc Detective checks](/how-i-built-this#doc-detective-checks), and
-[Skills & Agents](/docs/skills-agents/standing-rules-vs-memory).
+[Doc Detective checks](/how-i-built-this#doc-detective-checks),
+[skills](/how-i-built-this#skills), and
+[AGENTS.md](/how-i-built-this#agentsmd).
