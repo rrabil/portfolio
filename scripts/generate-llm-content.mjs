@@ -38,9 +38,9 @@ import {
 } from './lib/pages.mjs';
 
 const HOME_ENTRY = {
-  title: 'Richard Rabil — Principal Technical Writer & AI Knowledge Management',
+  title: 'Richard Rabil — Principal Technical Writer & AI Knowledge Architect',
   description:
-    "Portfolio homepage: dual identity in technical writing and AI knowledge management, selected published work, and the pipeline that builds this site.",
+    "Portfolio homepage: dual identity in technical writing and AI knowledge architecture, selected published work, and the pipeline that builds this site.",
 };
 
 function injectAlternateLink(htmlFile, mdHref) {
@@ -82,7 +82,7 @@ function main() {
   lines.push('# Richard Rabil — Portfolio');
   lines.push('');
   lines.push(
-    '> Principal Technical Writer & AI Knowledge Management. Technical writing samples, AI knowledge management practice, and a self-checking Docusaurus docs-as-code pipeline. Every page listed here has a plain-Markdown twin at its linked URL (append `index.md` to the page path, or follow the page\'s `<link rel="alternate" type="text/markdown">` tag).'
+    '> Principal Technical Writer & AI Knowledge Architect. Technical writing samples, AI knowledge architecture practice, and a self-checking Docusaurus docs-as-code pipeline. Every page listed here has a plain-Markdown twin at its linked URL (append `index.md` to the page path, or follow the page\'s `<link rel="alternate" type="text/markdown">` tag).'
   );
   lines.push('');
   lines.push('## Pages');

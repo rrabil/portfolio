@@ -1,15 +1,15 @@
 ---
 title: Richard Rabil
-description: Principal Technical Writer & AI Knowledge Management.
+description: Principal Technical Writer & AI Knowledge Architect.
 ---
 
 # Richard Rabil
 
-**Principal Technical Writer—AI Knowledge Management**
+**Principal Technical Writer—AI Knowledge Architect**
 
-Creating useful technical docs at scale—for humans *and* agents.
+Delivering technical knowledge at scale—for humans *and* agents.
 
-Hi, I'm Richard. Welcome to my portfolio. I bring 18+ years of experience producing documentation for SaaS and enterprise software.
+Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
 
 - [About Me](/about)
 - [View My Work](/docs/portfolio/samples)
@@ -18,9 +18,9 @@ Hi, I'm Richard. Welcome to my portfolio. I bring 18+ years of experience produc
 
 **Dual Identity**
 
-Technical Communication—I'm an expert in researching and organizing complex information, designing attractive documents, and creating technical content that people actually read. I hold a master's degree in technical communication.
+Technical Communication—I'm an expert in researching and organizing complex technical information, designing attractive documents, and creating content that people actually read. I hold a master's degree in technical communication.
 
-AI Knowledge Management—I build AI knowledge assets and governance frameworks that enable teams (and agents!) to produce quality content as the docs grow. This site is proof: a [docs-as-code pipeline](/how-i-built-this) that lints prose, validates links, and deploys vetted content.
+AI Knowledge Architecture—I build AI knowledge assets and governance frameworks that enable teams (and agents!) to deliver quality knowledge to their audiences as the docs grow. This site is proof: a [docs-as-code pipeline](/how-i-built-this) that lints prose, validates links, and deploys vetted content via CI/CD.
 
 [More About Me](/about)
 
@@ -39,6 +39,12 @@ A sampling of things I've shipped, including:
 
 ## What Is This Site?
 
-Not a metaphor. This portfolio is built and deployed through a real, gated pipeline: Lint, Link Check, Build, Content Checks, Deploy. Every push runs all five before anything ships. If a check fails, the site doesn't deploy.
+Not a metaphor. This portfolio is built and deployed through a real, gated pipeline: Lint, Link Check, Build, Content Checks, Deploy. Every push runs all five before anything ships. If a check fails, the site doesn't deploy. Every page also publishes a Markdown twin and an `llms.txt` entry, so an agent can read the source instead of scraping the page.
 
 [Learn more about how this site was built](/how-i-built-this)
+
+## Want to Get in Touch?
+
+Contact me on LinkedIn.
+
+[Connect on LinkedIn](https://www.linkedin.com/in/rrabil/)
