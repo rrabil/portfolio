@@ -66,13 +66,13 @@ export default function Home() {
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer—AI Knowledge Management
+            Principal Technical Writer—AI Knowledge Architect
           </p>
           <h1 className={styles.heroHeadline}>
-            Creating useful technical docs at scale—for humans <em>and</em> agents.
+            Delivering technical knowledge at scale—for humans <em>and</em> agents.
           </h1>
           <p className={styles.subhead}>
-            Hi, I'm Richard. Welcome to my portfolio. I bring 18+ years of experience producing documentation for SaaS and enterprise software.
+            Hi, I'm Richard. Welcome to my portfolio. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
           </p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/about">
@@ -108,17 +108,17 @@ export default function Home() {
             <div className={styles.identityPanel}>
               <h3>Technical Communication</h3>
               <p>
-                I'm an expert in researching and organizing complex information, designing
-                attractive documents, and creating technical content that people actually read. I hold a master's degree in technical communication.
+                I'm an expert in researching and organizing complex technical information, designing
+                attractive documents, and creating content that people actually read. I hold a master's degree in technical communication.
               </p>
             </div>
             <div className={styles.identityRule} />
             <div className={styles.identityPanel}>
-              <h3>AI Knowledge Management</h3>
+              <h3>AI Knowledge Architecture</h3>
               <p>
-                I build AI knowledge assets and governance frameworks that enable teams (and agents!) to produce quality content as the docs grow. This site is
+                I build AI knowledge assets and governance frameworks that enable teams (and agents!) to deliver quality knowledge to their audiences as the docs grow. This site is
                 proof: a <Link to="/how-i-built-this">docs-as-code pipeline</Link> that lints prose,
-                validates links, and deploys vetted content.
+                validates links, and deploys vetted content via CI/CD.
               </p>
             </div>
           </div>
@@ -196,11 +196,27 @@ export default function Home() {
           </div>
           <p className={styles.pipelineCaption}>
             Every push runs all five before anything ships. If a check fails,
-            the site doesn&apos;t deploy.
+            the site doesn&apos;t deploy. Every page also publishes a Markdown
+            twin and an <code>llms.txt</code> entry, so an agent can read the
+            source instead of scraping the page.
           </p>
           <Link className={styles.sectionLink} to="/how-i-built-this">
             Learn more →
           </Link>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.sectionHead}>
+            <p className={styles.eyebrow}>Want to Get in Touch?</p>
+            <h2>Contact me on LinkedIn.</h2>
+          </div>
+          <a
+            className={styles.sectionLink}
+            href="https://www.linkedin.com/in/rrabil/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Connect on LinkedIn →
+          </a>
         </section>
       </main>
     </Layout>

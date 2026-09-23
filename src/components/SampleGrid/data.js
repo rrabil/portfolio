@@ -6,8 +6,8 @@
 export const technicalWriting = [
   {
     meta: 'Overview Guide',
-    title: 'Opower Digital Energy Management',
-    blurb: 'The complete guide to the Digital Self Service - Energy Management experience, from bill comparisons to data trends to solar power usage.',
+    title: 'Opower Digital Energy Management Overview',
+    blurb: 'The complete guide to the Digital Self Service - Energy Management product experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy-use-view-residential.html#GUID-34357E57-D562-412F-9DBA-ED8D9EEA431A',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/dss-solar-bidirectional.png',

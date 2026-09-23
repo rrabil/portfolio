@@ -5,7 +5,7 @@ description: The system, content pipeline, automated checks, skills, and agent c
 
 # How I Built This
 
-My goal in this portfolio is to demonstrate my deep experience in AI-assisted technical writing, content engineering, and knowledge systems management. To that end, I worked with Claude over many iterations and editorial reviews to develop this page and showcase the underlying system, content pipeline, skills, and agents I used to produce the site.
+My goal in this portfolio is to demonstrate my deep experience in AI-assisted technical writing, content engineering, and knowledge architecture. To that end, I worked with Claude over many iterations and editorial reviews to develop this page and showcase the underlying system, content pipeline, skills, and agents I used to produce the site.
 
 ## System Overview
 
