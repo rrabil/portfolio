@@ -1,6 +1,6 @@
 ---
 title: Richard Rabil
-description: Principal Technical Writer & AI Knowledge Management.
+description: Principal Technical Writer & AI Knowledge Architect.
 ---
 
 # Richard Rabil

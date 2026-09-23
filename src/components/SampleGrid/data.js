@@ -108,7 +108,7 @@ export const iaKm = [
     thumb: '/img/samples/alistapart-article.png',
   },
   {
-    meta: 'Article · Intercom, October 2017 (archived)',
+    meta: 'Article · Intercom, November 2017 (archived)',
     title: "Designing Wiki Templates for Today's Web",
     blurb: 'Practical guidance for designing wiki page templates that hold up as content scales.',
     href: 'https://richardrabil.com/2018/06/12/my-article-from-stc-intercom-designing-wiki-templates-for-todays-web/',

@@ -42,3 +42,4 @@ checkLink
 unslop
 toolchain
 [Gg]enericiz(e|ed|ing)
+Jira

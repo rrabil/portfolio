@@ -2,7 +2,7 @@
 sidebar_position: 1
 hide_table_of_contents: false
 title: Work
-description: Published, production work spanning technical writing, information architecture, and AI knowledge systems.
+description: Published, production work spanning technical writing, information architecture and knowledge management, and AI and content engineering.
 ---
 
 import SampleGrid from '@site/src/components/SampleGrid';

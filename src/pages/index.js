@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <Layout
       title="Richard Rabil"
-      description="Principal Technical Writer & AI Knowledge Management">
+      description="Principal Technical Writer & AI Knowledge Architect">
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>

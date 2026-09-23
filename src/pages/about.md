@@ -1,6 +1,6 @@
 ---
 title: About Me
-description: Principal Technical Writer & AI Knowledge Management.
+description: Principal Technical Writer & AI Knowledge Architect.
 ---
 
 import styles from './about.module.css';
