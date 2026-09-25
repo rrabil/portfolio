@@ -43,3 +43,7 @@ unslop
 toolchain
 [Gg]enericiz(e|ed|ing)
 Jira
+PRDs?
+SMEs?
+onboarded
+Figma

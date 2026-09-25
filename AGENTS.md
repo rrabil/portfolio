@@ -121,7 +121,15 @@ Conventions on this page, apply them to any edit:
 
 Note: the earlier version of this page carried an "Editorial judgment" section (concrete moments of catching or correcting AI output — a linting Action that silently swallowed failures, an MDX comment-syntax fix that solved the build error but not the linter-suppression goal). The consolidated copy drops it. That material is preserved in the archive alongside the retired pages and in git history at `367eb9d`; if judgment-call narrative returns to the site, it needs a deliberate home rather than being re-added here by default.
 
-**Resume** (`src/pages/resume.md`) — written, currently a single Markdown/HTML page only (no separate downloadable PDF yet — the "ATS-parseable PDF" plan from earlier drafts of this file has not been built). Full work history (Oracle, Opower, SAIC, Digital Infuzion), tools table, publications, awards. If a PDF version is added later, keep it in sync but not identical — the HTML version can stay more expansive with inline portfolio links.
+**Resume** (`src/pages/resume.md`) — written. Mirrors Richard's master resume (a Google Doc) as his general, broad-audience resume. It is not a trimmed version: content matches the master except for the allowed differences below. Edits arrive as batches in `../handoffs/portfolio-resume-sync.md`, written by Richard's tailor-resume skill; apply them rather than rewording the page independently. No downloadable PDF yet.
+
+**Allowed differences from the master** (never "fix" these to match):
+
+- No street address, phone number, or email. Contact goes through LinkedIn.
+- A link row under the summary (LinkedIn, Samples, Blog) instead of the master's contact line.
+- Web formatting: italic date lines, en dashes, the Tools table, straight apostrophes.
+- Site-native links: Selected Projects links to How I Built This; Publications ends with a link to Work Samples instead of the master's "See more samples" line.
+- Evidence links inside bullets (to samples, How I Built This, blog posts) — added value for portfolio visitors; the words around them still match the master.
 
 ## Messaging & positioning context (for content generation, not code)
 
@@ -139,3 +147,4 @@ Note: the earlier version of this page carried an "Editorial judgment" section (
 - Content-only changes (copy in `docs/` and `src/pages/`, frontmatter, the site tagline) can go straight to `main` once Vale, the build, and the machine-readable checks pass. Structural changes go through a branch and PR.
 - When a repeated correction happens twice, it belongs in this file, not just in session memory.
 - When writing or editing site content, hold both audiences in mind: it should read naturally for a human visitor and remain clean, unambiguous Markdown/MDX for an AI agent parsing the source directly. Don't sacrifice one for the other.
+- At the start of any session that touches the resume or when asked, check `../handoffs/portfolio-resume-sync.md` for pending batches. Apply them, tick them off, and log the commit. Never edit resume content from any other source.
