@@ -31,15 +31,15 @@ const samples = [
   },
   {
     meta: 'Overview Guide · Oracle Utilities Docs',
-    title: 'Opower Digital Energy Management',
-    blurb: 'The complete guide to the Digital Self Service - Energy Management experience, from bill comparisons to data trends to solar power usage.',
+    title: 'Opower Digital Self-Service - Energy Management',
+    blurb: 'The complete guide to the Digital Self Service - Energy Management product experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy-use-view-residential.html#GUID-34357E57-D562-412F-9DBA-ED8D9EEA431A',
     readLabel: 'Read the documentation',
     thumb: '/img/samples/dss-solar-bidirectional.png',
   },
   {
     meta: 'User Guide · Oracle Utilities Docs',
-    title: 'Opower Analytics Visualization User Guide',
+    title: 'Opower Analytics Visualization',
     blurb: 'How subject areas, measures, and attributes come together to build visualizations and inform business decisions.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
     readLabel: 'Read the documentation',
