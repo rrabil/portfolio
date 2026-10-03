@@ -47,7 +47,6 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
                              "Machine-readable content layer"), about.md, resume.md,
                              api-sample.md, how-i-built-this.md
 /src/css, /src/components  → shared styles and React components
-/api                       → placeholder for the fictional OpenAPI spec (not yet built)
 /scripts                   → build-time Node scripts, run via npm lifecycle hooks
   /scripts/generate-llm-content.mjs → postbuild step, see "Machine-readable content layer"
   /scripts/lib/pages.mjs    → shared route/frontmatter logic for that script and its checks

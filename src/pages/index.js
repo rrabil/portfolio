@@ -69,7 +69,7 @@ export default function Home() {
             Principal Technical Writer—AI Knowledge Architect
           </p>
           <h1 className={styles.heroHeadline}>
-            Delivering technical knowledge at scale—for humans <em>and</em> agents.
+            Delivering technical knowledge at scale—for humans and agents.
           </h1>
           <p className={styles.subhead}>
             Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
