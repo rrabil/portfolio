@@ -1,8 +1,3 @@
-// Paused per Richard's request (2026) — Oracle Utilities Data Intelligence
-// Admin Guide card removed from the grid until he asks to bring it back.
-// Updated href on file for whenever it returns:
-// https://docs.oracle.com/en/industries/utilities/data-intelligence/266/data-intelligence-admin-guide/About-Oracle-Utilities-Data-Intelligence.html
-
 export const technicalWriting = [
   {
     meta: 'Overview Guide',
