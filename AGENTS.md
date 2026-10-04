@@ -67,7 +67,7 @@ static/                    → images, favicon, .nojekyll
 One workflow, five sequential jobs, each gated on the previous via `needs`:
 
 1. **lint** — installs Vale directly (not a third-party Action — see "Editorial judgment" on the How I Built This page for why), runs `vale sync` then `vale docs/ src/pages/`.
-2. **link-check** — runs Lychee (`lycheeverse/lychee-action`) against `docs/**/*.md`, `src/pages/**/*.md`, and root `*.md`, configured via `lychee.toml`. Runs with `fail: false`: broken links are reported but do **not** block the pipeline — a deliberate call to keep external-link rot from blocking deploys of otherwise-good content.
+2. **link-check** — runs Lychee (`lycheeverse/lychee-action`) against `docs/**/*.md`, `src/**/*.md`, `src/**/*.js` (the home and Work card links live in `src/pages/index.js` and `src/components/SampleGrid/data.js`), and root `*.md`, configured via `lychee.toml`. Runs with `fail: false`: broken links are reported but do **not** block the pipeline — a deliberate call to keep external-link rot from blocking deploys of otherwise-good content. (Scope was widened 2026-10-04 after two broken Oracle card links shipped unnoticed because they lived in JS files Lychee wasn't scanning.) Domains that bot-block checkers go in `lychee.toml` `exclude`.
 3. **build** — `npm ci` + `npm run build`, which also runs `scripts/generate-llm-content.mjs` as a `postbuild` step (see "Machine-readable content layer"); uploads the `build/` output as an artifact.
 4. **machine-readable-checks** — downloads the build artifact, runs `checks/md-twin-checker` and `checks/llms-txt-checker` against it. Blocks `deploy` on failure.
 5. **deploy** — downloads the build artifact and publishes to GitHub Pages via `actions/deploy-pages`. Only runs on a push to `main` (not on PRs), so nothing publishes without an actual merge.
@@ -79,7 +79,7 @@ Runs on push/PR to `main` and on manual `workflow_dispatch`.
 `/checks` is designed as a modular, scalable checker system, not a single-purpose script — though in practice, the first (and so far only) check is fulfilled by Lychee in CI rather than a hand-rolled module, and `checks/link-checker/README.md` documents that as the current, intentional state.
 
 - Each check is meant to be a self-contained module with a shared runner interface: input = site build output or source, output = pass/fail + report.
-- Decided: the link checker runs against Markdown/MDX source, not built HTML output (see the Lychee `args` in the workflow).
+- Decided: the link checker runs against Markdown/MDX and JS source (card data), not built HTML output (see the Lychee `args` in the workflow).
 - Future checks (backlog, not yet built): broken image references, heading-anchor drift, front-matter/metadata validation.
 - Adding a new check should mean adding a new module, not rewriting the runner or existing checks.
 

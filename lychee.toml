@@ -5,7 +5,9 @@
 # - document360.com: inconsistently 403s automated clients depending on
 #   user agent/request reputation; excluded preemptively to avoid CI
 #   flakiness even though it isn't a hard block like researchgate.net.
+# - linkedin.com: returns a non-standard 999 status to automated clients.
 exclude = [
     "https://document360.com",
     "https://www.researchgate.net",
+    "https://www.linkedin.com",
 ]
