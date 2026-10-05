@@ -7,7 +7,7 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 **Principal Technical Writer | Product & Engineering Documentation | AI Knowledge Architecture**
 
-20+ years creating technical documentation that helps people understand and use SaaS and enterprise products. First technical writer hired at Opower in its startup phase; since then I've led knowledge systems, content models, and governance that help teams learn and operate products faster, and maintain their own content. I also design AI-augmented workflows and the governance that keeps content trustworthy as it scales.
+20+ years creating technical docs to help people understand and use SaaS and enterprise products. Experienced in fast-paced corporate and startup environments, building knowledge systems and information architectures that enable teams to learn and operate products faster. I also design AI-augmented workflows and the governance that keeps content trustworthy at scale.
 
 **Core skills:** product and engineering documentation, information architecture, content modeling, metadata and taxonomy, DITA/XML, enterprise CCMS, structured authoring standards, content governance, AI knowledge workflows
 
