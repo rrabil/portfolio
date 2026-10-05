@@ -7,7 +7,9 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 **Principal Technical Writer | Product & Engineering Documentation | AI Knowledge Architecture**
 
-20+ years creating technical documentation for SaaS and enterprise products (user and configuration guides, SDK documentation, integration guides, and technical specifications), built with product and engineering from requirements through release. I also design AI-assisted authoring workflows and the governance that keeps content trustworthy as it scales.
+20+ years creating technical documentation that helps customers, implementers, developers, and delivery teams understand and use SaaS and enterprise products (user and admin guides, configuration guides, SDK guides, integration guides, and data specifications), built with product and engineering from requirements through release. First technical writer hired at Opower; since then I've led knowledge systems, content models, and governance that help teams across the company learn and operate products faster and maintain their own content. I also design AI-assisted authoring workflows and the governance that keeps content trustworthy as it scales.
+
+**Core skills:** content modeling, metadata and taxonomy, information architecture, DITA/XML, Oxygen XML Author, DITA-OT, enterprise CCMS, structured authoring standards, content governance, technical and developer documentation, AI knowledge workflows, prompt governance
 
 [LinkedIn](https://www.linkedin.com/in/rrabil) · [Samples](/docs/portfolio/samples) · [Blog](https://richardrabil.com/)
 
@@ -17,26 +19,28 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 *Arlington, VA · August 2016–Present*
 
-- Create and maintain technical documentation at scale for Oracle Utilities enterprise and SaaS products, working with product managers and engineers to keep content accurate across the portfolio.
-- Lead the long-term modernization of Oracle Utilities' Data Transfer Standards documentation, a large, interdependent specification set (account, billing, premise, and interval data) that utility integration teams use to launch and run Opower products. Designed a new data-ingress documentation architecture from scratch and led the review cycles that turned the move from legacy SFTP to OCI GoldenGate, Delta Sharing, and API-based ingress into a standardized decision guide for integration teams.
+- Create and maintain technical documentation at scale (docsets covering 20+ products and 4,000+ topics) for Oracle Utilities enterprise and SaaS products, including analytics documentation across multiple products written for non-technical business users, working in Agile sprints with product managers and engineers to keep content accurate across the portfolio. Write and own release notes for enterprise releases and feature updates of the Opower products, working with product managers to keep coverage complete and accurate. Lead the design and maintenance of the content models and metadata the team uses to publish guides to Oracle Help Center, and set the rules for what belongs in internal knowledge bases, what is published externally, and what is reused across both.
+- Lead the long-term modernization of Oracle Utilities' Data Transfer Standards documentation, part of the Opower platform documentation: a large, interdependent specification set (account, billing, premise, and interval data) that utility integration teams use to launch and run Opower products. Designed a new data-ingress documentation architecture from scratch, created a structured model for how the specifications define core data (data types, allowed values, nullability, and key requirements), and led the review cycles that turned the move from legacy SFTP to OCI GoldenGate, Delta Sharing, and API-based ingress into a standardized, scenario-based decision guide for integration teams.
 - Serve as developer-documentation partner for Oracle Utilities product docs, including an embedded widgets guide and Opower Integration Hub Widget SDK setup guide, restructuring JavaScript integration and SDK reference content around developer tasks. Turn customer troubleshooting findings into preventive guidance and improved code samples.
-- Serve as a workflow developer on an AI authoring tool for Oracle Industries User Assistance teams. Work with engineers to define product requirements (PRDs) covering authoritative context, provenance, knowledge relationships, and source evidence, and design solutions around content models and Oracle style guidelines. Run MVP, UAT, and GA test phases and present the tool to writing teams to drive adoption.
-- Architect and administer a shared AI knowledge workspace for technical writers across multiple teams in the Global Industries Unit, with rules for approved prompts and team context that keep outputs consistent and trustworthy. Define standards for repeatable documentation tasks (reusable prompts, skills, and context files) to cut variance and rework. Train writers and present to teams to build adoption.
+- Serve as a workflow developer on an AI authoring tool for 60 writers across Oracle Industries User Assistance teams. Work with engineers to define product requirements (PRDs) covering authoritative context, provenance, knowledge relationships, and source evidence, and design solutions around content models and Oracle style guidelines. Run MVP, UAT, and GA test phases and present the tool to writing teams to drive adoption. Recent work includes requirements and initial solutions for shared content components, variables, and condition tags, and a UI design for the writers' QA report, mocked up with Codex; engineers built parts of it into the tool.
+- Architect and administer a shared AI knowledge workspace (a custom GPT) for 60 technical writers across multiple teams in the Global Industries Unit, with rules for approved prompts and team context that keep outputs consistent and trustworthy. Designed a standard set of master context files containing audience profiles, document types, glossaries, and other metadata to inform AI prompts and content generation. Built a prompt registry, prompt template structure, and AI skills library for use across Oracle Industries documentation teams, and designed the information architecture, metadata, and templates for documenting shared prompts and skills. Train writers and present to teams to build adoption.
 - Define rules for new AI workflows: when AI can safely consume inputs, what information to include or exclude, and what constraints and test criteria govern each run and its evaluation.
 - Define and manage lifecycle rules and workspace governance. Create wiki dashboards to track effort and status of AI workspace assets.
 - Research trends in KM, AI, and technical communication and share findings with the team.
-- Maintain team documentation standards (style guidance, structural templates, workspace templates, SOPs) so knowledge assets and deliverables stay consistent.
-- Review and edit technically complex documentation written by engineers, including SDK and embedded-widget integration guides and configuration guides such as an SSO setup guide, for technical accuracy, task orientation, and consistency with Oracle style standards.
-- Led the migration of content in MadCap Flare to enterprise DITA/XML/Oxygen. Designed and socialized standards for directories, content reuse libraries, variables, condition tags, and image management, so every contributor worked from the same model.
-- Led team-wide initiative to move the remaining print documentation to the web, applying web-writing and usability conventions. Developed CSS stylesheet to match Oracle branding and wrote the team's migration plan.
+- Maintain team documentation standards (style guidance, structural templates, workspace templates, SOPs) so knowledge assets and deliverables stay consistent. Coach writers on products, documentation planning, and efficient tool use. Create architecture, data entity, swim-lane, and workflow diagrams in draw.io, Gliffy, and PowerPoint.
+- Lead the team's iteration planning and triage new documentation requests. Built intake workflows for them, including instructions for submitting documentation tickets, an AI skill that creates Jira documentation tickets, and a Slack form that captures release-notes inputs.
+- Apply WCAG accessibility requirements to published content: write image and table descriptions, set image dimensions, add table header rows, resolve findings from accessibility testing of the published site, and codify accessibility rules in the team style guide and AI prompts.
+- Review and edit technically complex documentation written by engineers, including SDK and embedded-widget integration guides and configuration guides such as an SSO setup guide and highly complex configuration-properties content, for technical accuracy, task orientation, and consistency with Oracle style standards.
+- Led the migration of content in MadCap Flare to enterprise DITA/XML/Oxygen. Designed and socialized standards for directories, reusable content components, metadata tagging (variables and condition tags), and image management, so every contributor worked from the same model. Published multichannel output through Flare targets and DITA-OT plugins, updated migrated topics to use DITA topic types and semantic tags, and designed the condition tag strategy that lets shared content render differently by product and customer type.
+- Led team-wide initiative to move the remaining print documentation to the web, applying web-writing and usability conventions. Developed CSS stylesheet to match Oracle branding and wrote the team's migration plan. Designed the standard table-of-contents and navigation structure for the HTML sites and set cross-linking rules (when to link across guides and how to format links). Later restructured the web content to make it clearer, more responsive, and easier to maintain.
 
 ### Opower—Senior Technical Writer
 
 *Arlington, VA · April 2012–July 2016*
 
-- Created and maintained product and engineering documentation for energy efficiency SaaS products.
-- Led a cross-org initiative to design a full-lifecycle SOP knowledge system for Opower delivery teams from scratch, working from ambiguous requirements across multiple stakeholders. Interviewed SMEs; defined the metadata and structural schema for parent/child content types; designed a scalable information architecture; and set up a governance model that let contributors across the company write and manage their own content faster. Delivered adoption training and tracked content health signals using page metadata and macros.
-- Co-led initiative to design and implement a central, authoritative product knowledge base from scratch for use across the company. Researched audiences, required metadata, and information types. Designed and implemented information models, page templates, and workflows for the knowledge base. Defined lifecycle rules for maintaining and retiring content, using content reuse libraries, writing instructions, and archiving procedures.
+- As the first technical writer hired (by the company's first documentation manager), created and maintained product and engineering documentation for energy efficiency SaaS products, including diagrams and system visuals (draw.io, Gliffy). Wrote release notes for several years before handing them to another team member. Built the project architecture for single-source publishing, with multichannel, semantic, and conditional tagging strategies so one source fed both print and digital outputs.
+- Led a cross-org initiative to design a full-lifecycle SOP knowledge system for Opower delivery teams from scratch, working from ambiguous requirements across multiple stakeholders. Interviewed SMEs; defined the content model and information-type taxonomy (metadata and structural schema for parent/child content types); designed a scalable information architecture; and set up a governance model that let contributors across the company write and manage their own content faster. Delivered adoption training and tracked content health signals using page metadata and macros.
+- Co-led initiative to design and implement a central, authoritative product knowledge base from scratch for use across the company. Researched audiences and required metadata, and defined an information-type taxonomy (concept, task, reference, and SOP content). Mocked up the layouts with screenshots and Gliffy diagrams, then designed and implemented information models, page templates, and workflows for the knowledge base. Defined lifecycle rules for maintaining and retiring content, using content reuse libraries, writing instructions, and archiving procedures.
 - Developed and implemented documentation standards (such as style guidelines, information models, templates, naming conventions, peer review checklists) that saved time, improved quality, and reduced redundancy.
 - Hired and onboarded technical writers, defined the team's peer-review standards, and coached junior writers on the products, documentation planning, and efficient use of team tools.
 
@@ -52,10 +56,11 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 *Rockville, MD · June 2006–October 2011*
 
-- Researched, wrote, and maintained print and online help, and system and software documentation in support of large-scale federal healthcare IT contracts. Worked closely with development teams to keep content accurate.
-- Composed technical proposals that secured new contract awards. Wrote technical marketing materials and web copy explaining the company's capabilities and value to federal healthcare buyers.
-- Ran peer reviews and checked content against style guides such as the Microsoft Manual of Style for Technical Publications.
+- Researched, wrote, and maintained print and online help, and system and software documentation in support of large-scale federal healthcare IT contracts, including clinical research management applications. Worked closely with development teams to keep content clear, accurate, and useful.
+- Wrote and edited the system architecture description (logical and technical architecture, web-services data exchange, and a CDISC-based information model) for the NIH/NIAID Division of AIDS Enterprise System, a clinical research platform, published in the online appendix to a 2011 JAMIA article.
+- Composed technical proposals that secured new contract awards. Researched and wrote technical marketing materials, including service descriptions, web copy, success stories, and product profiles for use in presentations and sales discussions. Developed a detailed content model of the marketing material (consisting of metadata dimensions, information types, and content units) to support documentation planning, structure, and consistency.
 - Planned and ran hands-on usability testing to improve the corporate website and test the efficacy of user guides: wrote the test plan, interviewed staff across the company, and recruited outside participants.
+- Ran peer reviews and checked content against the internal company style guide, the Chicago Manual of Style, and the Microsoft Manual of Style for Technical Publications.
 
 ## Selected Projects
 
@@ -63,7 +68,7 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 *This site—see [How I Built This](/how-i-built-this)*
 
-- Build and maintain a Docusaurus site published on GitHub Pages through a gated GitHub Actions workflow that runs Vale style checks, link checks, a build, and content checks before any update goes live.
+- Build and maintain a Docusaurus site published on GitHub Pages through a gated CI/CD workflow in GitHub Actions that runs Vale style checks, link checks, a build, and content checks before any update goes live.
 - Publish a machine-readable content layer: every page ships a raw Markdown twin and an `llms.txt` entry, so AI agents can retrieve the source instead of scraping rendered HTML.
 - Develop site content and quality checks with Claude Code and Codex, guided by a shared `AGENTS.md` instruction file.
 
@@ -76,11 +81,11 @@ description: Principal Technical Writer & AI Knowledge Architect—work experien
 
 | Category | Tools |
 | --- | --- |
-| Docs-as-Code & Version Control | Git/GitHub, GitHub Pages, Docusaurus, Markdown, Vale, Lychee, VS Code, HTML, CSS, TortoiseSVN |
-| Authoring & CCMS | DITA/XML, Oxygen XML Editor, MadCap Flare, Adobe RoboHelp, Atlassian Confluence |
+| Docs-as-Code & Version Control | Git/GitHub, GitLab, GitHub Pages, Docusaurus, Markdown, Vale, Lychee, VS Code, HTML, CSS, TortoiseSVN |
+| Authoring & CCMS | DITA/XML, Oxygen XML Author, MadCap Flare, Adobe RoboHelp, Atlassian Confluence, SharePoint |
 | AI & Automation | Claude Code, OpenAI Codex, ChatGPT and custom GPTs |
-| Diagramming & Design | Visio, Figma, Mermaid |
-| Productivity & Project Management | Jira, Microsoft Office (Word, PowerPoint, Excel, Project), Snagit, Camtasia |
+| Diagramming & Design | Visio, Figma, draw.io, Gliffy, Mermaid |
+| Productivity & Project Management | Jira, Microsoft Office (Word, PowerPoint, Excel, Project), Slack, Snagit, Camtasia |
 
 ## Selected Publications
 
