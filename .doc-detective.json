@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/doc-detective/common/refs/heads/main/dist/schemas/config_v3.schema.json",
   "input": ["tests/doc-detective"],
-  "origin": "http://localhost:3000/portfolio",
+  "origin": "http://localhost:3000",
   "runOn": [
     {
       "platforms": ["windows", "mac", "linux"],

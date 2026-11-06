@@ -12,8 +12,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://rrabil.github.io',
-  baseUrl: '/portfolio/',
+  url: 'https://portfolio.richardrabil.com',
+  baseUrl: '/',
 
   organizationName: 'rrabil',
   projectName: 'portfolio',
