@@ -14,7 +14,7 @@ Follows common docs-as-code portfolio conventions: a Markdown/MDX static site ge
 
 **Static site generator:** Docusaurus — chosen for solid Markdown/MDX support, an active plugin ecosystem, and native GitHub Pages compatibility.
 
-**Hosting:** GitHub Pages (`rrabil.github.io/portfolio/`), free tier, deployed via GitHub Actions using `actions/deploy-pages`.
+**Hosting:** GitHub Pages at `portfolio.richardrabil.com` (custom domain; CNAME to `rrabil.github.io`, set in WordPress.com DNS; old `rrabil.github.io/portfolio/` URLs redirect), free tier, deployed via GitHub Actions using `actions/deploy-pages`.
 
 **Navigation** (`docusaurus.config.js` → `themeConfig.navbar`):
 

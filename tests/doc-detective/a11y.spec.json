@@ -7,7 +7,7 @@
       "steps": [
         {
           "runShell": {
-            "command": "npx pa11y http://localhost:3000/portfolio/"
+            "command": "npx pa11y http://localhost:3000/"
           }
         }
       ]
@@ -17,7 +17,7 @@
       "steps": [
         {
           "runShell": {
-            "command": "npx pa11y http://localhost:3000/portfolio/resume"
+            "command": "npx pa11y http://localhost:3000/resume"
           }
         }
       ]
@@ -27,7 +27,7 @@
       "steps": [
         {
           "runShell": {
-            "command": "npx pa11y http://localhost:3000/portfolio/docs/portfolio/samples"
+            "command": "npx pa11y http://localhost:3000/docs/portfolio/samples"
           }
         }
       ]

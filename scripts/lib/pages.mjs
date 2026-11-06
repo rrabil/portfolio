@@ -16,7 +16,7 @@ export const ROOT = path.join(__dirname, '..', '..');
 export const BUILD_DIR = path.join(ROOT, 'build');
 
 // Must match `baseUrl` in docusaurus.config.js.
-export const BASE_URL = '/portfolio/';
+export const BASE_URL = '/';
 
 export const PAGE_SOURCE_ROOTS = [
   {dir: path.join(ROOT, 'src', 'pages'), routePrefix: ''},
@@ -74,7 +74,7 @@ export function routeToBuildDir(route) {
   return route === '/' ? BUILD_DIR : path.join(BUILD_DIR, ...route.split('/').filter(Boolean));
 }
 
-// /about -> /portfolio/about/index.md ; / -> /portfolio/index.md
+// /about -> /about/index.md ; / -> /index.md
 export function mdTwinPublicHref(route) {
   const trimmed = route === '/' ? '' : `${route.replace(/^\//, '')}/`;
   return `${BASE_URL}${trimmed}index.md`;
