@@ -48,13 +48,12 @@ export const technicalWriting = [
     thumb: '/img/samples/bce-power-view.png',
   },
   {
-    meta: 'Technical Report',
+    meta: 'Interactive Technical Report',
     title: 'Evaluation of Software Tools for Interactive Storytelling',
-    blurb: 'A comparative evaluation of authoring tools for branching, interactive video game writing.',
-    href: '/files/Rabil-Technical-Report-Software-Interactive-Storytelling.pdf',
-    readLabel: 'View PDF',
-    thumb: '/img/samples/technical-report-workflow.png',
-    internal: true,
+    blurb: 'An interactive online technical report comparing four authoring tools for branching game writing, scored against a 33-person industry survey.',
+    href: 'https://storytelling.richardrabil.com/',
+    readLabel: 'Explore the report',
+    thumb: '/img/samples/storytelling-report-site.png',
   },
   {
     meta: 'Instructional Design',

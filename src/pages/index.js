@@ -69,14 +69,14 @@ export default function Home() {
             Principal Technical Writer—AI Knowledge Architect
           </p>
           <h1 className={styles.heroHeadline}>
-            Delivering technical knowledge at scale—for humans and agents.
+            Delivering useful technical knowledge at scale—for humans and agents.
           </h1>
           <p className={styles.subhead}>
             Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
           </p>
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/about">
-              About Me
+            <Link className={styles.btnPrimary} to="/docs/portfolio/samples">
+              View My Work
               <svg
                 className={styles.btnIcon}
                 viewBox="0 0 24 24"
@@ -93,8 +93,8 @@ export default function Home() {
                 />
               </svg>
             </Link>
-            <Link className={styles.btnGhost} to="/docs/portfolio/samples">
-              View My Work
+            <Link className={styles.btnGhost} to="/about">
+              About Me
             </Link>
           </div>
         </section>

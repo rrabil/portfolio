@@ -7,12 +7,12 @@ description: Principal Technical Writer & AI Knowledge Architect.
 
 **Principal Technical Writer—AI Knowledge Architect**
 
-Delivering technical knowledge at scale—for humans *and* agents.
+Delivering useful technical knowledge at scale—for humans *and* agents.
 
 Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
 
-- [About Me](/about)
 - [View My Work](/docs/portfolio/samples)
+- [About Me](/about)
 
 ## What I do
 
