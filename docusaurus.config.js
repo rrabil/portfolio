@@ -5,7 +5,7 @@ import {GlobExcludeDefault} from '@docusaurus/utils';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Richard Rabil',
-  tagline: 'Principal Technical Writer & AI Knowledge Architect',
+  tagline: 'Principal Technical Writer · Knowledge Architecture · Content Engineering',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -68,7 +68,7 @@ const config = {
         {
           property: 'og:image:alt',
           content:
-            'Richard Rabil, Principal Technical Writer and AI Knowledge Architect: delivering useful technical knowledge at scale, for humans and agents.',
+            'Richard Rabil, Principal Technical Writer, with practices in knowledge architecture and content engineering: delivering useful technical knowledge at scale, for humans and agents.',
         },
       ],
       colorMode: {

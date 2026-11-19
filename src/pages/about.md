@@ -1,6 +1,6 @@
 ---
 title: About Me
-description: Principal Technical Writer & AI Knowledge Architect.
+description: Principal Technical Writer working across technical communication, knowledge architecture, and content engineering.
 ---
 
 import styles from './about.module.css';
@@ -17,11 +17,11 @@ import styles from './about.module.css';
 
 I'm a principal technical writer and knowledge architect with 20+ years of experience in the tech industry and a master's degree in technical communication. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs conscientious communicators who can craft quality documentation about the things we build, and deliver knowledge to the right people at the right time.
 
-## Creating Quality Docs
+## Technical Communication: Creating Quality Docs
 
 Documentation is only useful if people can discover and apply it to perform their tasks correctly. That not only means writing content that's findable, structured, consistent, accurate, and all the other adjectives typically applied to good writing. It also means designing content so it is visually approachable through methods like scannable layouts, thoughtful formatting, and design choices that invite trust. Every day it's my goal to bring about this combination of form and function to achieve *deep* quality, not just *functional* quality. (I even made this philosophy the [subject of a podcast](https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/).)
 
-## From Pages to Systems
+## Knowledge Architecture: From Pages to Systems
 
 In addition to developing quality content, I am keenly interested in *systems*, *structure*, and *scale*: how to build knowledge so it can grow, how to organize it so it flows, and how to keep it healthy over time. I'm constantly asking questions like:
 
@@ -31,7 +31,7 @@ In addition to developing quality content, I am keenly interested in *systems*, 
 
 These questions have led me into many overlapping disciplines, from technical writing and information architecture to content engineering and knowledge management. I frequently take on "team lead," "editorial director," and "architect" roles for large documentation projects in the organizations I work for: setting up information models and governance, designing templates and status dashboards, defining the content strategy for content lifecycles, and sharing best practices and articles about the latest techniques and trends in the field.
 
-## Where AI Comes In
+## Content Engineering: Where AI Comes In
 
 The explosive growth of AI has taken technical writing and knowledge management in all sorts of new directions. It's critical right now for writers to think holistically about how to cultivate content in systems that are responsive to AI tools and agents without losing sight of what human users really need.
 

@@ -12,27 +12,22 @@
         },
         {
           "find": {
-            "elementText": "/Technical Writing \\& Documentation/"
+            "elementText": "/Technical Communication/"
           }
         },
         {
           "find": {
-            "elementText": "/Information Architecture \\& Knowledge Management/"
+            "elementText": "/Knowledge Architecture/"
           }
         },
         {
           "find": {
-            "elementText": "/AI \\& Content Engineering/"
+            "elementText": "/Content Engineering/"
           }
         },
         {
           "find": {
-            "elementText": "/Career \\& Craft Perspectives/"
-          }
-        },
-        {
-          "find": {
-            "elementText": "/Agents and Skills/"
+            "elementText": "/Career \\& Craft/"
           }
         }
       ]

@@ -55,6 +55,45 @@ const samples = [
   },
 ];
 
+const layers = [
+  {
+    name: 'Technical Communication',
+    tag: 'The docs people read',
+    body: (
+      <>
+        I write docs that people read and use. I research complex products,
+        organize what I learn, and present it so readers find the answer fast.
+        I hold a master&apos;s degree in technical communication.
+      </>
+    ),
+  },
+  {
+    name: 'Knowledge Architecture',
+    tag: 'The structure under the docs',
+    body: (
+      <>
+        I design the structure under the docs: information architecture,
+        content models, taxonomy, and metadata. I also set the governance rules
+        that keep a knowledge system healthy as it grows. Good structure helps
+        people find answers, and it helps AI agents retrieve them.
+      </>
+    ),
+  },
+  {
+    name: 'Content Engineering',
+    tag: 'The systems that run them',
+    body: (
+      <>
+        I build the systems that create, check, and publish the docs. I work in
+        docs-as-code: plain text in Git, with automated style and link checks
+        before anything goes live. I also build AI workflows and agent skills.
+        This site is a working example:{' '}
+        <Link to="/how-i-built-this">see how I built it</Link>.
+      </>
+    ),
+  },
+];
+
 const pipelineStages = ['Lint', 'Link Check', 'Build', 'Content Checks', 'Deploy'];
 
 export default function Home() {
@@ -62,11 +101,11 @@ export default function Home() {
   return (
     <Layout
       title="Richard Rabil"
-      description="Principal Technical Writer & AI Knowledge Architect">
+      description="Principal Technical Writer · Knowledge Architecture · Content Engineering">
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer—AI Knowledge Architect
+            Principal Technical Writer · Knowledge Architecture · Content Engineering
           </p>
           <h1 className={styles.heroHeadline}>
             Delivering useful technical knowledge at scale—for humans and agents.
@@ -108,28 +147,21 @@ export default function Home() {
 
         <section className={styles.section}>
           <div className={styles.sectionHead}>
-            <p className={styles.eyebrow}>Dual Identity</p>
+            <p className={styles.eyebrow}>Three Layers</p>
             <h2>What I do.</h2>
           </div>
-          <div className={styles.identityGrid}>
-            <div className={styles.identityPanel}>
-              <h3>Technical Communication</h3>
-              <p>
-                With a master's degree in technical communication, I'm an expert in researching and
-                organizing complex technical information, designing attractive documents, and creating
-                content that people actually read.
-              </p>
-            </div>
-            <div className={styles.identityRule} />
-            <div className={styles.identityPanel}>
-              <h3>AI Knowledge Architecture</h3>
-              <p>
-                I build AI knowledge assets and governance frameworks that enable teams (and agents!) to deliver quality knowledge to their audiences as the docs grow. This site is
-                proof: a <Link to="/how-i-built-this">docs-as-code pipeline</Link> that lints prose,
-                validates links, and deploys vetted content via CI/CD.
-              </p>
-            </div>
-          </div>
+          <ol className={styles.layerStack}>
+            {layers.map((layer, i) => (
+              <li className={styles.layer} key={layer.name}>
+                <div className={styles.layerLabel}>
+                  <span className={styles.layerNumber}>0{i + 1}</span>
+                  <span className={styles.layerTag}>{layer.tag}</span>
+                  <h3>{layer.name}</h3>
+                </div>
+                <p className={styles.layerText}>{layer.body}</p>
+              </li>
+            ))}
+          </ol>
           <Link className={styles.sectionLink} to="/about">
             More About Me →
           </Link>

@@ -97,34 +97,77 @@
   margin: 0;
 }
 
-.identityGrid {
+.layerStack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  gap: 44px;
+  gap: 10px;
 }
 
-.identityRule {
-  background: var(--rule);
+/* Each layer sits on the one below it, like an exploded diagram: the docs on
+   top, the structure under them, the systems at the base. Each lower layer is
+   inset a little more and has a stronger accent edge. */
+.layer {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 32px;
+  padding: 26px 28px;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  background: var(--bg-surface);
 }
 
-.identityPanel h3 {
+.layer:nth-child(1) {
+  border-left-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.layer:nth-child(2) {
+  margin-left: 18px;
+  border-left-color: color-mix(in srgb, var(--accent) 72%, transparent);
+}
+
+.layer:nth-child(3) {
+  margin-left: 36px;
+}
+
+.layerLabel h3 {
   font-family: var(--font-display);
   font-size: 1.3rem;
-  margin: 0 0 14px;
+  margin: 4px 0 0;
 }
 
-.identityPanel p {
-  max-width: 58ch;
+.layerNumber {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.layerTag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.layerText {
+  max-width: 62ch;
+  margin: 0;
   color: var(--text-muted);
   font-size: 0.98rem;
 }
 
 @media (max-width: 760px) {
-  .identityGrid {
+  .layer {
     grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px 20px;
   }
-  .identityRule {
-    display: none;
+  .layer:nth-child(2),
+  .layer:nth-child(3) {
+    margin-left: 0;
   }
 }
 
