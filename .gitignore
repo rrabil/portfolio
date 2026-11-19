@@ -31,3 +31,10 @@ styles/*
 ~$*.pptx
 ~$*.docx
 ~$*.xlsx
+
+# Live site health check output (CI only)
+.lighthouseci/
+lighthouse-results/
+pa11y-report.md
+lighthouse-report.md
+lychee-report.md

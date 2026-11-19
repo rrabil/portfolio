@@ -14,6 +14,9 @@ Current modules:
   machine-readable content layer (AGENTS.md).
 - `llms-txt-checker/` — verifies `llms.txt` matches the site's actual
   pages, as a safety net on top of its automatic regeneration.
+- `site-health/` — daily check of the live, published site: uptime,
+  broken links, Pa11y accessibility, and Lighthouse speed. Opens a
+  GitHub issue when something fails.
 
 Backlog (not yet built): broken image references, heading-anchor drift.
 
