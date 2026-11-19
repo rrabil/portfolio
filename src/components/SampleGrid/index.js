@@ -34,6 +34,8 @@ export default function SampleGrid({items}) {
               className={styles.cardThumb}
               src={withBaseUrl(item.thumb)}
               alt=""
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className={`${styles.cardThumb} ${styles.placeholder}`} />

@@ -11,7 +11,7 @@ const samples = [
     blurb: 'A conversation on how visual design and usability shape how documentation gets read.',
     href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/podcast-document360.png',
+    thumb: '/img/samples/podcast-document360.webp',
   },
   {
     meta: 'A List Apart · July 2018',
@@ -19,7 +19,7 @@ const samples = [
     blurb: 'Reusable organizational patterns for professional writing in the workplace.',
     href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/alistapart-article.png',
+    thumb: '/img/samples/alistapart-article.webp',
   },
   {
     meta: 'STC Intercom · May 2019',
@@ -27,7 +27,7 @@ const samples = [
     blurb: 'How documentation quality and structure became a sales enablement asset.',
     href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/stc-intercom-article.png',
+    thumb: '/img/samples/stc-intercom-article.webp',
   },
   {
     meta: 'Overview Guide · Oracle Utilities Docs',
@@ -35,7 +35,7 @@ const samples = [
     blurb: 'The complete guide to the Digital Self Service - Energy Management product experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy_use_view_residential.html',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/dss-solar-bidirectional.png',
+    thumb: '/img/samples/dss-solar-bidirectional.webp',
   },
   {
     meta: 'User Guide · Oracle Utilities Docs',
@@ -43,7 +43,7 @@ const samples = [
     blurb: 'How subject areas, measures, and attributes come together to build visualizations and inform business decisions.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/av-user-guide.png',
+    thumb: '/img/samples/av-user-guide.webp',
   },
   {
     meta: 'Specification · Oracle Utilities Docs',
@@ -51,7 +51,7 @@ const samples = [
     blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/data-transfer-spec.png',
+    thumb: '/img/samples/data-transfer-spec.webp',
   },
 ];
 
@@ -146,6 +146,8 @@ export default function Home() {
                     className={styles.cardThumb}
                     src={withBaseUrl(sample.thumb)}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                   />
                 )}
                 <div className={styles.cardBody}>
