@@ -10,7 +10,7 @@ import {technicalWriting, iaKm, aiKnowledge, careerCraft} from '@site/src/compon
 
 # Work
 
-My work falls into three practices that build on each other: technical communication (the docs people read), knowledge architecture (the structure under the docs), and content engineering (the systems that run them). Below is a sample of my published work in each, plus writing on the craft itself. In some cases the original venue is paywalled, and I've linked to an archived copy on my blog instead.
+My work falls into three practices that build on each other: technical communication (the docs people read), knowledge architecture (the structure under the docs), and content engineering (the systems that run them). In some cases the original venue is paywalled, and I've linked to an archived copy on my blog instead.
 
 ## Technical Communication
 
