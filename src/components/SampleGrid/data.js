@@ -5,7 +5,7 @@ export const technicalWriting = [
     blurb: 'The complete guide to the Digital Self Service - Energy Management product experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy_use_view_residential.html',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/dss-solar-bidirectional.png',
+    thumb: '/img/samples/dss-solar-bidirectional.webp',
   },
   {
     meta: 'User Guide',
@@ -13,7 +13,7 @@ export const technicalWriting = [
     blurb: 'How subject areas, measures, and attributes come together to build visualizations and inform business decisions.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/av-user-guide.png',
+    thumb: '/img/samples/av-user-guide.webp',
   },
   {
     meta: 'Integration Guide',
@@ -21,7 +21,7 @@ export const technicalWriting = [
     blurb: 'A developer guide to embedding energy management widgets in single-page and multi-utility portals.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-widget-integration-guide/improving_user_experience_scenarios_with_custom_events.html',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/widget-integration-guide.png',
+    thumb: '/img/samples/widget-integration-guide.webp',
   },
   {
     meta: 'Admin Guide',
@@ -29,7 +29,7 @@ export const technicalWriting = [
     blurb: 'The full administration guide for a suite of analytics applications, covering setup, data connectors, and the procedures that keep the data current.',
     href: 'https://docs.oracle.com/en/industries/utilities/data-intelligence/266/data-intelligence-admin-guide/about-oracle-utilities-data-intelligence.html',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/admin-guide-object-storage.png',
+    thumb: '/img/samples/admin-guide-object-storage.webp',
   },
   {
     meta: 'Specification',
@@ -37,7 +37,7 @@ export const technicalWriting = [
     blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/data-transfer-spec.png',
+    thumb: '/img/samples/data-transfer-spec.webp',
   },
   {
     meta: 'Overview Guide',
@@ -45,7 +45,7 @@ export const technicalWriting = [
     blurb: 'Documentation about an energy management software-as-a-service product for business owners who want to save energy.',
     href: 'https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/power_view.html',
     readLabel: 'Read the documentation',
-    thumb: '/img/samples/bce-power-view.png',
+    thumb: '/img/samples/bce-power-view.webp',
   },
   {
     meta: 'Interactive Technical Report',
@@ -53,7 +53,7 @@ export const technicalWriting = [
     blurb: 'An interactive online technical report comparing four authoring tools for branching game writing, scored against a 33-person industry survey.',
     href: 'https://storytelling.richardrabil.com/',
     readLabel: 'Explore the report',
-    thumb: '/img/samples/storytelling-report-site.png',
+    thumb: '/img/samples/storytelling-report-site.webp',
   },
   {
     meta: 'Instructional Design',
@@ -61,7 +61,7 @@ export const technicalWriting = [
     blurb: 'A recorded tutorial on how to format production-quality output from a RoboHelp project.',
     href: 'https://www.youtube.com/watch?v=fbQ2ypdel0I',
     readLabel: 'Watch the video',
-    thumb: '/img/samples/robohelp-video.png',
+    thumb: '/img/samples/robohelp-video.webp',
   },
   {
     meta: 'Writing Workshop',
@@ -69,7 +69,7 @@ export const technicalWriting = [
     blurb: 'A genericized internal training deck on procedure-writing standards and structure.',
     href: '/files/Procedure-Writing-Workshop.pdf',
     readLabel: 'View deck',
-    thumb: '/img/samples/procedure-writing-workshop.png',
+    thumb: '/img/samples/procedure-writing-workshop.webp',
     internal: true,
   },
   {
@@ -78,7 +78,7 @@ export const technicalWriting = [
     blurb: 'A design spec for an original game concept, redacted for public sharing.',
     href: '/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf',
     readLabel: 'View PDF',
-    thumb: '/img/samples/game-design-document.png',
+    thumb: '/img/samples/game-design-document.webp',
     internal: true,
   },
 ];
@@ -90,7 +90,7 @@ export const iaKm = [
     blurb: 'Guidelines for reusing content safely across a documentation set without losing context.',
     href: 'https://richardrabil.com/2020/04/20/some-suggestions-for-content-reuse/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/content-reuse.png',
+    thumb: '/img/samples/content-reuse.webp',
   },
   {
     meta: 'Article · Intercom, May 2019 (archived)',
@@ -98,7 +98,7 @@ export const iaKm = [
     blurb: 'How documentation structure became a sales enablement asset.',
     href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/stc-intercom-article.png',
+    thumb: '/img/samples/stc-intercom-article.webp',
   },
   {
     meta: 'Article · A List Apart, July 2018',
@@ -106,7 +106,7 @@ export const iaKm = [
     blurb: 'Reusable organizational patterns for technical writing under real deadline pressure.',
     href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/alistapart-article.png',
+    thumb: '/img/samples/alistapart-article.webp',
   },
   {
     meta: 'Article · Intercom, November 2017 (archived)',
@@ -114,7 +114,7 @@ export const iaKm = [
     blurb: 'Practical guidance for designing wiki page templates that hold up as content scales.',
     href: 'https://richardrabil.com/2018/06/12/my-article-from-stc-intercom-designing-wiki-templates-for-todays-web/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/wiki-template.png',
+    thumb: '/img/samples/wiki-template.webp',
   },
   {
     meta: 'Presentation · SlideShare, November 2014',
@@ -122,7 +122,7 @@ export const iaKm = [
     blurb: 'An InfoDevDC meetup presentation on organizing documentation to scale with a growing team.',
     href: 'https://www.slideshare.net/slideshow/getting-organized-practical-guidelines-for-documentation-scalability/41119405',
     readLabel: 'View slides',
-    thumb: '/img/samples/getting-organized-slide2.png',
+    thumb: '/img/samples/getting-organized-slide2.webp',
   },
 ];
 
@@ -133,7 +133,7 @@ export const aiKnowledge = [
     blurb: 'What actually transfers well to AI-delegated technical writing, and where there are risks to address.',
     href: 'https://richardrabil.com/2026/08/08/on-delegating-tech-writing-to-ai-what-we-gain-and-what-we-lose/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/ai-delegating.png',
+    thumb: '/img/samples/ai-delegating.webp',
   },
   {
     meta: 'Article · February 2026',
@@ -141,7 +141,7 @@ export const aiKnowledge = [
     blurb: 'Why the role is changing rather than disappearing as AI reshapes documentation work.',
     href: 'https://richardrabil.com/2026/02/28/technical-writing-is-dead-long-live-technical-writing/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/tw-is-dead.png',
+    thumb: '/img/samples/tw-is-dead.webp',
   },
   {
     meta: 'Article · September 2025',
@@ -149,7 +149,7 @@ export const aiKnowledge = [
     blurb: 'Early hands-on experiments applying generative AI to real technical writing tasks.',
     href: 'https://richardrabil.com/2025/09/04/experiments-with-generative-ai-simple-use-cases-for-technical-writing-and-reflections-on-writer-responsibility/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/genai-experiments.png',
+    thumb: '/img/samples/genai-experiments.webp',
   },
 ];
 
@@ -160,7 +160,7 @@ export const careerCraft = [
     blurb: 'A conversation on how visual design and usability shape whether documentation actually gets read.',
     href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
     readLabel: 'Listen to the episode',
-    thumb: '/img/samples/podcast-document360.png',
+    thumb: '/img/samples/podcast-document360.webp',
   },
   {
     meta: 'Article · August 2024',
@@ -168,7 +168,7 @@ export const careerCraft = [
     blurb: 'A survey and analysis of the field’s most useful books on the craft of technical writing.',
     href: 'https://richardrabil.com/2024/08/18/the-best-books-on-technical-writing-an-in-depth-analysis/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/best-books.png',
+    thumb: '/img/samples/best-books.webp',
   },
   {
     meta: 'Article · December 2023',
@@ -176,7 +176,7 @@ export const careerCraft = [
     blurb: 'Why staffing ratios are a poor proxy for whether a documentation team is actually working.',
     href: 'https://richardrabil.com/2023/12/04/theres-no-such-thing-as-an-optimal-technical-writer-to-developer-ratio/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/writer-ratio.png',
+    thumb: '/img/samples/writer-ratio.webp',
   },
   {
     meta: 'Article · May 2023',
@@ -184,7 +184,7 @@ export const careerCraft = [
     blurb: 'Further research into how aesthetics and usability intersect with technical writing.',
     href: 'https://richardrabil.com/2023/05/17/notes-on-further-research-into-aesthetics-and-usability-and-what-it-means-for-technical-writers/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/aesthetics-usability.png',
+    thumb: '/img/samples/aesthetics-usability.webp',
   },
   {
     meta: 'Article · August 2018',
@@ -192,7 +192,7 @@ export const careerCraft = [
     blurb: 'A detailed analysis of the strengths and weaknesses of one of the most widely-used DITA XML authoring tools in the industry.',
     href: 'https://richardrabil.com/2018/08/10/do-technical-writers-dream-of-arbortext-editor/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/arbortext-dream.png',
+    thumb: '/img/samples/arbortext-dream.webp',
   },
   {
     meta: 'Article · TechWhirl, March 2018',
@@ -200,7 +200,7 @@ export const careerCraft = [
     blurb: 'Hiring-manager advice for standing out as a technical writing job applicant.',
     href: 'https://techwhirl.com/how-to-be-amazing-tech-comm-job-applicant-tips-tech-comm-hiring-manager/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/glasses-envelope.png',
+    thumb: '/img/samples/glasses-envelope.webp',
   },
   {
     meta: 'Article · TechWhirl, July 2017',
@@ -208,6 +208,6 @@ export const careerCraft = [
     blurb: 'Practical strategies for evaluating writing samples when hiring technical writers.',
     href: 'https://techwhirl.com/evaluating-writing-samples-strategies-techcomm-hiring-managers/',
     readLabel: 'Read the piece',
-    thumb: '/img/samples/peacock.png',
+    thumb: '/img/samples/peacock.webp',
   },
 ];
