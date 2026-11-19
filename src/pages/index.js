@@ -58,7 +58,6 @@ const samples = [
 const layers = [
   {
     name: 'Technical Communication',
-    tag: 'The docs people read',
     body: (
       <>
         I write docs that people read and use. I research complex products,
@@ -69,7 +68,6 @@ const layers = [
   },
   {
     name: 'Knowledge Architecture',
-    tag: 'The structure under the docs',
     body: (
       <>
         I design the structure under the docs: information architecture,
@@ -81,7 +79,6 @@ const layers = [
   },
   {
     name: 'Content Engineering',
-    tag: 'The systems that run them',
     body: (
       <>
         I build the systems that create, check, and publish the docs. I work in
@@ -147,21 +144,44 @@ export default function Home() {
 
         <section className={styles.section}>
           <div className={styles.sectionHead}>
-            <p className={styles.eyebrow}>Three Layers</p>
+            <p className={styles.eyebrow}>Three Practices</p>
             <h2>What I do.</h2>
           </div>
-          <ol className={styles.layerStack}>
-            {layers.map((layer, i) => (
-              <li className={styles.layer} key={layer.name}>
-                <div className={styles.layerLabel}>
-                  <span className={styles.layerNumber}>0{i + 1}</span>
-                  <span className={styles.layerTag}>{layer.tag}</span>
+          <div className={styles.practiceWrap}>
+            <svg
+              className={styles.venn}
+              viewBox="20 10 320 310"
+              role="img"
+              aria-label="Three overlapping circles: Technical Communication, Knowledge Architecture, and Content Engineering. My work sits where all three meet.">
+              <circle className={styles.vennCircle} cx="180" cy="115" r="100" />
+              <circle className={styles.vennCircle} cx="128" cy="205" r="100" />
+              <circle className={styles.vennCircle} cx="232" cy="205" r="100" />
+              <text className={styles.vennLabel} x="180" y="58" textAnchor="middle">
+                <tspan x="180">Technical</tspan>
+                <tspan x="180" dy="18">Communication</tspan>
+              </text>
+              <text className={styles.vennLabel} x="99" y="246" textAnchor="middle">
+                <tspan x="99">Knowledge</tspan>
+                <tspan x="99" dy="18">Architecture</tspan>
+              </text>
+              <text className={styles.vennLabel} x="261" y="246" textAnchor="middle">
+                <tspan x="261">Content</tspan>
+                <tspan x="261" dy="18">Engineering</tspan>
+              </text>
+              <text className={styles.vennCenter} x="180" y="170" textAnchor="middle">
+                <tspan x="180">Docs that</tspan>
+                <tspan x="180" dy="15">work</tspan>
+              </text>
+            </svg>
+            <ul className={styles.practiceList}>
+              {layers.map((layer) => (
+                <li className={styles.practice} key={layer.name}>
                   <h3>{layer.name}</h3>
-                </div>
-                <p className={styles.layerText}>{layer.body}</p>
-              </li>
-            ))}
-          </ol>
+                  <p>{layer.body}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
           <Link className={styles.sectionLink} to="/about">
             More About Me →
           </Link>

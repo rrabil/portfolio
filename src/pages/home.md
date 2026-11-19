@@ -17,11 +17,11 @@ Hi, I'm Richard. I bring 20+ years of experience creating product and engineerin
 
 ## What I do
 
-**Three Layers**
+**Three Practices**
 
-1. **Technical Communication** (the docs people read): I write docs that people read and use. I research complex products, organize what I learn, and present it so readers find the answer fast. I hold a master's degree in technical communication.
-2. **Knowledge Architecture** (the structure under the docs): I design the structure under the docs: information architecture, content models, taxonomy, and metadata. I also set the governance rules that keep a knowledge system healthy as it grows. Good structure helps people find answers, and it helps AI agents retrieve them.
-3. **Content Engineering** (the systems that run them): I build the systems that create, check, and publish the docs. I work in docs-as-code: plain text in Git, with automated style and link checks before anything goes live. I also build AI workflows and agent skills. This site is a working example: [see how I built it](/how-i-built-this).
+- **Technical Communication**: I write docs that people read and use. I research complex products, organize what I learn, and present it so readers find the answer fast. I hold a master's degree in technical communication.
+- **Knowledge Architecture**: I design the structure under the docs: information architecture, content models, taxonomy, and metadata. I also set the governance rules that keep a knowledge system healthy as it grows. Good structure helps people find answers, and it helps AI agents retrieve them.
+- **Content Engineering**: I build the systems that create, check, and publish the docs. I work in docs-as-code: plain text in Git, with automated style and link checks before anything goes live. I also build AI workflows and agent skills. This site is a working example: [see how I built it](/how-i-built-this).
 
 [More About Me](/about)
 

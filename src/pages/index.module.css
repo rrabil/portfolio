@@ -97,77 +97,71 @@
   margin: 0;
 }
 
-.layerStack {
+/* "What I do": three overlapping circles, one per practice, with the
+   practice text beside them. The overlaps darken because each circle is a
+   light, see-through tint of the accent color. */
+.practiceWrap {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.venn {
+  width: 100%;
+  height: auto;
+}
+
+.vennCircle {
+  fill: var(--accent);
+  fill-opacity: 0.12;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.vennLabel {
+  font-family: var(--font-display);
+  font-size: 16px;
+  fill: var(--text);
+}
+
+.vennCenter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--accent);
+}
+
+.practiceList {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 22px;
 }
 
-/* Each layer sits on the one below it, like an exploded diagram: the docs on
-   top, the structure under them, the systems at the base. Each lower layer is
-   inset a little more and has a stronger accent edge. */
-.layer {
-  display: grid;
-  grid-template-columns: minmax(220px, 300px) 1fr;
-  gap: 32px;
-  padding: 26px 28px;
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent);
-  background: var(--bg-surface);
-}
-
-.layer:nth-child(1) {
-  border-left-color: color-mix(in srgb, var(--accent) 45%, transparent);
-}
-
-.layer:nth-child(2) {
-  margin-left: 18px;
-  border-left-color: color-mix(in srgb, var(--accent) 72%, transparent);
-}
-
-.layer:nth-child(3) {
-  margin-left: 36px;
-}
-
-.layerLabel h3 {
+.practice h3 {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin: 4px 0 0;
+  font-size: 1.25rem;
+  margin: 0 0 6px;
 }
 
-.layerNumber {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--accent);
-  margin-right: 10px;
-}
-
-.layerTag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.layerText {
+.practice p {
   max-width: 62ch;
   margin: 0;
   color: var(--text-muted);
   font-size: 0.98rem;
 }
 
-@media (max-width: 760px) {
-  .layer {
+@media (max-width: 860px) {
+  .practiceWrap {
     grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 22px 20px;
+    gap: 28px;
   }
-  .layer:nth-child(2),
-  .layer:nth-child(3) {
-    margin-left: 0;
+  .venn {
+    max-width: 340px;
+    justify-self: center;
   }
 }
 
