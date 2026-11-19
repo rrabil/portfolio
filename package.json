@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "postbuild": "node scripts/generate-llm-content.mjs",
+    "postbuild": "node scripts/generate-llm-content.mjs && node scripts/make-resume-pdf.mjs --build",
     "check:md-twins": "node checks/md-twin-checker/check.mjs",
     "check:llms-txt": "node checks/llms-txt-checker/check.mjs",
     "swizzle": "docusaurus swizzle",
@@ -15,6 +15,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "resume:pdf": "node scripts/make-resume-pdf.mjs",
     "test:docs": "doc-detective --config .doc-detective.json"
   },
   "dependencies": {
