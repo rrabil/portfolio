@@ -12,7 +12,7 @@ Delivering useful technical knowledge at scale—for humans *and* agents.
 Hi, I'm Richard. I bring 20+ years of experience creating product and engineering documentation for SaaS and enterprise software.
 
 - [View My Work](/docs/portfolio/samples)
-- [Download Resume (PDF)](/files/richard-rabil-resume.pdf)
+- [View My Resume](/resume)
 - [Contact Me on LinkedIn](https://www.linkedin.com/in/rrabil/)
 
 ## What I do
@@ -50,4 +50,4 @@ Contact me on LinkedIn.
 
 [Connect on LinkedIn](https://www.linkedin.com/in/rrabil/)
 
-[Download my resume (PDF)](/files/richard-rabil-resume.pdf)
+[View my resume](/resume)

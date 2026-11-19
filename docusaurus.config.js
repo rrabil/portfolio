@@ -97,15 +97,6 @@ const config = {
             label: 'Contact',
             position: 'right',
           },
-          {
-            // pathname:// tells Docusaurus this is a static file, not a page
-            // route, so the browser downloads it instead of client-routing.
-            to: 'pathname:///files/richard-rabil-resume.pdf',
-            label: 'Download Resume',
-            position: 'right',
-            className: 'navbar-cta',
-            target: '_blank',
-          },
         ],
       },
       footer: {
@@ -126,7 +117,6 @@ const config = {
               {label: 'How I Built This', to: '/how-i-built-this'},
               {label: 'Blog', href: 'https://richardrabil.com'},
               {label: 'Contact (LinkedIn)', href: 'https://www.linkedin.com/in/rrabil/'},
-              {label: 'Download Resume (PDF)', to: 'pathname:///files/richard-rabil-resume.pdf'},
             ],
           },
           {
