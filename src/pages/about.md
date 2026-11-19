@@ -19,7 +19,7 @@ I'm a principal technical writer and knowledge architect with 20+ years of exper
 
 ## Technical Communication: Creating Quality Docs
 
-Documentation is only useful if people can discover and apply it to perform their tasks correctly. That not only means writing content that's findable, structured, consistent, accurate, and all the other adjectives typically applied to good writing. It also means designing content so it is visually approachable through methods like scannable layouts, thoughtful formatting, and design choices that invite trust. Every day it's my goal to bring about this combination of form and function to achieve *deep* quality, not just *functional* quality. (I even made this philosophy the [subject of a podcast](https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/).)
+Documentation is only useful if people can discover and apply it to perform their tasks correctly. That not only means writing content that's findable, structured, consistent, accurate, and all the other adjectives typically applied to good writing. It also means designing content so it is visually approachable through methods like scannable layouts, thoughtful formatting, and design choices that invite trust. Every day it's my goal to bring about this combination of form and function to achieve *deep* quality, not just *functional* quality. I even made this philosophy the [subject of a podcast](https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/).
 
 ## Knowledge Architecture: From Pages to Systems
 
