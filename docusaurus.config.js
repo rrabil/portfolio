@@ -56,6 +56,21 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Social preview (Open Graph / Twitter card) shown when any page is
+      // shared on LinkedIn, Slack, X, etc. Docusaurus emits og:image and
+      // twitter:image from this; the twitter:card size is set in metadata.
+      // Source design: 1200×630, the size LinkedIn and X expect.
+      image: 'img/social-card.jpg',
+      metadata: [
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {property: 'og:image:width', content: '1200'},
+        {property: 'og:image:height', content: '630'},
+        {
+          property: 'og:image:alt',
+          content:
+            'Richard Rabil, Principal Technical Writer and AI Knowledge Architect: delivering useful technical knowledge at scale, for humans and agents.',
+        },
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -77,6 +92,20 @@ const config = {
             label: 'Blog',
             position: 'right',
           },
+          {
+            href: 'https://www.linkedin.com/in/rrabil/',
+            label: 'Contact',
+            position: 'right',
+          },
+          {
+            // pathname:// tells Docusaurus this is a static file, not a page
+            // route, so the browser downloads it instead of client-routing.
+            to: 'pathname:///files/richard-rabil-resume.pdf',
+            label: 'Download Resume',
+            position: 'right',
+            className: 'navbar-cta',
+            target: '_blank',
+          },
         ],
       },
       footer: {
@@ -96,6 +125,8 @@ const config = {
             items: [
               {label: 'How I Built This', to: '/how-i-built-this'},
               {label: 'Blog', href: 'https://richardrabil.com'},
+              {label: 'Contact (LinkedIn)', href: 'https://www.linkedin.com/in/rrabil/'},
+              {label: 'Download Resume (PDF)', to: 'pathname:///files/richard-rabil-resume.pdf'},
             ],
           },
           {

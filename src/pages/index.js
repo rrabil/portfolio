@@ -93,9 +93,20 @@ export default function Home() {
                 />
               </svg>
             </Link>
-            <Link className={styles.btnGhost} to="/about">
-              About Me
-            </Link>
+            <a
+              className={styles.btnGhost}
+              href={withBaseUrl('/files/richard-rabil-resume.pdf')}
+              target="_blank"
+              rel="noopener">
+              Download Resume (PDF)
+            </a>
+            <a
+              className={styles.btnGhost}
+              href="https://www.linkedin.com/in/rrabil/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Contact Me on LinkedIn
+            </a>
           </div>
         </section>
 
@@ -213,13 +224,22 @@ export default function Home() {
             <p className={styles.eyebrow}>Want to Get in Touch?</p>
             <h2>Contact me on LinkedIn.</h2>
           </div>
-          <a
-            className={styles.sectionLink}
-            href="https://www.linkedin.com/in/rrabil/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Connect on LinkedIn →
-          </a>
+          <div className={styles.contactLinks}>
+            <a
+              className={styles.sectionLink}
+              href="https://www.linkedin.com/in/rrabil/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Connect on LinkedIn →
+            </a>
+            <a
+              className={styles.sectionLink}
+              href={withBaseUrl('/files/richard-rabil-resume.pdf')}
+              target="_blank"
+              rel="noopener">
+              Download my resume (PDF) →
+            </a>
+          </div>
         </section>
       </main>
     </Layout>

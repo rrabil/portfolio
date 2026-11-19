@@ -24,8 +24,12 @@ Follows common docs-as-code portfolio conventions: a Markdown/MDX static site ge
 - Resume
 - How I Built This → single page (flat link, not a dropdown)
 - Blog (right-aligned) → external link to richardrabil.com (not hosted on this site)
+- Contact (right-aligned) → Richard's LinkedIn profile (the only public contact channel)
+- Download Resume (right-aligned, styled as an outlined button via the `navbar-cta` class in `src/css/custom.css`) → `/files/richard-rabil-resume.pdf`
 
-Footer mirrors the same links under "Site" (Home, About Me, Work, Resume) and "More" (How I Built This, Blog) columns, plus "Source" (GitHub repo link).
+Footer mirrors the same links under "Site" (Home, About Me, Work, Resume) and "More" (How I Built This, Blog, Contact (LinkedIn), Download Resume (PDF)) columns, plus "Source" (GitHub repo link).
+
+**Social preview:** `themeConfig.image` points at `static/img/social-card.jpg` (1200×630), so every page's `og:image`/`twitter:image` uses it when shared on LinkedIn, Slack, or X; `themeConfig.metadata` adds `twitter:card=summary_large_image` and the image's size and alt text. If the headline, title, or headshot changes, regenerate the card so it still matches the home hero.
 
 **Deliberately excluded from nav and footer until they have real content** (a standing policy, not an oversight — see commit `572dd84`):
 
@@ -50,6 +54,7 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
 /scripts                   → build-time Node scripts, run via npm lifecycle hooks
   /scripts/generate-llm-content.mjs → postbuild step, see "Machine-readable content layer"
   /scripts/lib/pages.mjs    → shared route/frontmatter logic for that script and its checks
+  /scripts/make-resume-pdf.mjs → postbuild step, prints /resume to the downloadable resume PDF
 /checks                    → self-healing docs components, one module per check
   /checks/link-checker      → currently just documents that Lychee (in CI) fills this role
   /checks/md-twin-checker   → verifies every page has a Markdown twin + alternate-link tag
@@ -98,7 +103,7 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 **Done (was a backlog idea):** How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples have been consolidated into a single page (`src/pages/how-i-built-this.md`). The three pages had real content overlap — all three narrated the same CI pipeline at different levels of detail. The two retired pages were archived outside the repo (under `Career/portfolio-archive/retired-pages/`) rather than only deleted, and they remain in git history at commit `367eb9d`.
 
-**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"), "What I do" (Technical Communication vs. AI Knowledge Architecture panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
+**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"; buttons: View My Work, Download Resume (PDF), Contact Me on LinkedIn), "What I do" (Technical Communication vs. AI Knowledge Architecture panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor), "Want to Get in Touch?" (LinkedIn and resume PDF links). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
 **About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 
@@ -120,7 +125,9 @@ Conventions on this page, apply them to any edit:
 
 Note: the earlier version of this page carried an "Editorial judgment" section (concrete moments of catching or correcting AI output — a linting Action that silently swallowed failures, an MDX comment-syntax fix that solved the build error but not the linter-suppression goal). The consolidated copy drops it. That material is preserved in the archive alongside the retired pages and in git history at `367eb9d`; if judgment-call narrative returns to the site, it needs a deliberate home rather than being re-added here by default.
 
-**Resume** (`src/pages/resume.md`) — written. Mirrors Richard's master resume (a Google Doc) as his general, broad-audience resume. It is not a trimmed version: content matches the master except for the allowed differences below. Edits arrive as batches in `../handoffs/portfolio-resume-sync.md`, written by Richard's tailor-resume skill; apply them rather than rewording the page independently. No downloadable PDF yet.
+**Resume** (`src/pages/resume.md`) — written. Mirrors Richard's master resume (a Google Doc) as his general, broad-audience resume. It is not a trimmed version: content matches the master except for the allowed differences below. Edits arrive as batches in `../handoffs/portfolio-resume-sync.md`, written by Richard's tailor-resume skill; apply them rather than rewording the page independently.
+
+**Resume PDF** (`/files/richard-rabil-resume.pdf`, behind every "Download Resume" button): printed from the built `/resume` page by `scripts/make-resume-pdf.mjs`, never from the master Google Doc, so it carries the same allowed differences (no phone, email, or street address). It regenerates on every `npm run build` (postbuild, writes into `build/files/`), so the deployed PDF always matches the deployed page. `static/files/richard-rabil-resume.pdf` is a committed fallback that ships only if the build can't start a browser (the build warns and continues); refresh it with `npm run resume:pdf` after applying a resume batch.
 
 **Allowed differences from the master** (never "fix" these to match):
 
