@@ -1,6 +1,6 @@
 # Richard Rabil Portfolio
 
-Technical writing and AI knowledge systems portfolio, built with [Docusaurus](https://docusaurus.io/). See [AGENTS.md](AGENTS.md) for full project context, architecture decisions, and content plan — this file only covers running the site locally.
+My technical documentation, content engineering, and knowledge management and architecture portfolio, built with [Docusaurus](https://docusaurus.io/). See [AGENTS.md](AGENTS.md) for full project context, architecture decisions, and content plan.
 
 ## Local development
 
