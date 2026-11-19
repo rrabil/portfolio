@@ -4,7 +4,7 @@ Tool-agnostic project context for AI coding agents (Claude Code, Codex, or other
 
 ## Project overview
 
-Personal portfolio site for Richard Rabil, Principal Technical Writer & AI Knowledge Architect. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to demonstrate mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture.
+Personal portfolio site for Richard Rabil, Principal Technical Writer, with practices in knowledge architecture and content engineering. The site itself is a demonstration artifact: it embodies a scalable docs-as-code implementation. The purpose is to demonstrate mastery of technical writing at a senior level and establish credibility in AI-assisted knowledge architecture.
 
 Follows common docs-as-code portfolio conventions: a Markdown/MDX static site generator, automated prose linting, automated link checking, and a transparent "how this was built" narrative page — general best practices for demonstrating technical-writing and AI-collaboration credibility.
 
@@ -103,11 +103,11 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 **Done (was a backlog idea):** How I Built This, Documentation Pipeline Portfolio, and Doc Detective Examples have been consolidated into a single page (`src/pages/how-i-built-this.md`). The three pages had real content overlap — all three narrated the same CI pipeline at different levels of detail. The two retired pages were archived outside the repo (under `Career/portfolio-archive/retired-pages/`) rather than only deleted, and they remain in git history at commit `367eb9d`.
 
-**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (dual identity, "creating useful documentation at scale"; buttons: View My Work, View My Resume, Contact Me on LinkedIn), "What I do" (Technical Communication vs. AI Knowledge Architecture panels), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor), "Want to Get in Touch?" (LinkedIn and Resume page links). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
+**Home** (`src/pages/index.js`, hand-written React, plus `src/pages/home.md`, its hand-authored Markdown twin for the machine-readable content layer — see that section) — written. Hero (headline line "Principal Technical Writer · Knowledge Architecture · Content Engineering", "Delivering useful technical knowledge at scale—for humans and agents"; buttons: View My Work, View My Resume, Contact Me on LinkedIn), "What I do" (Three Practices: an inline-SVG Venn diagram of Technical Communication, Knowledge Architecture, and Content Engineering, with "Docs that work" where all three overlap, plus a short paragraph per practice beside it), "Selected Work" (six cards: three publications, three Oracle Utilities docs samples), "What Is This Site?" (the five-stage pipeline as proof, not metaphor), "Want to Get in Touch?" (LinkedIn and Resume page links). If `index.js`'s content changes, update `home.md` to match — nothing keeps them in sync automatically.
 
-**About Me** (`src/pages/about.md`) — written. States the dual identity in prose: one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
+**About Me** (`src/pages/about.md`) — written. States the three practices in prose, one section each (headings start with the practice name): one section on why Richard writes (technical-communication background, MA in Tech Comm), one on the "systems mindset" (governance, IA, content lifecycle across Opower and Oracle), one on where AI comes in (knowledge architecture, prompts/skills/agents). Explicitly notes the words on the page are human-written even though AI helped with scaffolding — reinforces the judgment-over-tool-fluency positioning. Not a resume-bullet dump.
 
-**Work** (`docs/portfolio/samples.md`, nav item) — written. Existing published pieces (Document360 podcast, STC Intercom, A List Apart), each linking to the original external source rather than reproducing content. Home page surfaces the same three as "Selected Work" cards. Ends with an "Agents and Skills" section that cross-links into How I Built This — its Content Pipeline, Doc Detective Checks, Skills, and AGENTS.md sections. Work points outward to the content-engineering side rather than duplicating it.
+**Work** (`docs/portfolio/samples.md`, nav item) — written. Existing published pieces (Document360 podcast, STC Intercom, A List Apart), each linking to the original external source rather than reproducing content. Home page surfaces the same three as "Selected Work" cards. Four sections: Technical Communication, Knowledge Architecture, Content Engineering, and Career & Craft (see "Three-part identity and labels"). The Content Engineering section cross-links into How I Built This — its Content Pipeline, Doc Detective Checks, Skills, and AGENTS.md sections (the old standalone "Agents and Skills" section was folded in on 2026-11-19). Work points outward to the content-engineering side rather than duplicating it.
 
 **Skills & Agents** (`docs/skills-agents/`) — **retired 2026-09-22, do not recreate without a deliberate decision.** The section held `standing-rules-vs-memory.md` (an overview page whose intro and two of three subsections were still "Content coming soon") and `evaluating-third-party-skills.md` (a written case study comparing and merging two third-party AI-editing skills). Rather than finish the section, it was removed: the Work page's "Agents and Skills" section now links straight to the Skills and AGENTS.md sections of How I Built This, which cover the same ground with real content. Both files were archived to `Career/portfolio-archive/retired-pages/2026-09-22-skills-agents-removal/` and remain in git history at commit `203296e`. The standing-rules-versus-accumulated-memory distinction it was meant to explain is still unwritten anywhere on the site; if it returns, it needs a deliberate home rather than a rebuilt placeholder section.
 
@@ -137,11 +137,23 @@ Note: the earlier version of this page carried an "Editorial judgment" section (
 
 ## Messaging & positioning context (for content generation, not code)
 
-- Dual identity: Principal Technical Writer + AI Knowledge Architect.
+- Three-part identity (decided 2026-11-19, replaces the old "dual identity"): one title, Principal Technical Writer, plus two practices, Knowledge Architecture and Content Engineering. "AI" is no longer in the title; it runs through all three practices. See "Three-part identity and labels" below.
 - Differentiator to emphasize throughout the site: judgment over tool-fluency — documented evidence of knowing when and why to override AI output, not just AI tool use itself.
 - New, related differentiator to start weaving in: serving human readers and AI agents as first-class audiences at once, not sequentially — content and structure (this file included) designed to be equally legible to a person and to an agent parsing it. Frame this as a natural extension of the governance-framework work, not a separate gimmick.
 - Resume stays broad/high-level; specific narrow evidence is reserved for other written materials and site narrative pages like "How I Built This" — not for resume bullets.
 - Domain expertise to leverage: DITA/Oxygen migrations, docs-as-code, Confluence governance, Oracle Utilities domain knowledge (usage data, billing, meter readings).
+
+## Three-part identity and labels
+
+Decided with Richard on 2026-11-19. Use these words everywhere: headline, Work sections, resume, About, page descriptions.
+
+- **Technical Communication**: docs people read. Document types such as user, admin, integration, and API docs live here.
+- **Knowledge Architecture**: the structure under the docs. Umbrella over information architecture, content models, taxonomy, metadata, governance, and knowledge management. Keep "knowledge management" visible as a keyword.
+- **Content Engineering**: the systems that build, check, and publish docs: docs-as-code, pipelines, AI workflows, agent skills.
+
+Tests for borderline items: knowledge architecture produces decisions and models; content engineering produces things that run. Knowledge architecture is the structure; knowledge management is the people and habits around it.
+
+**Labels** (for Work cards and future detail pages): `practice` (exactly one of the three above), `type` (what kind of thing: User guide, API reference, Specification, Knowledge base, Migration, Pipeline, Article, Talk…), `skills` (what was done: Information architecture, Content modeling, Taxonomy and metadata, Knowledge management, Docs-as-code, AI workflows, Governance, Editing…), `tools` (what was used: Git, Markdown, DITA/XML, Docusaurus, Vale, MadCap Flare, Confluence, Jira, Quarto, Claude Code, Codex…). Rule of thumb: a kind of document is a type, a way of working is a skill, a product is a tool. A new practice should be rare.
 
 ## Standing rules for agents working in this repo
 

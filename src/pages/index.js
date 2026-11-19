@@ -55,6 +55,42 @@ const samples = [
   },
 ];
 
+const layers = [
+  {
+    name: 'Technical Communication',
+    body: (
+      <>
+        I write docs that people read and use. I research complex products,
+        organize what I learn, and present it so readers find the answer fast.
+        I hold a master&apos;s degree in technical communication.
+      </>
+    ),
+  },
+  {
+    name: 'Knowledge Architecture',
+    body: (
+      <>
+        I design the structure under the docs: information architecture,
+        content models, taxonomy, and metadata. I also set the governance rules
+        that keep a knowledge system healthy as it grows. Good structure helps
+        people find answers, and it helps AI agents retrieve them.
+      </>
+    ),
+  },
+  {
+    name: 'Content Engineering',
+    body: (
+      <>
+        I build the systems that create, check, and publish the docs. I work in
+        docs-as-code: plain text in Git, with automated style and link checks
+        before anything goes live. I also build AI workflows and agent skills.
+        This site is a working example:{' '}
+        <Link to="/how-i-built-this">see how I built it</Link>.
+      </>
+    ),
+  },
+];
+
 const pipelineStages = ['Lint', 'Link Check', 'Build', 'Content Checks', 'Deploy'];
 
 export default function Home() {
@@ -62,11 +98,11 @@ export default function Home() {
   return (
     <Layout
       title="Richard Rabil"
-      description="Principal Technical Writer & AI Knowledge Architect">
+      description="Principal Technical Writer · Knowledge Architecture · Content Engineering">
       <main className={styles.wrap}>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>
-            Principal Technical Writer—AI Knowledge Architect
+            Principal Technical Writer · Knowledge Architecture · Content Engineering
           </p>
           <h1 className={styles.heroHeadline}>
             Delivering useful technical knowledge at scale—for humans and agents.
@@ -108,27 +144,43 @@ export default function Home() {
 
         <section className={styles.section}>
           <div className={styles.sectionHead}>
-            <p className={styles.eyebrow}>Dual Identity</p>
+            <p className={styles.eyebrow}>Three Practices</p>
             <h2>What I do.</h2>
           </div>
-          <div className={styles.identityGrid}>
-            <div className={styles.identityPanel}>
-              <h3>Technical Communication</h3>
-              <p>
-                With a master's degree in technical communication, I'm an expert in researching and
-                organizing complex technical information, designing attractive documents, and creating
-                content that people actually read.
-              </p>
-            </div>
-            <div className={styles.identityRule} />
-            <div className={styles.identityPanel}>
-              <h3>AI Knowledge Architecture</h3>
-              <p>
-                I build AI knowledge assets and governance frameworks that enable teams (and agents!) to deliver quality knowledge to their audiences as the docs grow. This site is
-                proof: a <Link to="/how-i-built-this">docs-as-code pipeline</Link> that lints prose,
-                validates links, and deploys vetted content via CI/CD.
-              </p>
-            </div>
+          <div className={styles.practiceWrap}>
+            <svg
+              className={styles.venn}
+              viewBox="20 10 320 310"
+              role="img"
+              aria-label="Three overlapping circles: Technical Communication, Knowledge Architecture, and Content Engineering. My work sits where all three meet.">
+              <circle className={styles.vennCircle} cx="180" cy="115" r="100" />
+              <circle className={styles.vennCircle} cx="128" cy="205" r="100" />
+              <circle className={styles.vennCircle} cx="232" cy="205" r="100" />
+              <text className={styles.vennLabel} x="180" y="58" textAnchor="middle">
+                <tspan x="180">Technical</tspan>
+                <tspan x="180" dy="18">Communication</tspan>
+              </text>
+              <text className={styles.vennLabel} x="102" y="252" textAnchor="middle">
+                <tspan x="102">Knowledge</tspan>
+                <tspan x="102" dy="18">Architecture</tspan>
+              </text>
+              <text className={styles.vennLabel} x="258" y="252" textAnchor="middle">
+                <tspan x="258">Content</tspan>
+                <tspan x="258" dy="18">Engineering</tspan>
+              </text>
+              <text className={styles.vennCenter} x="180" y="170" textAnchor="middle">
+                <tspan x="180">Docs that</tspan>
+                <tspan x="180" dy="15">work</tspan>
+              </text>
+            </svg>
+            <ul className={styles.practiceList}>
+              {layers.map((layer) => (
+                <li className={styles.practice} key={layer.name}>
+                  <h3>{layer.name}</h3>
+                  <p>{layer.body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
           <Link className={styles.sectionLink} to="/about">
             More About Me →

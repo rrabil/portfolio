@@ -97,34 +97,71 @@
   margin: 0;
 }
 
-.identityGrid {
+/* "What I do": three overlapping circles, one per practice, with the
+   practice text beside them. The overlaps darken because each circle is a
+   light, see-through tint of the accent color. */
+.practiceWrap {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  gap: 44px;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: 48px;
+  align-items: center;
 }
 
-.identityRule {
-  background: var(--rule);
+.venn {
+  width: 100%;
+  height: auto;
 }
 
-.identityPanel h3 {
+.vennCircle {
+  fill: var(--accent);
+  fill-opacity: 0.12;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.vennLabel {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin: 0 0 14px;
+  font-size: 15px;
+  fill: var(--text);
 }
 
-.identityPanel p {
-  max-width: 58ch;
+.vennCenter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--accent);
+}
+
+.practiceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 22px;
+}
+
+.practice h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+}
+
+.practice p {
+  max-width: 62ch;
+  margin: 0;
   color: var(--text-muted);
   font-size: 0.98rem;
 }
 
-@media (max-width: 760px) {
-  .identityGrid {
+@media (max-width: 860px) {
+  .practiceWrap {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
-  .identityRule {
-    display: none;
+  .venn {
+    max-width: 340px;
+    justify-self: center;
   }
 }
 

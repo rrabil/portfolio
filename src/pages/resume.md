@@ -1,11 +1,11 @@
 ---
 title: Resume
-description: Principal Technical Writer & AI Knowledge Architect—work experience, tools, and publications.
+description: Principal Technical Writer with practices in knowledge architecture and content engineering—work experience, tools, and publications.
 ---
 
 # Richard Rabil, Jr.
 
-**Principal Technical Writer | Product & Engineering Documentation | AI Knowledge Architecture**
+**Principal Technical Writer | Knowledge Architecture | Content Engineering & Docs-as-Code**
 
 20+ years creating technical docs to help people understand and use SaaS and enterprise products. Experienced in fast-paced corporate and startup environments, building knowledge systems and information architectures that enable teams to learn and operate products faster. I also design AI-augmented workflows and the governance that keeps content trustworthy at scale.
 
