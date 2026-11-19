@@ -55,6 +55,7 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
   /checks/link-checker      → currently just documents that Lychee (in CI) fills this role
   /checks/md-twin-checker   → verifies every page has a Markdown twin + alternate-link tag
   /checks/llms-txt-checker  → verifies llms.txt matches the site's actual pages
+  /checks/site-health       → daily check of the live site: uptime, links, Pa11y, Lighthouse
 /styles                    → Vale style packages; styles/Google fetched via `vale sync`
                              (not tracked in git), styles/config/ holds the project vocab
 /.claude                   → local Claude Code settings (gitignored except settings.local.json)
@@ -74,6 +75,11 @@ One workflow, five sequential jobs, each gated on the previous via `needs`:
 5. **deploy** — downloads the build artifact and publishes to GitHub Pages via `actions/deploy-pages`. Only runs on a push to `main` (not on PRs), so nothing publishes without an actual merge.
 
 Runs on push/PR to `main` and on manual `workflow_dispatch`.
+
+Two scheduled workflows sit outside this pipeline and never block a deploy. Each reports through one self-closing GitHub issue:
+
+- **`sample-links.yml`** — daily Lychee check of the home and Work card links (label `broken-sample-link`).
+- **`site-health.yml`** — daily check of the *published* site, pages taken from the live `sitemap.xml`: uptime, Lychee on every live page, Pa11y (WCAG 2 AA errors, HTML CodeSniffer + axe), and Lighthouse CI (performance, best practices, SEO thresholds in `checks/site-health/lighthouserc.json`). Label `site-health`. Also runs as a test on PRs that change it, without opening an issue. See `checks/site-health/README.md`.
 
 ## Self-healing docs principle
 

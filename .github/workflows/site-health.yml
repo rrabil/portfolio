@@ -1,0 +1,172 @@
+name: Live site health check
+
+# Daily check of the published site at portfolio.richardrabil.com, the way a
+# visitor sees it (not the source files the deploy pipeline checks):
+#   1. Is the site up? (reads the live sitemap.xml to get every page)
+#   2. Broken links on every live page (Lychee)
+#   3. Accessibility, WCAG 2 AA errors only (Pa11y with HTML CodeSniffer + axe)
+#   4. Speed and basics (Lighthouse: performance, best practices, SEO)
+# Like sample-links.yml, it never blocks a deploy. A problem opens (or updates)
+# one GitHub issue labeled "site-health", which closes itself once everything
+# passes again. On a pull request that edits this check, it only writes a
+# summary on the run page and opens no issue. See checks/site-health/README.md.
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/site-health.yml"
+      - "checks/site-health/**"
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  SITE_URL: https://portfolio.richardrabil.com
+
+jobs:
+  site-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Is the site up?
+        id: pages
+        run: |
+          if curl -fsSL --retry 3 --retry-delay 10 "$SITE_URL/sitemap.xml" -o sitemap.xml; then
+            urls=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed -e 's/<loc>//' -e 's/<\/loc>//' | tr '\n' ' ')
+            echo "urls=$urls" >> "$GITHUB_OUTPUT"
+            echo "up=true" >> "$GITHUB_OUTPUT"
+            echo "Pages found: $urls"
+          else
+            echo "up=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Could not load $SITE_URL/sitemap.xml"
+          fi
+
+      - name: Broken links (Lychee)
+        id: lychee
+        if: steps.pages.outputs.up == 'true'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --config lychee.toml ${{ steps.pages.outputs.urls }}
+          format: markdown
+          output: lychee-report.md
+          jobSummary: false
+          fail: false
+
+      - name: Setup Node
+        if: steps.pages.outputs.up == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.pages.outputs.up == 'true'
+        run: npm ci
+
+      - name: Accessibility (Pa11y)
+        id: pa11y
+        if: steps.pages.outputs.up == 'true'
+        continue-on-error: true
+        run: node checks/site-health/run-pa11y.mjs ${{ steps.pages.outputs.urls }}
+
+      - name: Speed and basics (Lighthouse)
+        id: lighthouse
+        if: steps.pages.outputs.up == 'true'
+        continue-on-error: true
+        run: |
+          args=""
+          for u in ${{ steps.pages.outputs.urls }}; do args="$args --collect.url=$u"; done
+          npx --yes @lhci/cli@0.16.1 autorun --config=checks/site-health/lighthouserc.json $args
+
+      - name: Summarize Lighthouse
+        if: always() && steps.pages.outputs.up == 'true'
+        run: node checks/site-health/summarize-lighthouse.mjs
+
+      - name: Save full Lighthouse reports
+        if: always() && steps.pages.outputs.up == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lighthouse-results/
+          if-no-files-found: ignore
+
+      - name: Write the report
+        if: always()
+        env:
+          UP: ${{ steps.pages.outputs.up }}
+          LINKS: ${{ steps.lychee.outputs.exit_code }}
+          A11Y: ${{ steps.pa11y.outcome }}
+          PERF: ${{ steps.lighthouse.outcome }}
+        run: |
+          status() { if [ "$1" = ok ]; then echo "✅ Passed"; else echo "❌ Needs attention"; fi; }
+          problems=0
+          if [ "$UP" != "true" ]; then
+            problems=1
+            {
+              echo "## ❌ The site is down"
+              echo
+              echo "$SITE_URL/sitemap.xml did not load after three tries. Visitors may not be able to reach the portfolio. Check the latest run of the deploy workflow and GitHub Pages settings."
+            } > report.md
+          else
+            [ "$LINKS" = "0" ] && l=ok || { l=bad; problems=1; }
+            [ "$A11Y" = "success" ] && a=ok || { a=bad; problems=1; }
+            [ "$PERF" = "success" ] && p=ok || { p=bad; problems=1; }
+            {
+              echo "| Check | Result |"
+              echo "| --- | --- |"
+              echo "| Site is up | ✅ Passed |"
+              echo "| Broken links | $(status $l) |"
+              echo "| Accessibility (WCAG 2 AA errors) | $(status $a) |"
+              echo "| Speed and basics (Lighthouse) | $(status $p) |"
+              echo
+              echo "## Broken links"
+              echo
+              echo "Domains in \`lychee.toml\` \`exclude\` are not checked. Verify those by hand in a browser."
+              echo
+              cat lychee-report.md 2>/dev/null || echo "No link report was produced."
+              echo
+              echo "## Accessibility"
+              echo
+              cat pa11y-report.md 2>/dev/null || echo "No accessibility report was produced."
+              echo
+              echo "## Speed and basics"
+              echo
+              cat lighthouse-report.md 2>/dev/null || echo "No Lighthouse report was produced."
+              echo
+              echo "Full Lighthouse reports are attached to the run as \`lighthouse-reports\`."
+            } > report.md
+          fi
+          echo "" >> report.md
+          echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" >> report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          echo "PROBLEMS=$problems" >> "$GITHUB_ENV"
+
+      - name: Open, update, or close the issue
+        if: always() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create site-health --color D93F0B \
+            --description "The daily live-site health check found a problem" 2>/dev/null || true
+          existing=$(gh issue list --label site-health --state open --json number --jq '.[0].number // empty')
+          if [ "$PROBLEMS" = "1" ]; then
+            {
+              echo "The daily health check of the live portfolio found a problem on $(date -u +%Y-%m-%d). Fix what is listed below; this issue closes itself on the next run where everything passes."
+              echo
+              cat report.md
+            } > issue-body.md
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file issue-body.md
+            else
+              gh issue create --title "Live site health check found a problem" \
+                --label site-health --body-file issue-body.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All live-site checks passed on $(date -u +%Y-%m-%d)."
+          fi
