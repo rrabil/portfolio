@@ -27,11 +27,7 @@ Follows common docs-as-code portfolio conventions: a Markdown/MDX static site ge
 
 Footer mirrors the same links under "Site" (Home, About Me, Work, Resume) and "More" (How I Built This, Blog) columns, plus "Source" (GitHub repo link).
 
-**Deliberately excluded from nav and footer until they have real content** (a standing policy, not an oversight — see commit `572dd84`):
-
-- API Sample (`/api-sample`)
-
-This page still exists as a live route — it's just not promoted to top-level nav yet. When a page is ready to graduate into nav, update this list and the actual navbar/footer config together so this section doesn't go stale again.
+**Pages are not published until they have real content** (a standing policy, not an oversight — see commit `572dd84`). A "coming soon" stub is not added as a live route, even unlinked, because it still appears in `llms.txt` and search results. When a page is ready, add it to the navbar/footer config and this section together.
 
 Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus default.
 
@@ -45,7 +41,7 @@ Favicon is a custom RR monogram (`static/img/favicon.ico`), not the Docusaurus d
 /src/pages                → top-level routes: index.js (home), home.md (hand-authored
                              Markdown twin of index.js, excluded from routing — see
                              "Machine-readable content layer"), about.md, resume.md,
-                             api-sample.md, how-i-built-this.md
+                             how-i-built-this.md
 /src/css, /src/components  → shared styles and React components
 /scripts                   → build-time Node scripts, run via npm lifecycle hooks
   /scripts/generate-llm-content.mjs → postbuild step, see "Machine-readable content layer"
@@ -106,9 +102,7 @@ GitHub Pages is a static host with no server-side content negotiation, so agents
 
 **Skills & Agents** (`docs/skills-agents/`) — **retired 2026-09-22, do not recreate without a deliberate decision.** The section held `standing-rules-vs-memory.md` (an overview page whose intro and two of three subsections were still "Content coming soon") and `evaluating-third-party-skills.md` (a written case study comparing and merging two third-party AI-editing skills). Rather than finish the section, it was removed: the Work page's "Agents and Skills" section now links straight to the Skills and AGENTS.md sections of How I Built This, which cover the same ground with real content. Both files were archived to `Career/portfolio-archive/retired-pages/2026-09-22-skills-agents-removal/` and remain in git history at commit `203296e`. The standing-rules-versus-accumulated-memory distinction it was meant to explain is still unwritten anywhere on the site; if it returns, it needs a deliberate home rather than a rebuilt placeholder section.
 
-**API Sample** (`src/pages/api-sample.md`, `/api-sample`, not yet in nav) — **stub, not yet built.** Planned: fictional OpenAPI 3.1 spec, utilities-domain (usage data, billing, meter readings) to leverage Oracle Utilities background, rendered via Scalar. Server is not real — "Try it" requests will fail; example responses carry the demonstration.
-
-- Open constraint: real authenticated data access isn't feasible for a fictional/public demo. Current plan (static example responses, no live backend) is confirmed workable for now. Revisit only if a more dynamic demo becomes worthwhile later.
+**API Sample** — **removed 2026-11-19, planned to return.** The `/api-sample` route was a public "Content coming soon" stub, so it was taken down rather than left live (it also appeared in `llms.txt`). It stays in git history. Richard is taking an API documentation course and plans to publish a real API sample when it's done. Earlier plan, for reference: fictional OpenAPI 3.1 spec, utilities-domain (usage data, billing, meter readings) to leverage Oracle Utilities background, rendered via Scalar, with static example responses and no live backend. When it returns, add it to nav and footer at the same time.
 
 **How I Built This** (`src/pages/how-i-built-this.md`) — written. The consolidated home for everything about how this site is built; the former Documentation Pipeline Portfolio and Doc Detective Examples pages were merged into it. Five sections, in order: System Overview (Docusaurus/GitHub Pages/Actions), Content Pipeline (Vale, Lychee, md-twin-checker, llms-txt-checker), Doc Detective Checks (one subsection per spec in `tests/doc-detective/`), Skills (one subsection per skill), AGENTS.md (this file, as a "serve two audiences" artifact).
 
