@@ -14,7 +14,7 @@ My work falls into three practices that build on each other: technical communica
 
 ## Technical Communication
 
-Technical writing and documentation for SaaS and enterprise products: user, admin, integration, and API docs.
+Technical writing and documentation for SaaS and enterprise products: user, admin, configuration, implementation, and engineering docs (such as SDK and API content).
 
 <SampleGrid items={technicalWriting} />
 
