@@ -111,18 +111,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
  * Links inside running text are underlined so they don't rely on color
- * alone (WCAG 1.4.1; axe rule "link-in-text-block"). Covers page bodies
- * (Markdown and MDX) and plain links in home-page paragraphs; navigation, cards,
- * buttons, and heading anchors keep their own styling.
+ * alone (WCAG 1.4.1; axe rule "link-in-text-block"). Scoped to links inside
+ * text blocks (paragraphs, list items, table cells) so whole-card links,
+ * navigation, buttons, and heading anchors keep their own styling.
  */
-article a:not(.hash-link):not(.button):not(.card),
+article :is(p, li, td, th, dd, blockquote, figcaption) a:not(.hash-link):not(.button):not(.breadcrumbs__link),
 main p a:not([class]) {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-article a:not(.hash-link):not(.button):not(.card):hover,
+article :is(p, li, td, th, dd, blockquote, figcaption) a:not(.hash-link):not(.button):not(.breadcrumbs__link):hover,
 main p a:not([class]):hover {
   text-decoration-thickness: 2px;
 }
