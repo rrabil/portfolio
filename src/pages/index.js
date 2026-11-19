@@ -160,13 +160,13 @@ export default function Home() {
                 <tspan x="180">Technical</tspan>
                 <tspan x="180" dy="18">Communication</tspan>
               </text>
-              <text className={styles.vennLabel} x="99" y="246" textAnchor="middle">
-                <tspan x="99">Knowledge</tspan>
-                <tspan x="99" dy="18">Architecture</tspan>
+              <text className={styles.vennLabel} x="102" y="252" textAnchor="middle">
+                <tspan x="102">Knowledge</tspan>
+                <tspan x="102" dy="18">Architecture</tspan>
               </text>
-              <text className={styles.vennLabel} x="261" y="246" textAnchor="middle">
-                <tspan x="261">Content</tspan>
-                <tspan x="261" dy="18">Engineering</tspan>
+              <text className={styles.vennLabel} x="258" y="252" textAnchor="middle">
+                <tspan x="258">Content</tspan>
+                <tspan x="258" dy="18">Engineering</tspan>
               </text>
               <text className={styles.vennCenter} x="180" y="170" textAnchor="middle">
                 <tspan x="180">Docs that</tspan>
