@@ -93,13 +93,9 @@ export default function Home() {
                 />
               </svg>
             </Link>
-            <a
-              className={styles.btnGhost}
-              href={withBaseUrl('/files/richard-rabil-resume.pdf')}
-              target="_blank"
-              rel="noopener">
-              Download Resume (PDF)
-            </a>
+            <Link className={styles.btnGhost} to="/resume">
+              View My Resume
+            </Link>
             <a
               className={styles.btnGhost}
               href="https://www.linkedin.com/in/rrabil/"
@@ -232,13 +228,9 @@ export default function Home() {
               rel="noopener noreferrer">
               Connect on LinkedIn →
             </a>
-            <a
-              className={styles.sectionLink}
-              href={withBaseUrl('/files/richard-rabil-resume.pdf')}
-              target="_blank"
-              rel="noopener">
-              Download my resume (PDF) →
-            </a>
+            <Link className={styles.sectionLink} to="/resume">
+              View my resume →
+            </Link>
           </div>
         </section>
       </main>

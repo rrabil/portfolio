@@ -80,24 +80,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
-/* "Download Resume" call to action: the one navbar item styled as a button,
-   so recruiters can find it at a glance. Desktop bar only; the mobile menu
-   keeps it as a plain list link. */
-.navbar__items .navbar-cta {
-  margin-left: 8px;
-  padding: 6px 14px;
-  border: 1px solid var(--accent);
-  border-radius: 3px;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.navbar__items .navbar-cta:hover {
-  background: var(--accent);
-  color: var(--accent-contrast);
-  text-decoration: none;
-}
-
 .footer--dark {
   --ifm-footer-background-color: #0d1013;
   --ifm-footer-color: #b7c1bf;
