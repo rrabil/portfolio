@@ -73,13 +73,12 @@ export const technicalWriting = [
     internal: true,
   },
   {
-    meta: 'Design Document',
-    title: 'High-Level Game Design Document',
-    blurb: 'A design spec for an original game concept, redacted for public sharing.',
-    href: '/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf',
-    readLabel: 'View PDF',
-    thumb: '/img/samples/game-design-document.webp',
-    internal: true,
+    meta: 'Game Design Document',
+    title: 'Calydon: High-Level Game Design Document',
+    blurb: 'A 2011 design document for an action-adventure RPG, rebuilt in 2026 as a docs-as-code website. It covers the world, characters, story, interface, levels, gameplay, art, and audio.',
+    href: 'https://gamedesigndoc.richardrabil.com/',
+    readLabel: 'Explore the design doc',
+    thumb: '/img/samples/calydon-design-doc-site.webp',
   },
 ];
 
