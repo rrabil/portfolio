@@ -79,11 +79,6 @@ export const technicalWriting = [
     href: 'https://gamedesigndoc.richardrabil.com/',
     readLabel: 'Explore the design doc',
     thumb: '/img/samples/calydon-design-doc-site.webp',
-    secondary: {
-      href: '/files/Rabil-High-Level-Game-Design-Document-Calydon-Redacted.pdf',
-      label: 'View the 2011 PDF',
-      internal: true,
-    },
   },
 ];
 
