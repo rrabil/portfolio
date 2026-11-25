@@ -6,7 +6,7 @@ import styles from './index.module.css';
 
 const samples = [
   {
-    meta: 'Document360 Podcast · August 2025',
+    meta: 'Document360 Podcast',
     title: 'Why Aesthetics Matter in Technical Docs, with Richard Rabil',
     blurb: 'A conversation on how visual design and usability shape how documentation gets read.',
     href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
@@ -14,7 +14,7 @@ const samples = [
     thumb: '/img/samples/podcast-document360.webp',
   },
   {
-    meta: 'A List Apart · July 2018',
+    meta: 'A List Apart',
     title: 'Order Out of Chaos: Patterns of Organization for Writing on the Job',
     blurb: 'Reusable organizational patterns for professional writing in the workplace.',
     href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
@@ -22,7 +22,7 @@ const samples = [
     thumb: '/img/samples/alistapart-article.webp',
   },
   {
-    meta: 'STC Intercom · May 2019',
+    meta: 'STC Intercom',
     title: 'Content Strategy in Action: Enabling Sales with Product Documentation',
     blurb: 'How documentation quality and structure became a sales enablement asset.',
     href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
@@ -46,7 +46,7 @@ const samples = [
     thumb: '/img/samples/av-user-guide.webp',
   },
   {
-    meta: 'Specification · Oracle Utilities Docs',
+    meta: 'Technical Specification · Oracle Utilities Docs',
     title: 'Data Transfer Specifications',
     blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',

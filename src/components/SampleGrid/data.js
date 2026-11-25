@@ -32,7 +32,7 @@ export const technicalWriting = [
     thumb: '/img/samples/admin-guide-object-storage.webp',
   },
   {
-    meta: 'Specification',
+    meta: 'Technical Specification',
     title: 'Data Transfer Specifications',
     blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
@@ -84,7 +84,7 @@ export const technicalWriting = [
 
 export const iaKm = [
   {
-    meta: 'Article · April 2020',
+    meta: 'Article',
     title: 'Best Practices for Content Reuse',
     blurb: 'Guidelines for reusing content safely across a documentation set without losing context.',
     href: 'https://richardrabil.com/2020/04/20/some-suggestions-for-content-reuse/',
@@ -92,7 +92,7 @@ export const iaKm = [
     thumb: '/img/samples/content-reuse.webp',
   },
   {
-    meta: 'Article · Intercom, May 2019 (archived)',
+    meta: 'Article · Intercom (archived)',
     title: 'Content Strategy in Action: Enabling Sales with Product Documentation',
     blurb: 'How documentation structure became a sales enablement asset.',
     href: 'https://richardrabil.com/2023/12/21/my-article-from-stc-intercom-content-strategy-in-action-how-documentation-can-enable-sales/',
@@ -100,7 +100,7 @@ export const iaKm = [
     thumb: '/img/samples/stc-intercom-article.webp',
   },
   {
-    meta: 'Article · A List Apart, July 2018',
+    meta: 'Article · A List Apart',
     title: 'Order Out of Chaos: Patterns of Organization for Writing on the Job',
     blurb: 'Reusable organizational patterns for technical writing under real deadline pressure.',
     href: 'https://alistapart.com/article/order-out-of-chaos-patterns-of-organization-for-writing-on-the-job',
@@ -108,7 +108,7 @@ export const iaKm = [
     thumb: '/img/samples/alistapart-article.webp',
   },
   {
-    meta: 'Article · Intercom, November 2017 (archived)',
+    meta: 'Article · Intercom (archived)',
     title: "Designing Wiki Templates for Today's Web",
     blurb: 'Practical guidance for designing wiki page templates that hold up as content scales.',
     href: 'https://richardrabil.com/2018/06/12/my-article-from-stc-intercom-designing-wiki-templates-for-todays-web/',
@@ -116,7 +116,7 @@ export const iaKm = [
     thumb: '/img/samples/wiki-template.webp',
   },
   {
-    meta: 'Presentation · SlideShare, November 2014',
+    meta: 'Presentation · SlideShare',
     title: 'Getting Organized: Practical Guidelines for Documentation Scalability',
     blurb: 'An InfoDevDC meetup presentation on organizing documentation to scale with a growing team.',
     href: 'https://www.slideshare.net/slideshow/getting-organized-practical-guidelines-for-documentation-scalability/41119405',
@@ -127,7 +127,7 @@ export const iaKm = [
 
 export const aiKnowledge = [
   {
-    meta: 'Article · August 2026',
+    meta: 'Article',
     title: 'On Delegating Tech Writing to AI: What We Gain and What We Lose',
     blurb: 'What actually transfers well to AI-delegated technical writing, and where there are risks to address.',
     href: 'https://richardrabil.com/2026/08/08/on-delegating-tech-writing-to-ai-what-we-gain-and-what-we-lose/',
@@ -135,7 +135,7 @@ export const aiKnowledge = [
     thumb: '/img/samples/ai-delegating.webp',
   },
   {
-    meta: 'Article · February 2026',
+    meta: 'Article',
     title: 'Technical Writing Is Dead. Long Live Technical Writing!',
     blurb: 'Why the role is changing rather than disappearing as AI reshapes documentation work.',
     href: 'https://richardrabil.com/2026/02/28/technical-writing-is-dead-long-live-technical-writing/',
@@ -143,7 +143,7 @@ export const aiKnowledge = [
     thumb: '/img/samples/tw-is-dead.webp',
   },
   {
-    meta: 'Article · September 2025',
+    meta: 'Article',
     title: 'Experiments with Generative AI: Simple Use Cases for Technical Writing',
     blurb: 'Early hands-on experiments applying generative AI to real technical writing tasks.',
     href: 'https://richardrabil.com/2025/09/04/experiments-with-generative-ai-simple-use-cases-for-technical-writing-and-reflections-on-writer-responsibility/',
@@ -154,7 +154,7 @@ export const aiKnowledge = [
 
 export const careerCraft = [
   {
-    meta: 'Podcast · Document360, August 2025',
+    meta: 'Podcast · Document360',
     title: 'Why Aesthetics Matter in Technical Docs, with Richard Rabil (Oracle)',
     blurb: 'A conversation on how visual design and usability shape whether documentation actually gets read.',
     href: 'https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/',
@@ -162,7 +162,7 @@ export const careerCraft = [
     thumb: '/img/samples/podcast-document360.webp',
   },
   {
-    meta: 'Article · August 2024',
+    meta: 'Article',
     title: 'The Best Books on Technical Writing: An In-Depth Analysis',
     blurb: 'A survey and analysis of the field’s most useful books on the craft of technical writing.',
     href: 'https://richardrabil.com/2024/08/18/the-best-books-on-technical-writing-an-in-depth-analysis/',
@@ -170,7 +170,7 @@ export const careerCraft = [
     thumb: '/img/samples/best-books.webp',
   },
   {
-    meta: 'Article · December 2023',
+    meta: 'Article',
     title: "There's No Such Thing as an Optimal Technical Writer to Developer Ratio",
     blurb: 'Why staffing ratios are a poor proxy for whether a documentation team is actually working.',
     href: 'https://richardrabil.com/2023/12/04/theres-no-such-thing-as-an-optimal-technical-writer-to-developer-ratio/',
@@ -178,7 +178,7 @@ export const careerCraft = [
     thumb: '/img/samples/writer-ratio.webp',
   },
   {
-    meta: 'Article · May 2023',
+    meta: 'Article',
     title: 'On Aesthetics, Usability, and Technical Writing',
     blurb: 'Further research into how aesthetics and usability intersect with technical writing.',
     href: 'https://richardrabil.com/2023/05/17/notes-on-further-research-into-aesthetics-and-usability-and-what-it-means-for-technical-writers/',
@@ -186,7 +186,7 @@ export const careerCraft = [
     thumb: '/img/samples/aesthetics-usability.webp',
   },
   {
-    meta: 'Article · August 2018',
+    meta: 'Article',
     title: 'Do Technical Writers Dream of Arbortext Editor?',
     blurb: 'A detailed analysis of the strengths and weaknesses of one of the most widely-used DITA XML authoring tools in the industry.',
     href: 'https://richardrabil.com/2018/08/10/do-technical-writers-dream-of-arbortext-editor/',
@@ -194,7 +194,7 @@ export const careerCraft = [
     thumb: '/img/samples/arbortext-dream.webp',
   },
   {
-    meta: 'Article · TechWhirl, March 2018',
+    meta: 'Article · TechWhirl',
     title: 'How to Be an Amazing Tech Comm Job Applicant: Tips from a Tech Comm Hiring Manager',
     blurb: 'Hiring-manager advice for standing out as a technical writing job applicant.',
     href: 'https://techwhirl.com/how-to-be-amazing-tech-comm-job-applicant-tips-tech-comm-hiring-manager/',
@@ -202,7 +202,7 @@ export const careerCraft = [
     thumb: '/img/samples/glasses-envelope.webp',
   },
   {
-    meta: 'Article · TechWhirl, July 2017',
+    meta: 'Article · TechWhirl',
     title: 'Evaluating Writing Samples: Strategies for TechComm Hiring Managers',
     blurb: 'Practical strategies for evaluating writing samples when hiring technical writers.',
     href: 'https://techwhirl.com/evaluating-writing-samples-strategies-techcomm-hiring-managers/',
