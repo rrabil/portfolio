@@ -35,7 +35,9 @@ These questions have led me into many overlapping disciplines, from technical wr
 
 The explosive growth of AI has taken technical writing and knowledge management in all sorts of new directions. It's critical right now for writers to think holistically about how to cultivate content in systems that are responsive to AI tools and agents without losing sight of what human users really need.
 
-What works well for human readers, such as structured pages, chunked sections, clear sentences, and consistent patterns, also tends to work well for AI agents. But not always. Agents have their own needs. They read some formats (such as Markdown and plain text) more reliably than others. Search and retrieval tools, such as MCP servers, often give them a chunk of a page instead of the whole page, which means each chunk needs enough context to stand on its own. And when HTML becomes plain text, styling disappears, so the words alone must carry the intended meaning. I apply my systems thinking and editorial judgment to develop content, skills, agents, metadata, and workflows that meet both human and agent needs. The larger goal is knowledge systems that stay sustainable over the long run.
+What works well for human readers, such as structured pages, chunked sections, clear sentences, and consistent patterns, also tends to work well for AI agents. But not always. Agents have their own needs, too. They read some formats (such as Markdown and plain text) more reliably than others. Search and retrieval tools, such as MCP servers, often give agents a chunk of a page instead of the whole page, which means each chunk needs enough context to stand on its own. And when HTML becomes plain text, styling disappears, so the words alone must carry the intended meaning.
+
+I apply my systems thinking and editorial judgment to develop content, skills, agents, metadata, and workflows that meet both human and agent needs. My larger goal is to build knowledge systems that stay useful and sustainable over the long run.
 
 Because in many ways, writing the first version is the easy part. Keeping the content healthy and scalable for years to come is the real art.
 
