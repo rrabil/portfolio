@@ -32,8 +32,8 @@ A sampling of things I've shipped, including:
 - "Why Aesthetics Matter in Technical Docs, with Richard Rabil"—Document360 Podcast, August 2025
 - "Order Out of Chaos: Patterns of Organization for Writing on the Job"—A List Apart, July 2018
 - "Content Strategy in Action: Enabling Sales with Product Documentation"—STC Intercom, May 2019
-- "Opower Digital Self-Service - Energy Management"—Overview Guide, Oracle Utilities Docs
-- "Opower Analytics Visualization"—User Guide, Oracle Utilities Docs
+- "Digital Self-Service - Energy Management"—Overview Guide, Oracle Utilities Docs
+- "Analytics Visualization"—User Guide, Oracle Utilities Docs
 - "Data Transfer Specifications"—Specification, Oracle Utilities Docs
 
 [View More Samples](/docs/portfolio/samples)

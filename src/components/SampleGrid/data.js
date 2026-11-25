@@ -1,7 +1,7 @@
 export const technicalWriting = [
   {
     meta: 'Overview Guide',
-    title: 'Opower Digital Self-Service - Energy Management',
+    title: 'Digital Self-Service - Energy Management',
     blurb: 'The complete guide to the Digital Self Service - Energy Management product experience, from bill comparisons to data trends to solar power usage.',
     href: 'https://docs.oracle.com/en/industries/utilities/digital-self-service/energy-management-overview/energy_use_view_residential.html',
     readLabel: 'Read the documentation',
@@ -9,7 +9,7 @@ export const technicalWriting = [
   },
   {
     meta: 'User Guide',
-    title: 'Opower Analytics Visualization',
+    title: 'Analytics Visualization',
     blurb: 'How subject areas, measures, and attributes come together to build visualizations and inform business decisions.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-analytics-visualization/opower-av-user-guide/get-started-opower-av.html#GUID-46E22F9F-E5D5-41C6-829C-06803B7B0350',
     readLabel: 'Read the documentation',
@@ -25,7 +25,7 @@ export const technicalWriting = [
   },
   {
     meta: 'Admin Guide',
-    title: 'Oracle Utilities Data Intelligence',
+    title: 'Data Intelligence',
     blurb: 'The full administration guide for a suite of analytics applications, covering setup, data connectors, and the procedures that keep the data current.',
     href: 'https://docs.oracle.com/en/industries/utilities/data-intelligence/266/data-intelligence-admin-guide/about-oracle-utilities-data-intelligence.html',
     readLabel: 'Read the documentation',
@@ -41,7 +41,7 @@ export const technicalWriting = [
   },
   {
     meta: 'Overview Guide',
-    title: 'Opower Business Customer Engagement Digital Self-Service',
+    title: 'Business Customer Engagement Digital Self-Service',
     blurb: 'Documentation about an energy management software-as-a-service product for business owners who want to save energy.',
     href: 'https://docs.oracle.com/en/industries/utilities/business-customer-engagement/business-customer-engagement-overview/power_view.html',
     readLabel: 'Read the documentation',
