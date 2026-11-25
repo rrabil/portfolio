@@ -17,11 +17,11 @@ import styles from './about.module.css';
 
 I'm a principal technical writer and knowledge architect with 20+ years of experience in the tech industry and a master's degree in technical communication. [I've long believed](https://richardrabil.com/2017/10/20/get-into-technical-writing/) that a culture like ours needs conscientious communicators who can craft quality documentation about the things we build, and deliver knowledge to the right people at the right time.
 
-## Technical Communication: Creating Quality Docs
+## Creating Quality Docs
 
 Documentation is only useful if people can discover and apply it to perform their tasks correctly. That not only means writing content that's findable, structured, consistent, accurate, and all the other adjectives typically applied to good writing. It also means designing content so it is visually approachable through methods like scannable layouts, thoughtful formatting, and design choices that invite trust. Every day it's my goal to bring about this combination of form and function to achieve *deep* quality, not just *functional* quality. I even made this philosophy the [subject of a podcast](https://document360.com/blog/why-aesthetics-matter-in-technical-docs-with-richard-oracle/).
 
-## Knowledge Architecture: From Pages to Systems
+## From Pages to Systems
 
 In addition to developing quality content, I am keenly interested in *systems*, *structure*, and *scale*: how to build knowledge so it can grow, how to organize it so it flows, and how to keep it healthy over time. I'm constantly asking questions like:
 
@@ -31,15 +31,13 @@ In addition to developing quality content, I am keenly interested in *systems*, 
 
 These questions have led me into many overlapping disciplines, from technical writing and information architecture to content engineering and knowledge management. I frequently take on "team lead," "editorial director," and "architect" roles for large documentation projects in the organizations I work for: setting up information models and governance, designing templates and status dashboards, defining the content strategy for content lifecycles, and sharing best practices and articles about the latest techniques and trends in the field.
 
-## Content Engineering: Where AI Comes In
+## Where AI Comes In
 
 The explosive growth of AI has taken technical writing and knowledge management in all sorts of new directions. It's critical right now for writers to think holistically about how to cultivate content in systems that are responsive to AI tools and agents without losing sight of what human users really need.
 
 What works well for human readers, such as structured pages, chunked sections, clear sentences, and consistent patterns, also tends to work well for AI agents. But not always. Agents have their own needs, too. They read some formats (such as Markdown and plain text) more reliably than others. Search and retrieval tools, such as MCP servers, often give agents a chunk of a page instead of the whole page, which means each chunk needs enough context to stand on its own. And when HTML becomes plain text, styling disappears, so the words alone must carry the intended meaning.
 
-I apply my systems thinking and editorial judgment to develop content, skills, agents, metadata, and workflows that meet both human and agent needs. My larger goal is to build knowledge systems that stay useful and sustainable over the long run.
-
-Because in many ways, writing the first version is the easy part. Keeping the content healthy and scalable for years to come is the real art.
+I apply my systems thinking and editorial judgment to develop content, skills, agents, metadata, and workflows that meet both human and agent needs. My larger goal is to build knowledge systems that stay useful and sustainable over the long run. Because in many ways, writing the first version is the easy part. Keeping the content healthy and scalable for years to come is the real art.
 
 In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline. See [how I built this site](/how-i-built-this) for more information.
 
