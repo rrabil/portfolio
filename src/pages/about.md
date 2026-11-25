@@ -35,7 +35,9 @@ These questions have led me into many overlapping disciplines, from technical wr
 
 The explosive growth of AI has taken technical writing and knowledge management in all sorts of new directions. It's critical right now for writers to think holistically about how to cultivate content in systems that are responsive to AI tools and agents without losing sight of what human users really need.
 
-Research shows that what works well for human users—such as structured pages, clear sentences, and consistent patterns—is generally what makes content retrievable by AI agents. With that in mind, I regularly apply my systems thinking and editorial judgment to develop prompts, skills, agents, metadata, and workflows that are based on time-tested best practices in creating and sustaining knowledge systems over the long run. Because in many ways, writing the first version is the easy part. Keeping the content healthy and scalable for years to come is the real art.
+What works well for human readers, such as structured pages, chunked sections, clear sentences, and consistent patterns, also tends to work well for AI agents. But not always. Agents have their own needs. They read some formats (such as Markdown and plain text) more reliably than others. Search and retrieval tools, such as MCP servers, often give them a chunk of a page instead of the whole page, which means each chunk needs enough context to stand on its own. And when HTML becomes plain text, styling disappears, so the words alone must carry the intended meaning. I apply my systems thinking and editorial judgment to develop content, skills, agents, metadata, and workflows that meet both human and agent needs. The larger goal is knowledge systems that stay sustainable over the long run.
+
+Because in many ways, writing the first version is the easy part. Keeping the content healthy and scalable for years to come is the real art.
 
 In this portfolio I have focused on putting the principles of content quality and AI-driven sustainability into practice using an actual docs-as-code pipeline. See [how I built this site](/how-i-built-this) for more information.
 
