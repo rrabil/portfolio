@@ -12,7 +12,7 @@ Runs from `.github/workflows/site-health.yml`:
 | --- | --- | --- |
 | Site is up | `curl` on `/sitemap.xml` | The sitemap does not load after three tries |
 | Broken links | Lychee, with the root `lychee.toml` | Any link on any live page is broken |
-| Accessibility | Pa11y (`run-pa11y.mjs`, `pa11y.json`) | Any WCAG 2 AA **error** (warnings and notices are ignored) |
+| Accessibility | Pa11y (`run-pa11y.mjs`, `pa11y.json`) | Any confirmed WCAG 2 AA **error** (warnings and notices are ignored; see below) |
 | Speed and basics | Lighthouse CI (`lighthouserc.json`, `summarize-lighthouse.mjs`) | Median performance below 70, or best practices or SEO below 80 |
 
 The page list comes from the live `sitemap.xml`, so new pages are checked
@@ -33,3 +33,10 @@ line in the workflow.
 Pa11y here runs both HTML CodeSniffer and axe, so it is stricter than the
 Doc Detective accessibility spec (`tests/doc-detective/a11y.spec.json`),
 which uses Pa11y's default HTML CodeSniffer only.
+
+**"Needs a human look" items:** axe sometimes cannot measure a spot, for
+example text inside an SVG drawing, or a paragraph cut off by the bottom of
+Pa11y's 1280×1024 test window. Pa11y reports these as errors, but they are
+not confirmed problems. `run-pa11y.mjs` lists them in a separate section of
+the report and does not fail the run because of them. Check them by eye when
+you read the report.
