@@ -34,7 +34,7 @@ A sampling of things I've shipped, including:
 - "Content Strategy in Action: Enabling Sales with Product Documentation"—STC Intercom
 - "Digital Self-Service - Energy Management"—Overview Guide, Oracle Utilities Docs
 - "Analytics Visualization"—User Guide, Oracle Utilities Docs
-- "Data Transfer Specifications"—Technical Specification, Oracle Utilities Docs
+- "Data Transfer Specifications"—Technical Spec, Oracle Utilities Docs
 
 [View More Samples](/docs/portfolio/samples)
 

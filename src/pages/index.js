@@ -46,7 +46,7 @@ const samples = [
     thumb: '/img/samples/av-user-guide.webp',
   },
   {
-    meta: 'Technical Specification · Oracle Utilities Docs',
+    meta: 'Technical Spec · Oracle Utilities Docs',
     title: 'Data Transfer Specifications',
     blurb: 'Documentation on transferring energy use data securely from utilities to Oracle in the right structure and format.',
     href: 'https://docs.oracle.com/en/industries/utilities/opower-platform/data-transfer/rates-data-file-specifications.html#GUID-0973077D-0779-414D-97AD-F687C19345DB',
